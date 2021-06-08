@@ -1,0 +1,55 @@
+\documentclass[10 pt]{article}
+\usepackage{tikz}
+\begin{document}
+
+\tikzstyle{elem} = [draw, rectangle, thick, minimum height=2em, minimum width=2em]
+\tikzstyle{line} = [draw, thick, -stealth, shorten >=0pt]
+
+\begin{tikzpicture}[scale=1, auto]
+  \matrix[row sep=0.5cm, column sep=0.5cm]{
+    & 
+    \node[elem] (ide) {Identificar};
+    \\
+    \node[elem] (lit) {Literatura};
+    &
+    \node[elem] (des) {Desarrollar};
+    &
+    \node[elem] (her) {Herramientas};
+    \\
+    \node[elem] (for) {Formular};
+    &
+    \node[elem] (imp) {Implementar};
+    &
+    \node[elem] (sel) {Seleccionar};
+    \\
+    & 
+    \node[elem] (dis) {Experimentos};
+    \\
+    \node[elem] (ana) {Analizar};
+    & &
+    \node[elem] (doc) {Documentar};
+    \\
+    \node[elem] (apl) {Aplicar};
+    & &
+    \node[elem] (exp) {Discutir};
+    \\};
+    
+    \draw [line] (ide) -- (lit);
+    \draw [line] (ide) -- (des);
+    \draw [line] (ide) -- (her);
+    \draw [line] (lit) -- (des);
+    \draw [line] (lit) -- (for);
+    \draw [line] (des) -- (imp);
+    \draw [line] (her) -- (sel);
+    \draw [line] (sel) -- (imp);
+    \draw [line] (for) -- (dis);
+    \draw [line] (imp) -- (dis);
+    \draw [line] (dis) -- (ana);
+    \draw [line] (dis) -- (apl);
+    \draw [line] (ana) -- (doc);
+    \draw [line] (apl) -- (doc);
+    \draw [line] (doc) -- (exp);
+  
+\end{tikzpicture}
+  
+\end{document}
