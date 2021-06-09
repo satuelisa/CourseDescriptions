@@ -3,21 +3,22 @@
 \include{profes}
 \begin{document}
 \include{rev}
-\input{header.tex}
+\input{headerDoc.tex}
 \section{Datos de Identificaci\'{o}n de la Unidad de Aprendizaje:}
-\subsection{Nombre:} \fbox{Aprendizaje autom\'{a}tico}
+\subsection{Nombre:} \fbox{Complejidad computacional}
 \subsection{Frecuencia semanal:} horas de trabajo presencial \fbox{4}
 \subsection{Horas de trabajo extra aula por semana:} \fbox{2}
 \subsection{Modalidad:} \yes~Escolarizada \no~No escolarizada \no~Mixto
 \subsection{Per\'{\i}odo acad\'{e}mico:} \yes~Semestral
 \no~Tetramestral \no~Modular
 \subsection{LGAC:} \underline{Sistemas estoc\'{a}sticos y simulaci\'{o}n}
-\subsection{Ubicaci\'{o}n semestral:} \underline{1 al 8}
-\subsection{\'{A}rea curricular:} \underline{Formaci\'{o}n, de libre elecci\'{o}n}
+\subsection{Ubicaci\'{o}n semestral:} \underline{1 o 2}
+\subsection{\'{A}rea curricular:} \underline{Formaci\'{o}n b\'{a}sica,
+  formaci\'{o}n avanzada, de aplicaci\'{o}n, libre elecci\'{o}n, investigaci\'{o}n}
 \subsection{Cr\'{e}ditos:} \underline{4}
 \subsection{Requisito:} \underline{Ninguno}
 \subsection{Fecha de elaboraci\'{o}n:} \underline{20/01/2010}
-\subsection{Fecha de la \'{u}ltima actualizaci\'{o}n:} \underline{17/10/2020}
+\subsection{Fecha de la \'{u}ltima actualizaci\'{o}n:} \underline{09/06/2021}
 \subsection{Responsable(s) del dise\~{n}o:}
 \begin{itemize}[label={}]
 \item \underline{\narturo~\arturo}
@@ -26,15 +27,15 @@
 \newpage
 \section{Presentaci\'{o}n:}
 
-La teor\'{\i}a del aprendizaje autom\'{a}tico o aprendizaje de m\'{a}quinas (del
-ingl\'{e}s, {\em machine learning}) es el subcampo de las ciencias de la
-computaci\'{o}n y una rama de la inteligencia artificial cuyo objetivo es
-desarrollar t\'{e}cnicas que permitan a las computadoras aprender.
+La complejidad computacional que es el campo de la teor\'{\i}a de la
+computaci\'{o}n que estudia te\'{o}ricamente la complejidad inseparable a la
+resoluci\'{o}n de un problema.
 
 \section{Prop\'{o}sito(s):}
 
-Crear programas capaces de generalizar comportamientos a partir de una
-informaci\'{o}n suministrada en forma de ejemplos.
+Introducir al estudiante con conceptos b\'{a}sicos de la complejidad
+computacional acorde de las necesidades que presenta su trabajo de
+tesis.
 
 \section{Competencias del perfil de egreso:}
 \subsection{Competencias del perfil de egreso}
@@ -42,6 +43,8 @@ informaci\'{o}n suministrada en forma de ejemplos.
 \input{p1.tex}
 
 \input{p2.tex}
+
+\input{p3.tex}
   
 \subsection{Competencias generales a que se vincula la Unidad de
     Aprendizaje:}
@@ -49,11 +52,9 @@ informaci\'{o}n suministrada en forma de ejemplos.
   La unidad se vincula con las siguientes competencias generales:
 
   \input{gcomptablestart.tex}
-  \input{c2.tex} & Tareas \\ \hline
-  \input{c3.tex} & Tareas \\ \hline
-  \input{c5.tex} & Tareas \\ \hline
-  \input{c12.tex} & Tareas, proyecto \\ \hline
-  \input{c13.tex} & Tareas, proyecto \\ \hline
+  \input{c2.tex} & Tareas, proyecto \\ \hline
+  \input{c3.tex} & Tareas, proyecto \\ \hline
+  \input{c5.tex} & Tareas, proyecto \\ \hline
   \end{tabular}
 
 \newpage
@@ -64,8 +65,8 @@ informaci\'{o}n suministrada en forma de ejemplos.
 
   \input{ecomptablestart.tex}
   \input{e1.tex}
-  & & & Resuelve problemas de libro de texto en el \'{a}rea
-        de ... con bases cient\'{\i}ficas.
+  & & & Resuelve problemas en el \'{a}rea
+        de {\em complejidad computacional} con bases cient\'{\i}ficas.
   &
     Tareas.
   &
@@ -77,9 +78,7 @@ informaci\'{o}n suministrada en forma de ejemplos.
     de
     objetivos
     establecidos
-    en
-    un
-    sistema
+    para un problema
     dado,
     revisando
     literatura
@@ -87,63 +86,32 @@ informaci\'{o}n suministrada en forma de ejemplos.
     de
     frontera.
   &
-    Tareas.
+    Tareas, proyecto.
   &&  \\ \hline
   
 \end{tabular}
 
 \section{Representaci\'{o}n gr\'{a}fica:}
 
-\begin{tikzpicture}[scale=1, auto]
-  \matrix[row sep=1cm, column sep=7mm]{
-      & 
-      \node[elem] (ide) {Identificar un problema de inter\'{e}s que se
-        busca resolver};
+\input{startdiagram.tex}
+\node[elem] (ide) {Identificar un problema de inter\'{e}s cuya complejidad se quiere conocer};
       \\
       \node[elem] (lit) {Identificar y revisar literatura cient\'{\i}fica relacionada relevante};
-      &
-      \node[elem] (des) {Desarrollar un m\'{e}todo de ...};
-      &
-      \node[elem] (her) {Revisar herramientas computacionales
-        existentes para implementar el m\'{e}todo};
       \\
-      \node[elem] (for) {Formular hip\'{o}tesis parala validaci\'{o}n del
-        modelo propuesto};
-      &
-      \node[elem] (imp) {Implementar el m\'{e}todo con las herramientas seleccionadas};
-      &
-      \node[elem] (sel) {Seleccionar las herramientas seg\'{u}n las caracter\'{\i}sticas del m\'{e}todo};
+      \node[elem] (des) {Desarrollar una demostraci\'{o}n de complejidad};
       \\
-      & \node[elem] (dis) {Dise\~{n}ar y realizar experimentos};
-      \\
-      \node[elem] (ana) {Analizar los resultados de los experimentos y contrastarlas con las hip\'{o}tesis};
-      & & 
       \node[elem] (doc) {Documentar el proceso conforme al estilo de
         redacci\'{o}n cient\'{\i}fica};
       \\
-      & 
-      \node[elem] (apl) {Aplicar visualizaci\'{o}n cient\'{\i}fica a los resultados};
-      & 
-      \node[elem] (exp) {Discutir entre pares los m\'{e}todos y los
-        resultados obtenidos};
+      \node[elem] (exp) {Discutir entre pares las demostraciones realizadas};
       \\
     };
     \draw [line] (ide) -- (lit);
     \draw [line] (ide) -- (des);
-    \draw [line] (ide) -- (her);
     \draw [line] (lit) -- (des);
-    \draw [line] (lit) -- (for);
-    \draw [line] (des) -- (imp);
-    \draw [line] (her) -- (sel);
-    \draw [line] (sel) -- (imp);
-    \draw [line] (for) -- (dis);
-    \draw [line] (imp) -- (dis);
-    \draw [line] (dis) -- (ana);
-    \draw [line] (dis) -- (apl);
-    \draw [line] (ana) -- (doc);
-    \draw [line] (apl) -- (doc);
+    \draw [line] (des) -- (doc);
     \draw [line] (doc) -- (exp);
-  \end{tikzpicture}
+\input{enddiagram.tex}
 
 \newpage
 \section{Estructuraci\'{o}n en cap\'{\i}tulos, etapas o fases de la unidad de
@@ -158,44 +126,29 @@ en el caso contrario, estar preparado a estudiarlos seg\'{u}n
 necesidad. Tambi\'{e}n se necesita conocimiento de programaci\'{o}n.
 La sesiones son de cuatro horas cada una y son veinte semanas en total.
 \begin{enumerate}[itemsep=-3pt]
-\item{Introducci\'{o}n; selecci\'{o}n de temas de proyecto}
-\item{Aprendizaje supervisado}
-\item{Regresi\'{o}n lineal}
-\item{Clasificaci\'{o}n lineal}
-\item{Expansi\'{o}n y regularizaci\'{o}n}
-\item{Suavizaci\'{o}n con n\'{u}cleos}
-\item{Evaluaci\'{o}n y selecci\'{o}n de modelos}
-\item{Inferencia y promediaci\'{o}n}
-\item{Modelos aditivos y \'{a}rboles}
-\item{Impulso y \'{a}rboles aditivos}
-\item{Redes neuronales}
-\item{M\'{a}quinas de soporte vectorial}
-\item{Vecinos m\'{a}s cercanos}
-\item{Aprendizaje no supervisado}
-\item{B\'{o}sques aleatorios}
-\item{Aprendizaje colectivo}
-\item{Modelos gr\'{a}ficos no dirigidos}
-\item{Problemas de alta dimensionalidad}
-\item{Presentaciones de proyectos}
-\item{Revisi\'{o}n de portafolios de evidencia}
+\item{Introducci\'{o}n; selecci\'{o}n de temas de proyecto (1 semana)}
+\item{Problemas y algoritmos (2 semanas)}
+\item{L\'{o}gica (2 semanas)}
+\item{M\'{a}quinas Turing (3 semanas)}
+\item{Clases de complejidad (9 semanas)}
+\item{Esquemas de aproximaci\'{o}n (1 semana)}
+\item{Presentaciones de proyectos (1 semana)}
+\item{Revisi\'{o}n de portafolios de evidencia (1 semana)}
 \end{enumerate}
 
 {\em Elementos de competencia:}
 
 \input{elemtablestart.tex}
-  Reporte escrito y/ c\'{o}digo de la implementaci\'{o}n de un algoritmo de
-  aprendizaje autom\'{a}tico.
+  Reporte escrito de la demostraci\'{o}n de complejidad computacional
+  de un problema.
   & Calidad de la redacci\'{o}n cient\'{\i}fica del reporte; 
-    precisi\'{o}n del algoritmo propuesto;
-    eficiencia de la implementaci\'{o}n del algoritmo;
-    cobertura de la experimentaci\'{o}n.
-  & Experimentaci\'{o}n con ejemplos; lectura de material de apoyo;
-    modificaci\'{o}n de ejemplos; dise\~{n}o y ejecuci\'{o}n de experimentos;
-    an\'{a}lisis y reportaje de resultados obtenidos.
+    validez y claridad de la demostraci\'{o}n.
+  & Lectura de material de apoyo;
+    modificaci\'{o}n de ejemplos; 
+    an\'{a}lisis y reportaje de ejercicios realizados.
   &
-    M\'{e}todos diversos de aprendizaje autom\'{a}tico
-  & Material en la p\'{a}gina web de la unidad y la literatura citada;
-    lenguaje Python o similar; paquete {\LaTeX} para redacci\'{o}n cient\'{\i}fica;
+    Aspectos diversos de complejidad computacional.
+  & Material en la p\'{a}gina web de la unidad y la literatura citada; paquete {\LaTeX} para redacci\'{o}n cient\'{\i}fica;
     repositorios de GitHub. \\ \hline
   
   \end{tabular}
@@ -209,8 +162,7 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
   absoluto, ni de otros estudiantes ni de la red ni de libros --- toda
   referencia bibliogr\'{a}fica tiene que ser apropiadamente citada. La
   entrega se realiza por un repositorio en GitHub que debe reflejar
-  todas las fases del trabajo en su log correspondiente. El alumno
-  selecciona su lenguaje de programaci\'{o}n para cada tarea.
+  todas las fases del trabajo en su documento correspondiente. 
 
   Son 17 tareas (A1--A17) que reportan avances semanales de aplicaci\'{o}n
   de la lectura de la semana para el proyecto del estudiante,
@@ -241,11 +193,8 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
   \item[0]{= inadecuado en alzance y calidad}
   \end{description}
 
-
   No habr\'{a} examen.
 
-
-  
   Ponderaci\'{o}n espec\'{\i}fica:
 
   \scalebox{0.85}{
@@ -279,23 +228,17 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
 \subsubsection{B\'{a}sicas}
 
  \begin{itemize}[itemsep=0em]
-
- \item{Hastie, Trevor, Tibshirani, Robert. \& Friedman, Jerome: {\em
-       The Elements of Statistical Learning: Data Mining, Inference,
-       and Prediction}. Springer; 2nd edition, 2016.}
-
-   \item{Michalski, Ryszard S., Jaime G. Carbonell \& Tom M. Mitchell,
-   eds. {\em Machine learning: An artificial intelligence
-     approach}. Springer Science \& Business Media, 2013.}
-
- \item{Witten, Ian H., et al. {\em Data Mining: Practical machine learning
-     tools and techniques}. Morgan Kaufmann, 2016.}
-
- \item{Marsland, Stephen. {\em Machine learning: an algorithmic
-       perspective}. CRC press, 2015.}
    
-\end{itemize}
+ \item{Papadimitriou, Christos H. {\em Computa;onal complexity}. John
+     Wiley and Sons Ltd., 2003.}
 
+ \item{Arora, Sanjeev, and Boaz Barak. {\em Computa;onal complexity:
+       a modern approach}. Cambridge University Press, 2009.}
+
+ \item{Garey, Michael R., and David S. Johnson. {\em Computers and intractability}. Vol. 29. New York: Freeman, 2002.}
+
+ \end{itemize}
+ 
 \subsubsection{Complementarias}
 
 Art\'{\i}culos cient\'{\i}ficos especializados.
