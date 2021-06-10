@@ -12,13 +12,12 @@
 \subsection{Per\'{\i}odo acad\'{e}mico:} \yes~Semestral
 \no~Tetramestral \no~Modular
 \subsection{LGAC:} \underline{\seys}
-\subsection{Ubicaci\'{o}n semestral:} \underline{1 o 2}
-\subsection{\'{A}rea curricular:} \underline{Formaci\'{o}n b\'{a}sica,
-  formaci\'{o}n avanzada, de aplicaci\'{o}n, libre elecci\'{o}n, investigaci\'{o}n}
+\subsection{Ubicaci\'{o}n semestral:} \underline{1--8}
+\subsection{\'{A}rea curricular:} \underline{\fr, \le}
 \subsection{Cr\'{e}ditos:} \underline{4}
 \subsection{Requisito:} \underline{Ninguno}
 \subsection{Fecha de elaboraci\'{o}n:} \underline{20/01/2010}
-\subsection{Fecha de la \'{u}ltima actualizaci\'{o}n:} \underline{09/06/2021}
+\subsection{Fecha de la \'{u}ltima actualizaci\'{o}n:} \underline{10/06/2021}
 \subsection{Responsable(s) del dise\~{n}o:}
 \begin{itemize}[label={}]
 \item \underline{\narturo~\arturo}
@@ -27,9 +26,9 @@
 \newpage
 \section{Presentaci\'{o}n:}
 
-La complejidad computacional que es el campo de la teor\'{\i}a de la
-computaci\'{o}n que estudia te\'{o}ricamente la complejidad inseparable a la
-resoluci\'{o}n de un problema.
+La {\em complejidad computacional} que es el campo de la teor\'{\i}a
+de la computaci\'{o}n que estudia te\'{o}ricamente la complejidad
+inseparable a la resoluci\'{o}n de un problema.
 
 \section{Prop\'{o}sito(s):}
 
@@ -40,77 +39,59 @@ tesis.
 \section{Competencias del perfil de egreso:}
 \subsection{Competencias del perfil de egreso}
 
-\input{p1.tex}
+\input{p1d.tex}
 
-\input{p2.tex}
-
-\input{p3.tex}
-  
 \subsection{Competencias generales a que se vincula la Unidad de
     Aprendizaje:}
-
+  
   La unidad se vincula con las siguientes competencias generales:
-
-  \input{gcomptablestart.tex}
-  \input{c2.tex} & Tareas, proyecto \\ \hline
-  \input{c3.tex} & Tareas, proyecto \\ \hline
+  
+  \input{comp_gen.tex}
+  \input{c2.tex} & Tareas \\ \hline
+  \input{c3.tex} & Tareas \\ \hline
   \input{c5.tex} & Tareas, proyecto \\ \hline
+  \input{c12.tex} & Tareas, proyecto \\ \hline
+  \input{c13.tex} & Tareas, proyecto \\ \hline
   \end{tabular}
 
 \newpage
     
 \subsection{Competencias espec\'{\i}ficas y nivel de dominio a que se vincula la unidad de aprendizaje:}
 
-  La unidad se vincula con las siguientes competencias espec\'{\i}ficas:
+La unidad se vincula con las siguientes competencias espec\'{\i}ficas:
 
-  \input{ecomptablestart.tex}
-  \input{e1.tex}
-  & & & Resuelve problemas en el \'{a}rea
-        de {\em complejidad computacional} con bases cient\'{\i}ficas.
-  &
-    Tareas.
-  &
-    Encuentra
-    soluciones
-    para
-    la
-    consecuci\'{o}n
-    de
-    objetivos
-    establecidos
-    para un problema
-    dado,
-    revisando
-    literatura
-    cient\'{\i}fica
-    de
-    frontera.
-  &
-    Tareas, proyecto.
-  &&  \\ \hline
-  
-\end{tabular}
+\input{start_bas_aut.tex}
+\input{e1.tex}
+& & &
+\input{resuelve.tex}
+&
+Tareas.
+&
+\input{encuentra.tex}
+&
+Tareas, proyecto.
+\input{end_bas_aut.tex}
 
 \section{Representaci\'{o}n gr\'{a}fica:}
 
 \input{startdiagram.tex}
 \node[elem] (ide) {Identificar un problema de inter\'{e}s cuya complejidad se quiere conocer};
-      \\
-      \node[elem] (lit) {Identificar y revisar literatura cient\'{\i}fica relacionada relevante};
-      \\
-      \node[elem] (des) {Desarrollar una demostraci\'{o}n de complejidad};
-      \\
-      \node[elem] (doc) {Documentar el proceso conforme al estilo de
-        redacci\'{o}n cient\'{\i}fica};
-      \\
-      \node[elem] (exp) {Discutir entre pares las demostraciones realizadas};
-      \\
-    };
-    \draw [line] (ide) -- (lit);
-    \draw [line] (ide) -- (des);
-    \draw [line] (lit) -- (des);
-    \draw [line] (des) -- (doc);
-    \draw [line] (doc) -- (exp);
+\\
+\node[elem] (lit) {Identificar y revisar literatura cient\'{\i}fica relacionada relevante};
+\\
+\node[elem] (des) {Desarrollar una demostraci\'{o}n de complejidad};
+\\
+\node[elem] (doc) {Documentar el proceso conforme al estilo de
+  redacci\'{o}n cient\'{\i}fica};
+\\
+\node[elem] (exp) {Discutir entre pares las demostraciones realizadas};
+\\
+};
+\draw [line] (ide) -- (lit);
+\draw [line] (ide) -- (des);
+\draw [line] (lit) -- (des);
+\draw [line] (des) -- (doc);
+\draw [line] (doc) -- (exp);
 \input{enddiagram.tex}
 
 \newpage
@@ -118,13 +99,14 @@ tesis.
   aprendizaje:}
 \subsection{Desarrollo de las fases de la Unidad de Aprendizaje:}
 
-Se cubren los principios te\'{o}ricos del aprendizaje
-autom\'{a}tico. Desarrollar habilidades en la resoluci\'{o}n en casos
-pr\'{a}cticos concretos. Se necesita contar con un buen entendimiento de varios los conceptos
-matem\'{a}ticos, especialmente de matem\'{a}ticas discretas y probabilidad, o
-en el caso contrario, estar preparado a estudiarlos seg\'{u}n
-necesidad. Tambi\'{e}n se necesita conocimiento de programaci\'{o}n.
-La sesiones son de cuatro horas cada una y son veinte semanas en total.
+Se cubren los principios te\'{o}ricos de la complejidad
+computacional. Desarrollar habilidades en la resoluci\'{o}n en casos
+pr\'{a}cticos concretos. Se necesita contar con un buen entendimiento
+de varios los conceptos matem\'{a}ticos, especialmente de
+matem\'{a}ticas discretas y probabilidad, o en el caso contrario,
+estar preparado a estudiarlos seg\'{u}n necesidad. Tambi\'{e}n se
+necesita conocimiento de programaci\'{o}n.  La sesiones son de cuatro
+horas cada una y son veinte semanas en total.
 \begin{enumerate}[itemsep=-3pt]
 \item{Introducci\'{o}n; selecci\'{o}n de temas de proyecto (1 semana)}
 \item{Problemas y algoritmos (2 semanas)}
@@ -139,86 +121,59 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
 {\em Elementos de competencia:}
 
 \input{elemtablestart.tex}
-  Reporte escrito de la demostraci\'{o}n de complejidad computacional
-  de un problema.
-  & Calidad de la redacci\'{o}n cient\'{\i}fica del reporte; 
-    validez y claridad de la demostraci\'{o}n.
-  & Lectura de material de apoyo;
-    modificaci\'{o}n de ejemplos; 
-    an\'{a}lisis y reportaje de ejercicios realizados.
-  &
-    Aspectos diversos de complejidad computacional.
-  & Material en la p\'{a}gina web de la unidad y la literatura citada; paquete {\LaTeX} para redacci\'{o}n cient\'{\i}fica;
-    repositorios de GitHub. \\ \hline
+
+Reporte escrito de la demostraci\'{o}n de complejidad computacional de
+un problema.
+
+&
+
+Calidad de la redacci\'{o}n cient\'{\i}fica del reporte; validez y
+claridad de la demostraci\'{o}n.
+
+&
+
+Lectura de material de apoyo; modificaci\'{o}n de ejemplos;
+an\'{a}lisis y reportaje de ejercicios realizados.
+
+&
+
+Aspectos diversos de complejidad computacional.
+
+&
+
+Material en la p\'{a}gina web de la unidad y la literatura citada;
+paquete {\LaTeX} para redacci\'{o}n cient\'{\i}fica; repositorios de
+GitHub. \\ \hline
   
-  \end{tabular}
+\end{tabular}
 
 \newpage
-  
-  \section{Evaluaci\'{o}n integral de procesos y productos:}
-  
-  Las tareas son individuales; se recomienda estudiar juntos y
-  discutir las soluciones, pero no se tolera ning\'{u}n tipo de plagio en
-  absoluto, ni de otros estudiantes ni de la red ni de libros --- toda
-  referencia bibliogr\'{a}fica tiene que ser apropiadamente citada. La
-  entrega se realiza por un repositorio en GitHub que debe reflejar
-  todas las fases del trabajo en su documento correspondiente. 
 
-  Son 17 tareas (A1--A17) que reportan avances semanales de aplicaci\'{o}n
-  de la lectura de la semana para el proyecto del estudiante,
-  otorgando por m\'{a}ximo 5 puntos por tarea:
-  \begin{description}[itemsep=0em]
-  \item[NP]{= tarea omitida}
-  \item[5]{= excede lo que se esperaba}
-  \item[4]{= cumple con lo que se esperaba}
-  \item[3]{= d\'{e}bil en alcance y/o calidad}
-  \item[2]{= d\'{e}bil en ambos alcance y calidad}
-  \item[1]{= sin contribuciones o m\'{e}ritos aunque fue entregada}
-  \item[0]{= completamente inadecuado en alzance y calidad}
-  \end{description}
-  El proyecto final (A18) otorga un m\'{a}ximo de 15 puntos, evaluados en los
-  siguientes rubros
-  \begin{enumerate}[itemsep=0em]
-  \item{Variedad de t\'{e}cnicas de aprendizaje autom\'{a}tico empleadas}
-  \item{Cobertura y validez de la experimentaci\'{o}n}
-  \item{Claridad y relevancia de los resultados computacionales}    
-  \item{Calidad de visualizaci\'{o}n cient\'{\i}fica}
-  \item{Calidad de redacci\'{o}n cient\'{\i}fica}
-  \end{enumerate}
-  con la escala:
-  \begin{description}[itemsep=0em]
-  \item[3]{= cumple con lo que se esperaba}
-  \item[2]{= d\'{e}bil en alcance y/o calidad}
-  \item[1]{= d\'{e}bil en ambos alcance y calidad}
-  \item[0]{= inadecuado en alzance y calidad}
-  \end{description}
+\section{Evaluaci\'{o}n integral de procesos y productos:}
 
-  No habr\'{a} examen.
+Las tareas son individuales; se recomienda estudiar juntos y discutir
+las soluciones, pero no se tolera ning\'{u}n tipo de plagio en
+absoluto, ni de otros estudiantes ni de la red ni de libros --- toda
+referencia bibliogr\'{a}fica tiene que ser apropiadamente citada. La
+entrega se realiza por un repositorio en GitHub que debe reflejar
+todas las fases del trabajo en su documento correspondiente.  No
+habr\'{a} examen.
 
-  Ponderaci\'{o}n espec\'{\i}fica:
+Son 17 tareas (A1--A17) que reportan avances semanales de aplicaci\'{o}n
+de la lectura de la semana para el proyecto del estudiante,
+otorgando por m\'{a}ximo 5 puntos por tarea:
+\input{escala05.tex}
+El proyecto final (A18) otorga un m\'{a}ximo de 15 puntos, evaluados en los
+siguientes rubros
+\input{rubros.tex}
+con la escala
+\input{escala03.tex}
 
-  \scalebox{0.85}{
-    \begin{tabular}{|c|cccccccccccccccccc|c|}
-      \hline
-      
-      \rotatebox{90}{\cellcolor{tableheader}{\bf Actividad\phantom{xx}}} & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 & A9 & A10 &
-                                                                                                                              A11
-      & A12 & A13 & A14 & A15 & A16 & A17 & A18 & {\bf Total}
-      \\
-      \hline
-      \rotatebox{90}{\cellcolor{tableheader}{\bf Ponderaci\'{o}n\phantom{xx}}}
-                                                                         & 5\% & 5\% & 5\% &
-                                                                                             5\% &
-                                                                                                   5\% & 5\% & 5\% & 5\%
-                                                                                                                 & 5\%
-                                                                                                                      & 5\%
-                                                                                                                            & 5\%
-      & 5\% 
-            & 5\% & 5\% & 5\% & 5\% & 5\% & 15\% & 100\%		
-      \\ \hline
-    \end{tabular}}
-  
-  \newpage
+Ponderaci\'{o}n espec\'{\i}fica:
+
+\input{act18.tex}
+
+\newpage
 
 \section{Producto integrador de aprendizaje de la unidad:}
 \subsection{Producto integrador de Aprendizaje:} Portafolio en un repositorio digital p\'{u}blico.
@@ -227,22 +182,23 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
 \subsection{Fuentes de apoyo y consulta}
 \subsubsection{B\'{a}sicas}
 
- \begin{itemize}[itemsep=0em]
-   
- \item{Papadimitriou, Christos H. {\em Computa;onal complexity}. John
-     Wiley and Sons Ltd., 2003.}
+\begin{itemize}[itemsep=0em]
+  
+\item{C.H.\ {\sc Papadimitriou}:. {\em Computa;onal complexity}. John
+    Wiley and Sons Ltd., 2003.}
+  
+\item{S.\ {\sc Arora} \& B.\ {\sc Boaz}: {\em Computa;onal complexity:
+      a modern approach}. Cambridge University Press, 2009.}
+  
+\item{M.R.\ {\sc Garey} \& D.S.\ {\sc Johnson}: {\em Computers and
+      intractability}. Vol. 29. New York: Freeman, 2002.}
+  
+\end{itemize}
 
- \item{Arora, Sanjeev, and Boaz Barak. {\em Computa;onal complexity:
-       a modern approach}. Cambridge University Press, 2009.}
-
- \item{Garey, Michael R., and David S. Johnson. {\em Computers and intractability}. Vol. 29. New York: Freeman, 2002.}
-
- \end{itemize}
- 
 \subsubsection{Complementarias}
 
 Art\'{\i}culos cient\'{\i}ficos especializados.
-
+  
 \label{final} % last page
 \include{autoriza}
 \include{close}

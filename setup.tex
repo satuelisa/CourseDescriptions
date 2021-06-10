@@ -33,16 +33,11 @@ minimum width=2em, execute at begin node={\begin{varwidth}{14em}},
 \definecolor{headerframe}{RGB}{177,178,177} % #b1b2b1
 \definecolor{headercontent}{RGB}{239,239,239} % #efefef
 \definecolor{tableheader}{RGB}{185,208,238}% #b9d0ee
-\tcbset{mystyle/.style={
-  breakable,
-  enhanced,
-  roundcorner = 30pt,
-  outer arc = 4pt,
-  arc = 4pt,
+\tcbset{
+  arc = 3mm,
   colframe = headerframe,
   colback = headercontent,
   fonttitle=\sffamily
-  }
 }
 \usepackage{amssymb}
 \newcommand{\yes}{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{$\times$}}}
@@ -64,3 +59,13 @@ minimum width=2em, execute at begin node={\begin{varwidth}{14em}},
 \newcommand{\seys}{Sistemas estoc\'{a}sticos y simulaci\'{o}n}
 \newcommand{\mado}{M\'{e}todos avanzados de optimizaci\'{o}n}
 \newcommand{\odsi}{Optimizaci\'{o}n de sistemas industriales}
+
+% AREAS CURRICULARES
+\newcommand{\fb}{formaci\'{o}n b\'{a}sica} % maestria
+\newcommand{\fa}{formaci\'{o}n avanzada} % maestria
+\newcommand{\fr}{formaci\'{o}n} % doctorado
+\renewcommand{\div}{divulgaci\'{o}n}
+\newcommand{\inv}{investigaci\'{o}n}
+\renewcommand{\pi}{producto integrador}
+\newcommand{\da}{de aplicaci\'{o}n}
+\renewcommand{\le}{libre elecci\'{o}n}
