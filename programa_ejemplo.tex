@@ -3,43 +3,54 @@
 \include{profes}
 \begin{document}
 \include{rev}
-\input{header.tex}
+\input{headerDoc.tex} % o headerMs.tex si es maestria
 \section{Datos de Identificaci\'{o}n de la Unidad de Aprendizaje:}
-\subsection{Nombre:} \fbox{Aprendizaje autom\'{a}tico}
-\subsection{Frecuencia semanal:} horas de trabajo presencial \fbox{4}
-\subsection{Horas de trabajo extra aula por semana:} \fbox{2}
+\subsection{Nombre:} \fbox{Poner nombre de la unidad}
+\subsection{Frecuencia semanal:} horas de trabajo presencial
+\fbox{4} % sacar den plan de estudios el valor
+\subsection{Horas de trabajo extra aula por semana:} \fbox{2} % sacar den plan de estudios el valor
 \subsection{Modalidad:} \yes~Escolarizada \no~No escolarizada \no~Mixto
 \subsection{Per\'{\i}odo acad\'{e}mico:} \yes~Semestral
 \no~Tetramestral \no~Modular
-\subsection{LGAC:} \underline{Sistemas estoc\'{a}sticos y simulaci\'{o}n}
-\subsection{Ubicaci\'{o}n semestral:} \underline{1 al 8}
-\subsection{\'{A}rea curricular:} \underline{Formaci\'{o}n, de libre elecci\'{o}n}
-\subsection{Cr\'{e}ditos:} \underline{4}
-\subsection{Requisito:} \underline{Ninguno}
+
+% Verificar den plan de estudios el LGAC:
+%
+% \seys = Sistemas estoc. y simul.
+% \mado = M. avanzados de optim.
+% \odsi = Optimi. de sistemas industriales
+%
+% NO PONER LGAC de los CA, estos son del PROGRAMA y no los podemoe
+% editar asi no mas
+
+\subsection{LGAC:} \underline{\seys}
+
+\subsection{Ubicaci\'{o}n semestral:} \underline{1 al 8} % sacar den plan de estudios el valor
+\subsection{\'{A}rea curricular:} \underline{Formaci\'{o}n, de libre
+  elecci\'{o}n} % sacar den plan de estudios el valor
+\subsection{Cr\'{e}ditos:} \underline{4} % sacar den plan de estudios el valor
+\subsection{Requisito:} \underline{Ninguno} % sacar den plan de estudios el valor
 \subsection{Fecha de elaboraci\'{o}n:} \underline{20/01/2010}
-\subsection{Fecha de la \'{u}ltima actualizaci\'{o}n:} \underline{17/10/2020}
+\subsection{Fecha de la \'{u}ltima actualizaci\'{o}n:} \underline{06/09/2021}
 \subsection{Responsable(s) del dise\~{n}o:}
 \begin{itemize}[label={}]
-\item \underline{\narturo~\arturo}
-\item \underline{\nelisa~\elisa}
+\item \underline{\narturo~\arturo} % sacar den plan de estudios el valor
+\item \underline{\nelisa~\elisa} % este eres tu
 \end{itemize}
 \newpage
 \section{Presentaci\'{o}n:}
 
-La teor\'{\i}a del aprendizaje autom\'{a}tico o aprendizaje de m\'{a}quinas (del
-ingl\'{e}s, {\em machine learning}) es el subcampo de las ciencias de la
-computaci\'{o}n y una rama de la inteligencia artificial cuyo objetivo es
-desarrollar t\'{e}cnicas que permitan a las computadoras aprender.
+Redactar
 
 \section{Prop\'{o}sito(s):}
 
-Crear programas capaces de generalizar comportamientos a partir de una
-informaci\'{o}n suministrada en forma de ejemplos.
+Suele venir en el plan de estudios
 
 \section{Competencias del perfil de egreso:}
 \subsection{Competencias del perfil de egreso}
 
-\input{p1.tex}
+% checar cuales vienen en el plan de estudios
+
+\input{p1d.tex} % p1m.tex si es de maestria (difiere la P1)
 
 \input{p2.tex}
   
@@ -48,7 +59,8 @@ informaci\'{o}n suministrada en forma de ejemplos.
 
   La unidad se vincula con las siguientes competencias generales:
 
-  \input{gcomptablestart.tex}
+% checar cuales vienen en el plan de estudios  
+  \input{comp_gen.tex}
   \input{c2.tex} & Tareas \\ \hline
   \input{c3.tex} & Tareas \\ \hline
   \input{c5.tex} & Tareas \\ \hline
@@ -62,40 +74,24 @@ informaci\'{o}n suministrada en forma de ejemplos.
 
   La unidad se vincula con las siguientes competencias espec\'{\i}ficas:
 
-  \input{ecomptablestart.tex}
+  \input{start_bas_aut.tex} % ini_bas para I&II, bas_aut para II&III,
+                            % auut_est para III&IV (cuidar las & para
+                            % llenar cada columna)
   \input{e1.tex}
-  & & & Resuelve problemas de libro de texto en el \'{a}rea
-        de ... con bases cient\'{\i}ficas.
+  & & &
+  \input{resuelve.tex} % checar cuales vienen en el plan de estudios
   &
     Tareas.
+    &
+  \input{encuentra.tex} % checar cuales vienen en el plan de estudios
   &
-    Encuentra
-    soluciones
-    para
-    la
-    consecuci\'{o}n
-    de
-    objetivos
-    establecidos
-    en
-    un
-    sistema
-    dado,
-    revisando
-    literatura
-    cient\'{\i}fica
-    de
-    frontera.
-  &
-    Tareas.
-  &&  \\ \hline
-  
-\end{tabular}
+  Tareas.
+\input{end_bas_aut.tex}
 
 \section{Representaci\'{o}n gr\'{a}fica:}
 
-\begin{tikzpicture}[scale=1, auto]
-  \matrix[row sep=1cm, column sep=7mm]{
+% modificar los textos y las conexiones acorde a la unidad
+\input{startdiagram}
       & 
       \node[elem] (ide) {Identificar un problema de inter\'{e}s que se
         busca resolver};
@@ -107,7 +103,7 @@ informaci\'{o}n suministrada en forma de ejemplos.
       \node[elem] (her) {Revisar herramientas computacionales
         existentes para implementar el m\'{e}todo};
       \\
-      \node[elem] (for) {Formular hip\'{o}tesis parala validaci\'{o}n del
+      \node[elem] (for) {Formular hip\'{o}tesis para la validaci\'{o}n del
         modelo propuesto};
       &
       \node[elem] (imp) {Implementar el m\'{e}todo con las herramientas seleccionadas};
@@ -143,39 +139,22 @@ informaci\'{o}n suministrada en forma de ejemplos.
     \draw [line] (ana) -- (doc);
     \draw [line] (apl) -- (doc);
     \draw [line] (doc) -- (exp);
-  \end{tikzpicture}
+\input{enddiagram.tex}
 
 \newpage
 \section{Estructuraci\'{o}n en cap\'{\i}tulos, etapas o fases de la unidad de
   aprendizaje:}
 \subsection{Desarrollo de las fases de la Unidad de Aprendizaje:}
 
-Se cubren los principios te\'{o}ricos del aprendizaje
-autom\'{a}tico. Desarrollar habilidades en la resoluci\'{o}n en casos
-pr\'{a}cticos concretos. Se necesita contar con un buen entendimiento de varios los conceptos
-matem\'{a}ticos, especialmente de matem\'{a}ticas discretas y probabilidad, o
-en el caso contrario, estar preparado a estudiarlos seg\'{u}n
-necesidad. Tambi\'{e}n se necesita conocimiento de programaci\'{o}n.
-La sesiones son de cuatro horas cada una y son veinte semanas en total.
+Se cubren los principios te\'{o}ricos de ...
+Se busca esarrollar habilidades en la resoluci\'{o}n en
+casos pr\'{a}cticos concretos.
+
+La sesiones son de cuatro horas cada una y son veinte
+semanas en total.
 \begin{enumerate}[itemsep=-3pt]
 \item{Introducci\'{o}n; selecci\'{o}n de temas de proyecto}
-\item{Aprendizaje supervisado}
-\item{Regresi\'{o}n lineal}
-\item{Clasificaci\'{o}n lineal}
-\item{Expansi\'{o}n y regularizaci\'{o}n}
-\item{Suavizaci\'{o}n con n\'{u}cleos}
-\item{Evaluaci\'{o}n y selecci\'{o}n de modelos}
-\item{Inferencia y promediaci\'{o}n}
-\item{Modelos aditivos y \'{a}rboles}
-\item{Impulso y \'{a}rboles aditivos}
-\item{Redes neuronales}
-\item{M\'{a}quinas de soporte vectorial}
-\item{Vecinos m\'{a}s cercanos}
-\item{Aprendizaje no supervisado}
-\item{B\'{o}sques aleatorios}
-\item{Aprendizaje colectivo}
-\item{Modelos gr\'{a}ficos no dirigidos}
-\item{Problemas de alta dimensionalidad}
+\item{...}
 \item{Presentaciones de proyectos}
 \item{Revisi\'{o}n de portafolios de evidencia}
 \end{enumerate}
@@ -183,20 +162,14 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
 {\em Elementos de competencia:}
 
 \input{elemtablestart.tex}
-  Reporte escrito y/ c\'{o}digo de la implementaci\'{o}n de un algoritmo de
-  aprendizaje autom\'{a}tico.
-  & Calidad de la redacci\'{o}n cient\'{\i}fica del reporte; 
-    precisi\'{o}n del algoritmo propuesto;
-    eficiencia de la implementaci\'{o}n del algoritmo;
-    cobertura de la experimentaci\'{o}n.
-  & Experimentaci\'{o}n con ejemplos; lectura de material de apoyo;
-    modificaci\'{o}n de ejemplos; dise\~{n}o y ejecuci\'{o}n de experimentos;
-    an\'{a}lisis y reportaje de resultados obtenidos.
+  Reporte escrito y/ ... % poner lo que corresponde
+  & Calidad de la redacci\'{o}n cient\'{\i}fica del reporte; ... % poner lo que corresponde
+
+  & Lectura de material de apoyo; ... % poner lo que corresponde
   &
-    M\'{e}todos diversos de aprendizaje autom\'{a}tico
-  & Material en la p\'{a}gina web de la unidad y la literatura citada;
-    lenguaje Python o similar; paquete {\LaTeX} para redacci\'{o}n cient\'{\i}fica;
-    repositorios de GitHub. \\ \hline
+    M\'{e}todos diversos de ... % poner lo que corresponde
+  & La literatura citada; ... % poner lo que corresponde
+ \\ \hline
   
   \end{tabular}
 
@@ -207,14 +180,10 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
   Las tareas son individuales; se recomienda estudiar juntos y
   discutir las soluciones, pero no se tolera ning\'{u}n tipo de plagio en
   absoluto, ni de otros estudiantes ni de la red ni de libros --- toda
-  referencia bibliogr\'{a}fica tiene que ser apropiadamente citada. La
-  entrega se realiza por un repositorio en GitHub que debe reflejar
-  todas las fases del trabajo en su log correspondiente. El alumno
-  selecciona su lenguaje de programaci\'{o}n para cada tarea.
+  referencia bibliogr\'{a}fica tiene que ser apropiadamente citada.
 
-  Son 17 tareas (A1--A17) que reportan avances semanales de aplicaci\'{o}n
-  de la lectura de la semana para el proyecto del estudiante,
-  otorgando por m\'{a}ximo 5 puntos por tarea:
+  % modificar a gusto
+  Son ... tareas (A1--...) ... otorgando por m\'{a}ximo ... puntos por tarea:
   \begin{description}[itemsep=0em]
   \item[NP]{= tarea omitida}
   \item[5]{= excede lo que se esperaba}
@@ -224,12 +193,12 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
   \item[1]{= sin contribuciones o m\'{e}ritos aunque fue entregada}
   \item[0]{= completamente inadecuado en alzance y calidad}
   \end{description}
-  El proyecto final (A18) otorga un m\'{a}ximo de 15 puntos, evaluados en los
+  El proyecto final (A...) otorga un m\'{a}ximo de ... puntos, evaluados en los
   siguientes rubros
   \begin{enumerate}[itemsep=0em]
-  \item{Variedad de t\'{e}cnicas de aprendizaje autom\'{a}tico empleadas}
+  \item{Variedad de t\'{e}cnicas de empleadas}
   \item{Cobertura y validez de la experimentaci\'{o}n}
-  \item{Claridad y relevancia de los resultados computacionales}    
+  \item{Claridad y relevancia de los resultados}    
   \item{Calidad de visualizaci\'{o}n cient\'{\i}fica}
   \item{Calidad de redacci\'{o}n cient\'{\i}fica}
   \end{enumerate}
@@ -242,8 +211,7 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
   \end{description}
 
 
-  No habr\'{a} examen.
-
+  No habr\'{a} examen. % quitar si pones examen
 
   
   Ponderaci\'{o}n espec\'{\i}fica:
@@ -272,7 +240,8 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
   \newpage
 
 \section{Producto integrador de aprendizaje de la unidad:}
-\subsection{Producto integrador de Aprendizaje:} Portafolio en un repositorio digital p\'{u}blico.
+\subsection{Producto integrador de Aprendizaje:} Portafolio en un
+repositorio digital p\'{u}blico. % modificar al gusto
 
 \section{Fuentes de apoyo y consulta:}
 \subsection{Fuentes de apoyo y consulta}
@@ -280,19 +249,11 @@ La sesiones son de cuatro horas cada una y son veinte semanas en total.
 
  \begin{itemize}[itemsep=0em]
 
- \item{Hastie, Trevor, Tibshirani, Robert. \& Friedman, Jerome: {\em
+% mencionar libros principales
+   
+ \item{T. {\sc Hastie}, R.\ {\sc Tibshirani}. \& J.\ {\sc Friedman}: {\em
        The Elements of Statistical Learning: Data Mining, Inference,
        and Prediction}. Springer; 2nd edition, 2016.}
-
-   \item{Michalski, Ryszard S., Jaime G. Carbonell \& Tom M. Mitchell,
-   eds. {\em Machine learning: An artificial intelligence
-     approach}. Springer Science \& Business Media, 2013.}
-
- \item{Witten, Ian H., et al. {\em Data Mining: Practical machine learning
-     tools and techniques}. Morgan Kaufmann, 2016.}
-
- \item{Marsland, Stephen. {\em Machine learning: an algorithmic
-       perspective}. CRC press, 2015.}
    
 \end{itemize}
 

@@ -20,6 +20,8 @@ cp programa_ejemplo.tex 667-Doc-SeminarioDoctoral5.tex
 cp programa_ejemplo.tex 670-Doc-SeminarioDoctoral6.tex
 cp programa_ejemplo.tex 673-Doc-SeminarioDoctoral7.tex
 cp programa_ejemplo.tex 676-Doc-SeminarioDoctoral8.tex
+cp programa_ejemplo.tex 708-Ms-SimulacionDeSistemas.tex
+cp programa_ejemplo.tex 683-Doc-SimulacionDeSistemas.tex
 cp programa_ejemplo.tex 698-Ms-Tesis1.tex             
 cp programa_ejemplo.tex 701-Ms-Tesis2.tex
 cp programa_ejemplo.tex 652-Doc-Tesis1.tex

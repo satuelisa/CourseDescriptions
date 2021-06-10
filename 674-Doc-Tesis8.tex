@@ -1,60 +1,9 @@
 \documentclass[10 pt]{article}
-\usepackage{wallpaper}
-\usepackage[spanish, mexico]{babel}  
-\usepackage{color}
-\usepackage[T1]{fontenc}
-\usepackage[letterpaper,left=2cm,right=2cm,top=4cm,bottom=2cm]{geometry}
-\usepackage{graphicx}
-\usepackage[latin1]{inputenc}
-\usepackage{hyperref}
-\usepackage{graphics}
-\usepackage{varwidth}
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows}
-\tikzstyle{elem} = [draw, rectangle, thick, minimum height=2em,
-minimum width=2em, execute at begin node={\begin{varwidth}{14em}},
-   execute at end node={\end{varwidth}}]
-\tikzstyle{line} = [draw, thick, -stealth, shorten >=0pt]
-\usepackage{multicol}
-\usepackage{wrapfig}
-\usepackage{fancyhdr}
-\usepackage{enumitem}
-\renewcommand*\familydefault{\sfdefault} 
-\renewcommand{\thesection}{\Roman{section}} 
-\usepackage{remreset}
-\makeatletter
-\@removefromreset{subsection}{section}
-\renewcommand\thesubsection{\arabic{subsection}}
-\makeatother
-\usepackage{titlesec}
-\ULCornerWallPaper{1}{logos.pdf}
-\setlength{\parindent}{1em}
-\setlength{\parskip}{2pt}
-\usepackage{tcolorbox}
-\usepackage{amssymb}
-\newcommand{\yes}{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{$\times$}}}
-\newcommand{\no}{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{\phantom{$\times$}}}}
-\usepackage{enumitem}
+\include{setup}
 \include{profes}
 
 \begin{document}
-\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{4pt}{}
-\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection.}{4pt}{}
-
-\begin{tcolorbox}
-  \begin{center}
-    UNIVERSIDAD AUT\'{O}NOMA DE NUEVO LE\'{O}N
-
-    \medskip
-
-    {\bf PE} \underline{Doctorado en Ingenier\'{\i}a de Sistemas}
-
-    \medskip
-
-    \underline{PROGRAMA ANAL\'{I}TICO}
-  \end{center}
-\end{tcolorbox}
-
+\input{header.tex}
 \section{Datos de Identificaci\'{o}n de la Unidad de Aprendizaje:}
 \subsection{Nombre:} \fbox{Aprendizaje autom\'{a}tico}
 \subsection{Frecuencia semanal:} horas de trabajo presencial \fbox{4}
