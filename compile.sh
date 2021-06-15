@@ -1,5 +1,22 @@
+ok=0 # windows
+if [ "$(uname)" == "Darwin" ]; then # page count
+    ok=1
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    ok=1
+fi
 for file in `ls -1 ???-*-*.tex`;
 do
-    pdflatex -interaction=batchmode $file;
-    pdflatex -interaction=batchmode $file; # twice for the pageref
+    pdflatex -interaction=batchmode $file >2 /dev/null;
+    code=$?
+    if [ "$code" -ne "0" ]; then # complain
+	echo "ERROR"
+	echo "pdflatex failed for" $file
+    else
+	pdflatex -interaction=batchmode $file >2 /dev/null; # twice for the pageref
+	if [ "$ok" -eq "1" ]; then # not windows
+	    program=`basename $file .tex`
+	    echo $file
+	    pdfinfo $program.pdf | grep Pages
+	fi
+    fi
 done
