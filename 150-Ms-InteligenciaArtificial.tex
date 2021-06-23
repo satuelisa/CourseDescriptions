@@ -75,54 +75,81 @@ La unidad se vincula con las siguientes competencias espec\'{\i}ficas:
 \section{Representaci\'{o}n gr\'{a}fica:}
 
 \input{startdiagram.tex}
-& 
+&   
 \node[elem] (ide) {Identificar un problema de inter\'{e}s que se
   busca resolver};
-\\
-\node[elem] (lit) {Identificar y revisar literatura cient\'{\i}fica relacionada relevante};
-&
-\node[elem] (des) {Desarrollar un m\'{e}todo de inteligencia
-  artificial para el problema seleccionado};
 &
 \node[elem] (her) {Revisar herramientas computacionales
   existentes para implementar el m\'{e}todo};
 \\
-\node[elem] (for) {Formular hip\'{o}tesis para la validaci\'{o}n del
-  modelo propuesto};
-&
-\node[elem] (imp) {Implementar el m\'{e}todo con las herramientas seleccionadas};
+ \node[elem] (lit) {Identificar y revisar literatura cient\'{\i}fica relacionada relevante};
+& 
+\node[elem] (des) {Desarrollar un m\'{e}todo de inteligencia
+  artificial para el problema seleccionado}; 
 &
 \node[elem] (sel) {Seleccionar las herramientas seg\'{u}n las caracter\'{\i}sticas del m\'{e}todo};
 \\
-& \node[elem] (dis) {Dise\~{n}ar y realizar experimentos};
+\node[elem] (for) {Formular hip\'{o}tesis para la validaci\'{o}n del
+  modelo propuesto};
+&
+\node[elem] (dis) {Dise\~{n}ar y realizar experimentos};
+&
+\node[elem] (imp) {Implementar el m\'{e}todo con las herramientas seleccionadas};
 \\
-\node[elem] (ana) {Analizar los resultados de los experimentos y contrastarlas con las hip\'{o}tesis};
-& & 
-\node[elem] (doc) {Documentar el proceso conforme al estilo de
-  redacci\'{o}n cient\'{\i}fica};
-\\
-& 
 \node[elem] (apl) {Aplicar visualizaci\'{o}n cient\'{\i}fica a los resultados};
 & 
+\node[elem] (ana) {Analizar los resultados de los experimentos y contrastarlas con las hip\'{o}tesis};
+\\
+&  
+\node[elem] (doc) {Documentar el proceso conforme al estilo de
+  redacci\'{o}n cient\'{\i}fica};
+&
 \node[elem] (exp) {Discutir entre pares los m\'{e}todos y los
   resultados obtenidos};
-\\
-};
-\draw [line] (ide) -- (lit);
-\draw [line] (ide) -- (des);
-\draw [line] (ide) -- (her);
-\draw [line] (lit) -- (des);
-\draw [line] (lit) -- (for);
-\draw [line] (des) -- (imp);
-\draw [line] (her) -- (sel);
-\draw [line] (sel) -- (imp);
-\draw [line] (for) -- (dis);
-\draw [line] (imp) -- (dis);
-\draw [line] (dis) -- (ana);
-\draw [line] (dis) -- (apl);
-\draw [line] (ana) -- (doc);
-\draw [line] (apl) -- (doc);
-\draw [line] (doc) -- (exp);
+\\ % evidencia
+\node[evid](tareas) {Tareas};
+&
+&
+\node[evid](proyecto) {Proyecto};
+\\ % competencias generales
+\node[comp](c2) {C2};
+& &
+\node[comp](c3) {C3};
+& 
+\node[comp](c5) {C5};
+\\ % competencias especificas
+&
+\node[comp](e2ii) {E2 Nivel II B\'{a}sico};
+& &
+\node[comp](e2iii) {E2 Nivel III Aut\'{o}nomo};
+\\};
+  \draw [line] (tareas) -- (e2ii);
+  \draw [line] (proyecto) -- (e2ii);
+  \draw [line] (tareas) -- (e2iii);
+  \draw [line] (proyecto) -- (e2iii);
+  \draw [line] (tareas) -- (c2);
+  \draw [line] (tareas) -- (c3);
+  \draw [line] (tareas) -- (c5);
+  \draw [line] (proyecto) -- (c5);
+  \draw [line] (ide) -- (lit);
+  \draw [line] (ide) -- (des);
+  \draw [line] (ide) -- (her);
+  \draw [line] (lit) -- (des);
+  \draw [line] (lit) -- (for);
+  \draw [line] (des) -- (imp);
+  \draw [line] (her) -- (sel);
+  \draw [line] (sel) -- (imp);
+  \draw [line] (for) -- (dis);
+  \draw [line] (imp) -- (dis);
+  \draw [line] (dis) -- (ana);
+  \draw [line] (dis) -- (apl);
+  \draw [line] (ana) -- (doc);
+  \draw [line] (apl) -- (doc);
+  \draw [line] (doc) -- (exp);
+  \draw [line] (exp) -- (proyecto);
+  \draw [line] (doc) -- (proyecto);
+  \draw [line] (doc) -- (tareas);
+  \draw [line] (apl) -- (tareas);
 \input{enddiagram}
 
 \newpage
