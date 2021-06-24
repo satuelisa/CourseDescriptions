@@ -4,7 +4,7 @@ if [ "$(uname)" == "Darwin" ]; then # page count
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     ok=1
 fi
-for file in `ls -1 ???-*-*.tex`;
+for file in `ls -1 [[:digit:]]??-*-*.tex`;
 do
     pdflatex -interaction=batchmode $file >2 /dev/null;
     code=$?

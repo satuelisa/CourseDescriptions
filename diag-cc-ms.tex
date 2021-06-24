@@ -1,0 +1,66 @@
+\section{Representaci\'{o}n gr\'{a}fica:}
+
+\input{startdiagram.tex}
+\matrix[row sep=7mm, column sep=1mm] at (0, 0) {
+    \node[header](pde) {Perfil de egreso}; \\
+    \node[perf](p1){P1}; \\
+    \node[perf](p2){P2}; \\
+    \node[perf](p3){P3}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (1.5, 0) {
+    \node[header](gra) {Competencias generales}; \\
+    \node[comp](c2) {C2}; \\
+    \node[comp](c3) {C3}; \\
+    \node[comp](c5) {C5}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (4, 0) {
+    \node[header](ces) {Competencia espec\'{\i}fica}; \\
+    \node[esp](e2ii) {E2 Nivel II}; \\
+    \node[esp](e2iii) {E2 Nivel III}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (6, 0){
+    \node[header](uds) {Unidades tem\'{a}ticas}; \\
+    \node[unidad](ut1) {UT 1}; \\
+    \node[unidad](ut2) {UT 2}; \\
+    \node[unidad](ut3) {UT 3}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (9, 0){
+    \node[header](ele) {Elementos}; \\
+    \node[elem](e1) {Conocer los conceptos de modelos computacionales}; \\
+    \node[elem](e2) {Describir las clases de complejidad m\'{a}s t\'{i}picas}; \\
+    \node[elem](e3) {Estimar qu\'{e} tan bien se puede aproximar un problema}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (13, 0){
+    \node[header](hev) {Evidencias}; \\
+    \node[evid](tar) {Tareas: reporte y c\'{o}digo}; \\
+    \node[evid](pro) {Proyecto: reporte y c\'{o}digo}; \\
+  };
+  \draw [line] (p1) -- (c2);
+  \draw [line] (p1) -- (c3);
+  \draw [line] (p1) -- (c5);
+  \draw [line] (p2) -- (c2);
+  \draw [line] (p2) -- (c3);
+  \draw [line] (p2) -- (c5);
+  \draw [line] (p3) -- (c2);
+  \draw [line] (p3) -- (c5);
+  \draw [line] (c2) -- (e2ii);
+  \draw [line] (c3) -- (e2ii);
+  \draw [line] (c5) -- (e2ii);
+  \draw [line] (c3) -- (e2iii);
+  \draw [line] (c5) -- (e2iii);
+  \draw [line] (e2ii) -- (ut1);
+  \draw [line] (e2ii) -- (ut2);
+  \draw [line] (e2ii) -- (ut3);
+  \draw [line] (e2iii) -- (ut1);
+  \draw [line] (e2iii) -- (ut2);
+  \draw [line] (e2iii) -- (ut3);
+  \draw [line] (ut1) -- (e1);
+  \draw [line] (ut2) -- (e2);
+  \draw [line] (ut3) -- (e3);
+  \draw [line] (e1) --(tar);
+  \draw [line] (e2) --(tar);
+  \draw [line] (e3) --(tar);
+  \draw [line] (e1) --(pro);
+  \draw [line] (e2) --(pro);
+  \draw [line] (e3) --(pro);
+\input{enddiagram}

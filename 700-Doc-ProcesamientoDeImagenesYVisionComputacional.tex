@@ -24,31 +24,13 @@
 \item \underline{\nelisa~\elisa}
 \end{itemize}
 \newpage
-\section{Presentaci\'{o}n:}
 
-La {\em visi\'{o}n computacional} refiere al procesamiento
-automatizado de im\'{a}genes para extrar informaci\'{o}n para sistemas
-de toma de decisiones.  En procesamiento de nivel bajo, se trabaja
-directamente con las im\'{a}genes para extraer propiedades como
-orillas, gradiente, profundidad, textura, color, etc. Procesamiento de
-nivel intermedio consiste generalmente en agrupar los elementos
-obtenidos en el nivel bajo, para obtener, por ejemplo, contornos y
-regiones, generalmente con el prop\'{o}sito de
-segmentaci\'{o}n. Procesamiento de alto nivel, por \'{u}ltimo,
-consiste en la interpretaci\'{o}n de los entes obtenidos en los
-niveles inferiores y se utilizan modelos y/o conocimiento {\em a
-  priori} del dominio
-
-\section{Prop\'{o}sito(s):}
-
-Introducci\'{o}n a la visi\'{o}n computacional que trata de emular esta
-capacidad en las computadoras, de forma que, mediante la
-interpretaci\'{o}n de las im\'{a}genes adquiridas, por ejemplo, con una
-c\'{a}mara, se puedan reconocer los diversos objetos en el ambiente y su
-posici\'{o}n en el espacio.
+\input{pp-cv.tex}
 
 \section{Competencias del perfil de egreso:}
 \subsection{Competencias del perfil de egreso}
+
+\quad
 
 \input{p1d.tex}
 
@@ -57,7 +39,7 @@ posici\'{o}n en el espacio.
 \subsection{Competencias generales a que se vincula la Unidad de
     Aprendizaje:}
 
-  La unidad se vincula con las siguientes competencias generales:
+\quad
 
   \input{comp_gen.tex}
   \input{c2.tex} & Tareas \\ \hline
@@ -71,7 +53,7 @@ posici\'{o}n en el espacio.
     
 \subsection{Competencias espec\'{\i}ficas y nivel de dominio a que se vincula la unidad de aprendizaje:}
 
-La unidad se vincula con las siguientes competencias espec\'{\i}ficas:
+\quad
 
 \input{start_bas_aut.tex}
 \input{e2.tex}
@@ -82,179 +64,6 @@ La unidad se vincula con las siguientes competencias espec\'{\i}ficas:
 & Tareas, proyecto.
 \input{end_bas_aut.tex}
 
-\section{Representaci\'{o}n gr\'{a}fica:}
+\input{diag-cv-doc.tex}
 
-\input{startdiagram.tex}
-& 
-\node[elem] (ide) {Identificar un problema de inter\'{e}s que se
-  busca resolver};
-&
-\node[elem] (inp) {Obtener im\'{a}genes de entrada};
-\\
-\node[elem] (lit) {Identificar y revisar literatura cient\'{\i}fica relacionada relevante};
-&
-\node[elem] (des) {Desarrollar un m\'{e}todo de visi\'{o}n computacional};
-&
-\node[elem] (her) {Revisar herramientas computacionales
-  existentes para implementar el m\'{e}todo};
-\\
-\node[elem] (for) {Formular hip\'{o}tesis para la validaci\'{o}n del
-  modelo propuesto};
-&
-\node[elem] (imp) {Implementar el m\'{e}todo con las herramientas seleccionadas};
-&
-\node[elem] (sel) {Seleccionar las herramientas seg\'{u}n las caracter\'{\i}sticas del m\'{e}todo};
-\\
-& \node[elem] (dis) {Dise\~{n}ar y realizar experimentos};
-\\
-\node[elem] (ana) {Analizar los resultados y contrastarlos con las hip\'{o}tesis};
-& & 
-\node[elem] (doc) {Documentar el proceso conforme al estilo de
-  redacci\'{o}n cient\'{\i}fica};
-\\
-& 
-\node[elem] (apl) {Aplicar visualizaci\'{o}n cient\'{\i}fica a los resultados};
-& 
-\node[elem] (exp) {Discutir entre pares los m\'{e}todos y los
-  resultados obtenidos};
-\\
-};
-\draw [line] (ide) -- (inp);
-\draw [line] (inp) -- (dis);
-\draw [line] (ide) -- (lit);
-\draw [line] (ide) -- (des);
-\draw [line] (ide) -- (her);
-\draw [line] (lit) -- (des);
-\draw [line] (lit) -- (for);
-\draw [line] (des) -- (imp);
-\draw [line] (her) -- (sel);
-\draw [line] (sel) -- (imp);
-\draw [line] (for) -- (dis);
-\draw [line] (imp) -- (dis);
-\draw [line] (dis) -- (ana);
-\draw [line] (dis) -- (apl);
-\draw [line] (ana) -- (doc);
-\draw [line] (apl) -- (doc);
-\draw [line] (doc) -- (exp);
-\input{enddiagram.tex}
-
-\newpage
-\section{Estructuraci\'{o}n en cap\'{\i}tulos, etapas o fases de la unidad de
-  aprendizaje:}
-\subsection{Desarrollo de las fases de la Unidad de Aprendizaje:}
-
-Se cubren los principios te\'{o}ricos de la visi\'{o}n computacional.  Se
-busca desarrollar habilidades en la resoluci\'{o}n en casos
-pr\'{a}cticos concretos. Se necesita contar con un buen entendimiento
-de varios los conceptos matem\'{a}ticos, especialmente de
-matem\'{a}ticas discretas y probabilidad, o en el caso contrario,
-estar preparado a estudiarlos seg\'{u}n necesidad. Tambi\'{e}n se
-necesita conocimiento de programaci\'{o}n.  La sesiones son de cuatro
-horas cada una y son veinte semanas en total.
-\begin{enumerate}[itemsep=-3pt]
-\item{Introducci\'{o}n; selecci\'{o}n de temas de proyecto}
-\item{Representaci\'{o}n de colores}
-\item{Histogramas y umbrales}
-\item{Filtros y m\'{a}scaras}
-\item{An\'{a}lisis de bordes}
-\item{An\'{a}lisis de formas}
-\item{Detecci\'{o}n de l\'{\i}neas}
-\item{Detecci\'{o}n de c\'{\i}rculos}
-\item{Detecci\'{o}n de elipses}
-\item{Detecci\'{o}n de agujeros}
-\item{Detecci\'{o}n de pol\'{\i}gonos y esquinas}
-\item{Formatos de video}
-\item{Detecci\'{o}n de movimiento}
-\item{Reconocimiento de objetos}
-\item{Decomposici\'{o}n de wavelets}
-\item{Reducci\'{o}n de ruido}
-\item{Im\'{a}genes hiperespectarles}
-\item{Procesamiento en tiempo real}
-\item{Presentaciones de proyectos}
-\item{Revisi\'{o}n de portafolios de evidencia}
-\end{enumerate}
-
-{\em Elementos de competencia:}
-
-\input{elemtablestart.tex}
-
-Reporte escrito y c\'{o}digo de la implementaci\'{o}n de un algoritmo de
-visi\'{o}n computacional.
-
-&
-
-Calidad de la redacci\'{o}n cient\'{\i}fica del reporte; precisi\'{o}n
-del m\'{e}todo propuesto; eficiencia de la implementaci\'{o}n del
-m\'{e}todo; cobertura de la experimentaci\'{o}n.
-
-&
-
-Experimentaci\'{o}n con ejemplos; lectura de material de apoyo;
-modificaci\'{o}n de ejemplos; dise\~{n}o y ejecuci\'{o}n de
-experimentos; an\'{a}lisis y reportaje de resultados obtenidos.
-
-&
-
-M\'{e}todos diversos de visi\'{o}n computacional.
-
-&
-
-Material en la p\'{a}gina web de la unidad y la literatura citada;
-lenguaje Python o similar; paquete {\LaTeX} para redacci\'{o}n
-cient\'{\i}fica; repositorios de GitHub. \\ \hline
-
-\end{tabular}
-
-\newpage
-  
-\section{Evaluaci\'{o}n integral de procesos y productos:}
-
-Las tareas son individuales; se recomienda estudiar juntos y discutir
-las soluciones, pero no se tolera ning\'{u}n tipo de plagio en
-absoluto, ni de otros estudiantes ni de la red ni de libros --- toda
-referencia bibliogr\'{a}fica tiene que ser apropiadamente citada. La
-entrega se realiza por un repositorio en GitHub que debe reflejar
-todas las fases del trabajo. El alumno
-selecciona su lenguaje de programaci\'{o}n para cada tarea. No
-habr\'{a} examen.  Son 17 tareas (A1--A17) que reportan avances
-semanales de aplicaci\'{o}n de la lectura de la semana para el
-proyecto del estudiante, otorgando por m\'{a}ximo 5 puntos por tarea:
-
-\input{escala05.tex}
-
-El proyecto final (A18) otorga un m\'{a}ximo de 15 puntos, evaluados en los
-siguientes rubros
-
-\input{rubros.tex}
-
-con la escala:
-
-\input{escala03.tex}
-
-Ponderaci\'{o}n espec\'{\i}fica:
-
-\input{act18.tex}
-\newpage
-
-\section{Producto integrador de aprendizaje de la unidad:}
-\subsection{Producto integrador de Aprendizaje:} Portafolio en un repositorio digital p\'{u}blico.
-
-\section{Fuentes de apoyo y consulta:}
-\subsection{Fuentes de apoyo y consulta}
-\subsubsection{B\'{a}sicas}
-
- \begin{itemize}[itemsep=0em]
-
- \item{E.R.\ {\sc Davies}, {\em Machine Vision: Theory, Algorithms,
-       Practicalities}, Morgan Kaufmann Publishers Inc., San
-     Francisco, CA, USA, 2004. ISBN 0122060938.}
-   
-\end{itemize}
-
-\subsubsection{Complementarias}
-
-Art\'{\i}culos cient\'{\i}ficos especializados.
-
-\label{final} % last page
-\include{autoriza}
-\include{close}
+\input{end-cv.tex}

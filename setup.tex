@@ -49,7 +49,13 @@ minimum width=2em, fill=unidad]
 \@removefromreset{subsection}{section}
 \renewcommand\thesubsection{\arabic{subsection}}
 \makeatother
+\makeatletter
+\@removefromreset{theparagraph}{paragraph}
+\renewcommand\theparagraph{}
+\makeatother
 \usepackage{titlesec}
+\titleformat{\paragraph}[runin]
+{\itshape}{\theparagraph}{1em}{}
 \ULCornerWallPaper{1}{logos.pdf}
 \setlength{\parindent}{1em}
 \setlength{\parskip}{2pt}
@@ -59,6 +65,7 @@ minimum width=2em, fill=unidad]
   colback = headercontent,
   fonttitle=\sffamily
 }
+
 \usepackage{amssymb}
 \newcommand{\yes}{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{$\times$}}}
 \newcommand{\no}{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{\phantom{$\times$}}}}
