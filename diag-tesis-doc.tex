@@ -1,0 +1,72 @@
+\input{startdiagram}
+  \matrix[row sep=15mm, column sep=1mm] at (0, 0) {
+   \node[header](pde) {Perfil de egreso}; \\
+   \node[perf](p3) {P3}; \\
+  };                            
+  \matrix[row sep=15mm, column sep=1mm] at (1.5, 0) {
+    \node[header](gra) {Competencias generales}; \\
+    \node[comp](c7) {C7}; \\
+    \node[comp](c11) {C11}; \\
+    \node[comp](c12) {C12}; \\
+    \node[comp](c13) {C13}; \\
+  };
+  \matrix[row sep=15mm, column sep=1mm] at (4, 0) {
+    \node[header](ces) {Competencia espec\'{\i}fica}; \\
+    \node[esp](e3iii) {E3 Nivel III}; \\
+    \node[esp](e3iv) {E3 Nivel IV}; \\
+  };
+  \matrix[row sep=15mm, column sep=1mm] at (6, 0){
+    \node[header](uds) {Unidades tem\'{a}ticas}; \\
+    \node[unidad](ut1) {UT 1}; \\
+    \node[unidad](ut2) {UT 2}; \\
+    \node[unidad](ut3) {UT 3}; \\
+    \node[unidad](ut4) {UT 4}; \\
+    \node[unidad](ut5) {UT 5}; \\
+  };
+  \matrix[row sep=15mm, column sep=1mm] at (9, 0){
+    \node[header](ele) {Elementos}; \\
+    \node[elem](e1) {Plantear un problema de investigaci\'{o}n}; \\
+    \node[elem](e2) {Contextualizar un problema}; \\
+    \node[elem](e3) {Describir una soluci\'{o}n propuesta}; \\
+    \node[elem](e4) {Evaluar una soluci\'{o}n propuesta}; \\
+    \node[elem](e5) {Organizar un manuscrito de tesis}; \\
+  };
+  \matrix[row sep=15mm, column sep=1mm] at (13, 0){
+    \node[header](hev) {Evidencias}; \\
+    \node[evid](tar) {Bit\'{a}cora semanal}; \\
+    \node[evid](pro) {Manuscrito: avance de tesis}; \\
+  };
+  \draw [line] (p3) -- (c7);
+  \draw [line] (p3) -- (c11);
+  \draw [line] (p3) -- (c12);
+  \draw [line] (p3) -- (c13);
+  \draw [line] (c7) -- (e3iii);
+  \draw [line] (c7) -- (e3iii);
+  \draw [line] (c11) -- (e3iv);
+  \draw [line] (c12) -- (e3iv);
+  \draw [line] (c13) -- (e3iv);
+  \draw [line] (e3iii) -- (ut1);
+  \draw [line] (e3iii) -- (ut2);
+  \draw [line] (e3iii) -- (ut3);
+  \draw [line] (e3iii) -- (ut4);
+  \draw [line] (e3iv) -- (ut1);
+  \draw [line] (e3iv) -- (ut2);
+  \draw [line] (e3iv) -- (ut3);
+  \draw [line] (e3iv) -- (ut4);
+  \draw [line] (e3iv) -- (ut5);       
+  \draw [line] (ut1) -- (e1);
+  \draw [line] (ut2) -- (e2);
+  \draw [line] (ut3) -- (e3);
+  \draw [line] (ut4) -- (e4);
+  \draw [line] (ut5) -- (e5);  
+  \draw [line] (e1) --(tar);
+  \draw [line] (e2) --(tar);
+  \draw [line] (e3) --(tar);
+  \draw [line] (e4) --(tar);
+  \draw [line] (e5) --(tar);
+  \draw [line] (e1) --(pro);
+  \draw [line] (e2) --(pro);
+  \draw [line] (e3) --(pro);
+  \draw [line] (e4) --(pro);
+  \draw [line] (e5) --(pro);  
+\input{enddiagram}

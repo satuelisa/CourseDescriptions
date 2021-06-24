@@ -5,6 +5,7 @@
 \usepackage{fancyhdr} % before geometry
 \usepackage[letterpaper,left=18mm,right=18mm,headheight=5mm,headsep=40mm,top=52mm,bottom=22mm]{geometry}
 \usepackage{graphicx}
+\usepackage{rotating}
 \usepackage[latin1]{inputenc}
 \usepackage{hyperref}
 \usepackage{graphics}
@@ -16,15 +17,26 @@
 \definecolor{headercontent}{RGB}{239,239,239} % #efefef
 \definecolor{tableheader}{RGB}{185,208,238}% #b9d0ee
 \definecolor{evidence}{RGB}{238,208,185}
+\definecolor{perfil}{RGB}{208,238,185}
+\definecolor{unidad}{RGB}{208,185,185} 
 
 \usetikzlibrary{shapes,arrows}
-\tikzstyle{elem} = [draw, rectangle, thick, minimum height=2em,
-minimum width=2em, execute at begin node={\begin{varwidth}{10em}},
-   execute at end node={\end{varwidth}}]
+\tikzstyle{elem} = [scale=0.7, draw, rectangle, thick, minimum height=2em,
+minimum width=2em, execute at begin node={\begin{varwidth}{12em}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{perf} = [draw, rectangle, thick, minimum height=2em,
+minimum width=2em, fill=perfil]
 \tikzstyle{comp} = [draw, rectangle, thick, minimum height=2em,
 minimum width=2em, fill=tableheader]
-\tikzstyle{evid} = [draw, rectangle, thick, minimum height=2em,
+\tikzstyle{esp} = [scale=0.7, draw, rectangle, thick, minimum height=2em,
+minimum width=2em, fill=tableheader]
+\tikzstyle{unidad} = [scale=0.9, draw, rectangle, thick, minimum height=2em,
 minimum width=2em, fill=evidence]
+\tikzstyle{evid} = [scale=0.75, draw, rectangle, thick, minimum height=2em,
+minimum width=2em, fill=unidad]
+\tikzstyle{header} = [scale=0.8, minimum height=2em, minimum width=2em, execute at begin node={\begin{varwidth}{4em}},
+  execute at end node={\end{varwidth}}]
+
 
 \tikzstyle{line} = [draw, thick, -stealth, shorten >=0pt]
 \usepackage{multicol}

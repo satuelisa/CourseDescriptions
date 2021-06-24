@@ -1,0 +1,69 @@
+\matrix[row sep=7mm, column sep=1mm] at (0, 0) {
+    \node[header](pde) {Perfil de egreso}; \\
+    \node[perf](p1){P1}; \\
+    \node[perf](p2){P2}; \\
+    \node[perf](p3){P3}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (1.5, 0) {
+    \node[header](gra) {Competencias generales}; \\
+    \node[comp](c2) {C2}; \\
+    \node[comp](c3) {C3}; \\
+    \node[comp](c5) {C5}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (4, 0) {
+    \node[header](ces) {Competencia espec\'{\i}fica}; \\
+    \node[esp](e2ii) {E2 Nivel II}; \\
+    \node[esp](e2iii) {E2 Nivel III}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (6, 0){
+    \node[header](uds) {Unidades tem\'{a}ticas}; \\
+    \node[unidad](ut1) {UT 1}; \\
+    \node[unidad](ut2) {UT 2}; \\
+    \node[unidad](ut3) {UT 3}; \\
+    \node[unidad](ut4) {UT 4}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (9, 0){
+    \node[header](ele) {Elementos}; \\
+    \node[elem](busq) {Aplicar m\'{e}todos de b\'{u}squeda}; \\
+    \node[elem](plan) {Aplicar planeaci\'{o}n}; \\
+    \node[elem](evol) {Aplicar algoritmos evolutivos}; \\
+    \node[elem](apre) {Aplicar aprendizaje m\'{a}quina}; \\
+  };
+  \matrix[row sep=7mm, column sep=1mm] at (13, 0){
+    \node[header](hev) {Evidencias}; \\
+    \node[evid](tar) {Tareas: reporte y c\'{o}digo}; \\
+    \node[evid](pro) {Proyecto: reporte y c\'{o}digo}; \\
+  };
+  \draw [line] (p1) -- (c2);
+  \draw [line] (p1) -- (c3);
+  \draw [line] (p1) -- (c5);
+  \draw [line] (p2) -- (c2);
+  \draw [line] (p2) -- (c3);
+  \draw [line] (p2) -- (c5);
+  \draw [line] (p3) -- (c2);
+  \draw [line] (p3) -- (c5);
+  \draw [line] (c2) -- (e2ii);
+  \draw [line] (c3) -- (e2ii);
+  \draw [line] (c5) -- (e2ii);
+  \draw [line] (c3) -- (e2iii);
+  \draw [line] (c5) -- (e2iii);
+  \draw [line] (e2ii) -- (ut1);
+  \draw [line] (e2ii) -- (ut2);
+  \draw [line] (e2ii) -- (ut3);
+  \draw [line] (e2ii) -- (ut4);
+  \draw [line] (e2iii) -- (ut1);
+  \draw [line] (e2iii) -- (ut2);
+  \draw [line] (e2iii) -- (ut3);
+  \draw [line] (e2iii) -- (ut4);
+  \draw [line] (ut1) -- (busq);
+  \draw [line] (ut2) -- (plan);
+  \draw [line] (ut3) -- (evol);
+  \draw [line] (ut4) -- (apre);
+  \draw [line] (busq) --(tar);
+  \draw [line] (plan) --(tar);
+  \draw [line] (evol) --(tar);
+  \draw [line] (apre) --(tar);
+  \draw [line] (busq) --(pro);
+  \draw [line] (plan) --(pro);
+  \draw [line] (evol) --(pro);
+  \draw [line] (apre) --(pro);  
