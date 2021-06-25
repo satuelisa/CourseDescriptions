@@ -12,7 +12,7 @@ do
 	echo "ERROR"
 	echo "pdflatex failed for" $file
     else
-	pdflatex -interaction=batchmode $file >2 /dev/null; # twice for the pageref
+	pdflatex -interaction=batchmode $file 2> /dev/null; # twice for the pageref
 	if [ "$ok" -eq "1" ]; then # not windows
 	    program=`basename $file .tex`
 	    echo $file
