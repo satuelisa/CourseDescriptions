@@ -1,14 +1,11 @@
 \input{startdiagram}
   \matrix[row sep=15mm, column sep=1mm] at (0, 0) {
    \node[header](pde) {Perfil de egreso}; \\
-   \node[perf](p1) {P1}; \\
-   \node[perf](p2) {P2}; \\
    \node[perf](p3) {P3}; \\
   };                            
   \matrix[row sep=15mm, column sep=1mm] at (1.5, 0) {
     \node[header](gra) {Competencias generales}; \\
-    \node[comp](c7) {C7}; \\
-    \node[comp](c11) {C11}; \\    
+    \node[comp](c11) {C11}; \\
     \node[comp](c12) {C12}; \\
     \node[comp](c13) {C13}; \\
   };
@@ -38,22 +35,9 @@
     \node[evid](tar) {Bit\'{a}cora semanal}; \\
     \node[evid](pro) {Manuscrito: avance de tesis}; \\
   };
-  \draw [line] (p1) -- (c7);
-  \draw [line] (p1) -- (c11); 
-  \draw [line] (p1) -- (c12);
-  \draw [line] (p1) -- (c13);
-  \draw [line] (p2) -- (c7);
-  \draw [line] (p2) -- (c11);
-  \draw [line] (p2) -- (c12);
-  \draw [line] (p2) -- (c13);
-  \draw [line] (p3) -- (c7);
   \draw [line] (p3) -- (c11);
   \draw [line] (p3) -- (c12);
   \draw [line] (p3) -- (c13);
-  \draw [line] (c7) -- (e3iii);  
-  \draw [line] (c11) -- (e3iii);
-  \draw [line] (c12) -- (e3iii);
-  \draw [line] (c13) -- (e3iii);  
   \draw [line] (c11) -- (e3iv);
   \draw [line] (c12) -- (e3iv);
   \draw [line] (c13) -- (e3iv);
