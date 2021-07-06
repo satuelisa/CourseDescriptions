@@ -45,17 +45,30 @@ minimum width=2em, fill=unidad]
 \renewcommand*\familydefault{\sfdefault} 
 \renewcommand{\thesection}{\Roman{section}} 
 \usepackage{remreset}
+
 \makeatletter
 \@removefromreset{subsection}{section}
 \renewcommand\thesubsection{\arabic{subsection}}
 \makeatother
+
 \makeatletter
-\@removefromreset{theparagraph}{paragraph}
+\@removefromreset{subsubsection}{section} % no number
+\renewcommand\thesubsubsection{}
+\makeatother
+
+\usepackage{titlesec}
+\titleformat{\subsubsection}[runin]
+{\bfseries}{\thesubsubsection}{0em}{} % in boldface
+
+\makeatletter
+\@removefromreset{theparagraph}{paragraph} % no number
 \renewcommand\theparagraph{}
 \makeatother
+
 \usepackage{titlesec}
 \titleformat{\paragraph}[runin]
-{\itshape}{\theparagraph}{1em}{}
+{\itshape}{\theparagraph}{1em}{} % in italics
+
 \ULCornerWallPaper{1}{logos.pdf}
 \setlength{\parindent}{1em}
 \setlength{\parskip}{2pt}
