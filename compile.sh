@@ -21,3 +21,5 @@ do
     fi
 done
 bash rename.sh
+mv *.pdf PDF
+rm *.aux *.log *.out
