@@ -49,7 +49,11 @@
 
 \sectionfont{\fontsize{10}{12}\selectfont}
 
-\newcommand{\sino}{\hfill \CheckBox[checkboxsymbol=\ding{56}]{S\'{i}}\quad\CheckBox[checkboxsymbol=\ding{56}]{No}}
+\newcounter{boxcount}
+
+\newcommand{\sino}{\hfill \CheckBox[name=yesbox\refstepcounter{boxcount},checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=nobox\refstepcounter{boxcount},checkboxsymbol=\ding{56}]{No}}
 \newcommand{\rsino}{\begin{flushright}\sino\end{flushright}}
 
 \begin{document}
