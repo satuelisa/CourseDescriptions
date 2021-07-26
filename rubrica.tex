@@ -8,7 +8,7 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{fancyhdr}
-\usepackage[letterpaper,left=15mm,right=15mm,headheight=5mm,headsep=40mm,top=45mm,bottom=35mm]{geometry}
+\usepackage[letterpaper,left=15mm,right=15mm,headheight=5mm,headsep=38mm,top=42mm,bottom=35mm]{geometry}
 \usepackage{enumitem}
 \usepackage{soul}
 \fancyhf{}
@@ -40,21 +40,15 @@
 \renewcommand{\thesection}{\Roman{section}} 
 \usepackage{remreset}
 
-\setlength{\parskip}{3pt}
+\setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 \usepackage{setspace}
-\setstretch{1.2}
+\setstretch{1.1}
 
 \usepackage{sectsty}
 
 \sectionfont{\fontsize{10}{12}\selectfont}
 
-\newcounter{boxcount}
-
-\newcommand{\sino}{\hfill \CheckBox[name=yesbox\refstepcounter{boxcount},checkboxsymbol=\ding{56}]{S\'{i}}%
-  \quad%
-  \CheckBox[name=nobox\refstepcounter{boxcount},checkboxsymbol=\ding{56}]{No}}
-\newcommand{\rsino}{\begin{flushright}\sino\end{flushright}}
 
 \begin{document}
 \pagestyle{fancy}
@@ -68,12 +62,10 @@
 \begin{Form}
 
   {\bf Unidad de Aprendizaje:} \\
-
   \TextField[name=ua,multiline=false,bordercolor=black,align=0,width=\textwidth,height=7mm,default={Clave y nombre}]{}
 
 {\bf Programa educativo:} \\
-  
-\ChoiceMenu[print,combo,default=Seleccione,name=pr]{}%
+  \ChoiceMenu[print,combo,default=Seleccione,name=pr]{}%
            {Maestr\'{\i}a en Ciencias de la Ingenier\'{\i}a con Orientaci\'{o}n en Sistemas, %
              Doctorado en Ingenier\'{\i}a de Sistemas}
 
@@ -88,40 +80,80 @@ la Unidad de Aprendizaje arriba mencionado, se encuentra que:
 
 \item{Coinciden Clave y nombre de la Unidad de Aprendizaje del
   Programa Anal\'{i}tico con la informaci\'{o}n de su correspondiente
-  Programa Sint\'{e}tico \sino}
+  Programa Sint\'{e}tico  \hfill \CheckBox[name=box1,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box2,checkboxsymbol=\ding{56}]{No}}
 
 \item{Coincide la Frecuencia semanal del Programa Anal\'{i}tico con la
-  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico \rsino}
+  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico \begin{flushright}
+  \CheckBox[name=box3,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box4,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{Coinciden las Horas de trabajo extra aula por semana del
   Programa Anal\'{i}tico con la informaci\'{o}n de su correspondiente
-  Programa Sint\'{e}tico \sino}
+  Programa Sint\'{e}tico   \hfill \CheckBox[name=box5,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box6,checkboxsymbol=\ding{56}]{No}}
 
 \item{Coincide la Modalidad del Programa Anal\'{i}tico con la
-  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico \sino}
+  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico
+  \begin{flushright}
+    \CheckBox[name=box7,checkboxsymbol=\ding{56}]{S\'{i}}
+    \quad \CheckBox[name=box8,checkboxsymbol=\ding{56}]{No}\end{flushright}}
 
 \item{Coincide el Periodo Acad\'{e}mico del Programa Anal\'{i}tico con
   la informaci\'{o}n de su correspondiente Programa Sint\'{e}tico
-  \rsino}
+  \begin{flushright}
+  \CheckBox[name=box9,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box10,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{Coinciden las LGAC del Programa Anal\'{i}tico con la
-  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico \sino}
+  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico
+  \begin{flushright}\CheckBox[name=box11,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad%
+  \CheckBox[name=box12,checkboxsymbol=\ding{56}]{No}
+  \end{flushright}}
 
 \item{Coincide en la Ubicaci\'{o}n semestral el Programa Anal\'{i}tico
   con la informaci\'{o}n de su correspondiente Programa Sint\'{e}tico
-  \rsino}
+  \begin{flushright}
+  \CheckBox[name=box13,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box14,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{Coincide el \'{A}rea Curricular del Programa Anal\'{i}tico con
   la informaci\'{o}n de su correspondiente Programa Sint\'{e}tico
-  \rsino}
+  \begin{flushright}
+  \CheckBox[name=box15,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box16,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{Coincide el n\'{u}mero de Cr\'{e}ditos del Programa
   Anal\'{i}tico con la informaci\'{o}n de su correspondiente Programa
-  Sint\'{e}tico \rsino}
+  Sint\'{e}tico \begin{flushright}
+  \CheckBox[name=box17,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box18,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{Coincide en los requisitos establecidos para cursar la Unidad de
   Aprendizaje del Programa Anal\'{i}tico con la informaci\'{o}n de su
-  correspondiente Programa Sint\'{e}tico \sino}
+  correspondiente Programa Sint\'{e}tico
+  \begin{flushright}\CheckBox[name=box19,checkboxsymbol=\ding{56}]{S\'{i}}%
+    \quad%
+    \CheckBox[name=box20,checkboxsymbol=\ding{56}]{No}
+    \end{flushright}}
 
 \end{enumerate}
 
@@ -131,20 +163,34 @@ la Unidad de Aprendizaje arriba mencionado, se encuentra que:
 
 \item{La fecha de elaboraci\'{o}n del Programa Anal\'{i}tico es
   congruente con la vigencia de su correspondiente Programa
-  Sint\'{e}tico \rsino}
+  Sint\'{e}tico \begin{flushright}
+  \CheckBox[name=box21,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box22,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{La fecha de la \'{u}ltima actualizaci\'{o}n del Programa
   Anal\'{i}tico indica que la actualizaci\'{o}n se realiz\'{o} hace
   menos de tres a\~{n}os, por lo que se puede considerar vigente
-  \sino}
+    \hfill \CheckBox[name=box23,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box24,checkboxsymbol=\ding{56}]{No}}
 
 \item{Entre los Responsables del dise\~{n}o de la Unidad de
   Aprendizaje se incluyen profesores del N\'{u}cleo Acad\'{e}mico del
-  Programa \rsino}
+  Programa \begin{flushright}
+  \CheckBox[name=box25,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box26,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+}
 
 \item{El perfil de egreso vinculado a la Unidad de Aprendizaje
   estipulado en el Programa Anal\'{i}tico es congruente con la
-  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico \sino}
+  informaci\'{o}n de su correspondiente Programa Sint\'{e}tico   \hfill \CheckBox[name=box27,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box28,checkboxsymbol=\ding{56}]{No}}
 
 \end{enumerate}
   
@@ -153,7 +199,9 @@ la Unidad de Aprendizaje arriba mencionado, se encuentra que:
 El texto de la secci\'{o}n ``Presentaci\'{o}n'' del programa
 anal\'{i}tico es suficientemente claro y est\'{a} orientado a
 describir la Unidad de Aprendizaje en cuesti\'{o}n, apeg\'{a}ndose a
-lo estipulado por el Programa Sint\'{e}tico. \sino
+lo estipulado por el Programa Sint\'{e}tico.   \hfill \CheckBox[name=box29,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box30,checkboxsymbol=\ding{56}]{No}
 
 \section{Prop\'{o}sito(s)}
 
@@ -161,17 +209,23 @@ El texto de la secci\'{o}n ``Prop\'{o}sito'' del programa
 anal\'{i}tico es suficientemente claro y est\'{a} orientado a
 describir el prop\'{o}sito de la Unidad de Aprendizaje en
 cuesti\'{o}n, apeg\'{a}ndose a lo estipulado por el Programa
-Sint\'{e}tico. \sino
+Sint\'{e}tico.   \hfill \CheckBox[name=box31,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box32,checkboxsymbol=\ding{56}]{No}
 
 \section{Competencias del Perfil de Egreso}
 
 \begin{enumerate}[resume,leftmargin=*,nolistsep]
 \item{Las Competencias Generales a las que se vincula la Unidad de Aprendizaje en el
 Programa Anal\'{i}tico son las mismas que se indican en su correspondiente Programa
-Sint\'{e}tico \sino}
+Sint\'{e}tico   \hfill \CheckBox[name=box33,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box34,checkboxsymbol=\ding{56}]{No}}
 \item{Las Competencias Espec\'{i}ficas y el nivel de dominio a las que se vincula la Unidad de
 Aprendizaje en el Programa Anal\'{i}tico son las mismas que se indican en su correspondiente
-Programa Sint\'{e}tico \sino}
+Programa Sint\'{e}tico   \hfill \CheckBox[name=box35,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box36,checkboxsymbol=\ding{56}]{No}}
 \end{enumerate}
 
 \section{Representaci\'{o}n Gr\'{a}fica}
@@ -179,7 +233,9 @@ Programa Sint\'{e}tico \sino}
 La representaci\'{o}n gr\'{a}fica que se presenta en el Programa Anal\'{i}tico es conguente con la
 informaci\'{o}n presentada en el Programa Sint\'{e}tico, ilustrando la relaci\'{o}n entre las
 competencias a desarrollar, los niveles de competencia, los contenidos, y la estructuraci\'{o}n
-de las etapas de la unidad de aprendizaje. \sino
+de las etapas de la unidad de aprendizaje.   \hfill \CheckBox[name=box37,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box38,checkboxsymbol=\ding{56}]{No}
 
 \newpage
 
@@ -188,20 +244,26 @@ de las etapas de la unidad de aprendizaje. \sino
 La Estructura en Etapas de la Unidad de Aprendizaje que se presenta en el Programa
 Anal\'{i}tico es conguente con el Contenido de la Unidad presentada en el Programa Sint\'{e}tico,
 adem\'{a}s, los criterios de desempe\~{n}o, las actividades de aprendizaje, y los recursos son
-adecuados. \sino
+adecuados.   \hfill \CheckBox[name=box39,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box40,checkboxsymbol=\ding{56}]{No}
 
 \section{Evaluaci\'{o}n integral de proceso}
 
 La Evaluaci\'{o}n Integral de Procesos y Productos del Programa Anal\'{i}tico muestra que existe
 congruencia entre las Actividades de Aprendizaje y las Evidencias, adem\'{a}s, la ponderaci\'{o}n
 de las evaluaciones de las evidencias consideran de forma equilibrada actividades de
-ejecuci\'{o}n pr\'{a}ctica, investigaci\'{o}n y s\'{i}ntesis, ex\'{a}menes, y el producto integrador. \sino
+ejecuci\'{o}n pr\'{a}ctica, investigaci\'{o}n y s\'{i}ntesis, ex\'{a}menes, y el producto integrador.   \hfill \CheckBox[name=box41,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box42,checkboxsymbol=\ding{56}]{No}
 
 \section{Producto Integrador de Aprendizaje de la Unidad}
 
 El Producto Integrador de la Unidad de Aprendizaje est\'{a} definido a trav\'{e}s del desarrollo de
 una evidencia de aprendizaje con criterios de desempe\~{n}o, actividades, contenidos y
-recursos que son claros y asequibles. \sino
+recursos que son claros y asequibles.   \hfill \CheckBox[name=box43,checkboxsymbol=\ding{56}]{S\'{i}}%
+  \quad%
+  \CheckBox[name=box44,checkboxsymbol=\ding{56}]{No}
 
 \section{Fuentes de apoyo y Consulta}
 
@@ -209,7 +271,12 @@ Las Fuentes de Apoyo y Consulta que se indican en el Programa Anal\'{i}tico son 
 la Unidad de Aprendizaje, son suficientes y est\'{a}n actualizadas en virtud de que al menos el
 30\% de ellas tienen un m\'{a}ximo de 5 a\~{n}os de haberse publicado. Asimismo, el 30\% de las
 Fuentes de Apoyo y Consulta citadas se encuentran disponibles en la Biblioteca de la
-UANL. \rsino
+UANL. \begin{flushright}
+  \CheckBox[name=box45,checkboxsymbol=\ding{56}]{S\'{i}}
+  \quad
+  \CheckBox[name=box46,checkboxsymbol=\ding{56}]{No}
+\end{flushright}
+
 
 \TextField[default=Ninguna,name=obs,multiline=true,bordercolor=black,align=0,width=\textwidth,height=5cm]{OBSERVACIONES:\\ \\}
 
