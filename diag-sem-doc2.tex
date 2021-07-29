@@ -1,8 +1,6 @@
 \input{startdiagram}
   \matrix[row sep=12mm, column sep=1mm] at (0, 0) {
    \node[header](pde) {Perfil de egreso}; \\
-   \node[perf](p1) {P1}; \\
-   \node[perf](p2) {P2}; \\
    \node[perf](p3) {P3}; \\
   };                            
   \matrix[row sep=12mm, column sep=1mm] at (1.5, 0) {
@@ -10,6 +8,9 @@
     \node[comp](c4) {C4}; \\
     \node[comp](c7) {C7}; \\
     \node[comp](c9) {C9}; \\
+        \node[comp](c11) {C11}; \\
+            \node[comp](c12) {C12}; \\    
+                \node[comp](c13) {C13}; \\
   };
   \matrix[row sep=12mm, column sep=1mm] at (4, 0) {
     \node[header](ces) {Competencia espec\'{\i}fica}; \\
@@ -20,7 +21,6 @@
     \node[header](uds) {Unidades tem\'{a}ticas}; \\
     \node[unidad](ut1) {UT 1}; \\
     \node[unidad](ut2) {UT 2}; \\
-    \node[unidad](ut3) {UT 3}; \\
   };
   \matrix[row sep=12mm, column sep=1mm] at (9, 0){
     \node[header](ele) {Elementos}; \\
@@ -28,49 +28,39 @@
     \node[elem](e2) {Identificar expertos en un tema}; \\
     \node[elem](e3) {Organizar un foro acad\'{e}mico}; \\
     \node[elem](e4) {Participar en el discurso cient\'{\i}fico}; \\
-    \node[elem](e5) {Exponer un trabajo cient\'{\i}fico}; \\
   };
   \matrix[row sep=12mm, column sep=1mm] at (13, 0){
     \node[header](hev) {Evidencias}; \\
-    \node[evid](grab) {Video}; \\
-    \node[evid](diap) {Diapositivas}; \\
     \node[evid](tar) {Portafolio}; \\
   };
-
-  \draw [line] (p1) -- (c4);
-  \draw [line] (p1) -- (c7);
-  \draw [line] (p1) -- (c9);
-  \draw [line] (p2) -- (c4);
-  \draw [line] (p2) -- (c7);
-  \draw [line] (p2) -- (c9);
   \draw [line] (p3) -- (c4);
   \draw [line] (p3) -- (c7);
   \draw [line] (p3) -- (c9);
+    \draw [line] (p3) -- (c11);
+      \draw [line] (p3) -- (c12);
+        \draw [line] (p3) -- (c13);
   \draw [line] (c4) -- (e2iii);
   \draw [line] (c7) -- (e2iii);
   \draw [line] (c9) -- (e2iii);
+    \draw [line] (c11) -- (e2iii);
+      \draw [line] (c12) -- (e2iii);
+        \draw [line] (c13) -- (e2iii);
   \draw [line] (c4) -- (e2iv);
   \draw [line] (c7) -- (e2iv);
   \draw [line] (c9) -- (e2iv);
+    \draw [line] (c11) -- (e2iv);
+      \draw [line] (c12) -- (e2iv);
+        \draw [line] (c13) -- (e2iv);
   \draw [line] (e2iii) -- (ut1);
   \draw [line] (e2iii) -- (ut2);
-  \draw [line] (e2iii) -- (ut3);
   \draw [line] (e2iv) -- (ut1);
   \draw [line] (e2iv) -- (ut2);
-  \draw [line] (e2iv) -- (ut3);
   \draw [line] (ut1) -- (e1);
   \draw [line] (ut1) -- (e2);
-  \draw [line] (ut1) -- (e3); 
+  \draw [line] (ut1) -- (e3);
   \draw [line] (ut2) -- (e4);
-  \draw [line] (ut3) -- (e4);  
-  \draw [line] (ut3) -- (e5);
   \draw [line] (e1) --(tar);
   \draw [line] (e2) --(tar);
   \draw [line] (e3) --(tar);
   \draw [line] (e4) --(tar);
-  \draw [line] (e5) --(tar);
-  \draw [line] (e4) --(grab);
-  \draw [line] (e5) --(grab);
-  \draw [line] (e4) --(diap);
-  \draw [line] (e5) --(diap);    
 \input{enddiagram}

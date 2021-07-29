@@ -33,6 +33,8 @@
   };
   \matrix[row sep=12mm, column sep=1mm] at (13, 0){
     \node[header](hev) {Evidencias}; \\
+    \node[evid](grab) {Video}; \\
+    \node[evid](diap) {Diapositivas}; \\    
     \node[evid](tar) {Portafolio}; \\
   };
   \draw [line] (p3) -- (c4);
@@ -67,4 +69,8 @@
   \draw [line] (e3) --(tar);
   \draw [line] (e4) --(tar);
   \draw [line] (e5) --(tar);
+  \draw [line] (e4) --(grab);
+  \draw [line] (e5) --(grab);
+  \draw [line] (e4) --(diap);
+  \draw [line] (e5) --(diap);  
 \input{enddiagram}
