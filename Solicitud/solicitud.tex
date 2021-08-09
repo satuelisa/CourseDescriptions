@@ -1,0 +1,315 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[top=1cm,left=20mm,right=25mm,bottom=2cm]{geometry}
+
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \begin{center}%
+  \let \footnote \thanks
+  {\Large \@title \par}%
+  {\large \@author \par}%
+  {\sc \@date \par}
+  \end{center}%
+  \vskip 1mm}
+\makeatother
+
+\usepackage[affil-it]{authblk}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{4pt}
+\renewcommand{\baselinestretch}{1.4}
+\pagestyle{empty}
+
+\title{\Large Solicitud de admisión al Posgrado}
+  
+\author{División de Posgrado en Ingeniería de Sistemas}\affil{Facultad de Ingeniería Mecánica y
+  Eléctrica}
+\date{Universidad Autónoma de Nuevo León}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+{\em Favor de llenar directamente en computadora con Adobe Acrobat Reader.}
+
+\begin{Form}
+  {Inicio de estudios deseado:}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=sem]{}{Otoño}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=sem]{}{Primavera}
+  \TextField[name=year,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Año}
+
+  {Programa:}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=pe]{}{Maestría}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=pe]{}{Doctorado}
+
+ \TextField[name=nom,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Nombre(s)}
+ \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=6cm,height=1.2em]{Apellido(s)}
+
+ \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{Nacionalidad(es)}
+
+ \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Fecha de nacimiento}
+
+ \TextField[name=curp,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{CURP}
+ \TextField[name=rfc,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{RFC}
+
+  {Estado civil:}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Soltero}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Casado}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Divorciado}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Viudo}
+  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Otro}
+
+  {Domicilio actual} \\ \\
+  \TextField[name=act,multiline=true,bordercolor=black,align=0,width=10cm,height=8em]{}
+
+  {Domicilio permanente (si diferente del actual)} \\  \\
+  \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=10cm,height=10em]{}
+  
+  {\em Teléfonos:}
+
+  \TextField[name=casa,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Casa}
+  \TextField[name=oficina,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Oficina}
+  \TextField[name=cel,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Celular}
+
+  \TextField[name=email,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Correo
+    electrónico}
+
+  \TextField[name=website,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Página
+    personal}
+
+  \TextField[name=repo,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Repositorio
+    GitHub o similar (público)}
+
+\begin{flushright}
+  {\em Dejar en blanco aquellos campos que no aplican.}
+\end{flushright}
+  
+\newpage
+
+\begin{flushright}
+  {\em Dejar en blanco aquellos campos que no aplican.}
+\end{flushright}
+  
+{\bf Última fecha de presentación exámenes de admisión a posgrado de la UANL:}
+
+  \TextField[name=exani,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{EXANI
+  (conocimientos generales)}
+  \TextField[name=exci,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{EXCI
+  (inglés)}
+
+{\bf Beca anterior de CONACyT:}
+
+\TextField[name=bg,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Grado
+  obtenido} \\
+\TextField[name=fb,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Fecha
+  de obtención de grado} \\
+\TextField[name=nb,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Número de beca}
+
+{\bf Grados académicos anteriores de estudios superiores}: \\
+indicar escuela, programa, periodo (desde-hasta mes/año), grado
+obtenido y promedio \\ \\
+\TextField[name=prev,multiline=true,bordercolor=black,align=0,width=\textwidth,height=10em]{}
+
+{\bf Motivos de postulación}: 
+
+A un posgrado en general: \\ \\
+\TextField[name=gen,multiline=true,bordercolor=black,align=0,width=\textwidth,height=15em]{}
+
+A este posgrado en particular: \\ \\
+\TextField[name=part,multiline=true,bordercolor=black,align=0,width=\textwidth,height=15em]{}
+
+\newpage
+
+{\bf Conocimientos de programación:}
+\begin{itemize}[itemsep=-2pt]
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=progra]{}{=1}}}]{Ninguno}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=progra]{}{=2}}}]{Principiante}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=progra]{}{=3}}}]{Intermedio}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=progra]{}{=4}}}]{Avanzado}
+\end{itemize}
+
+Experiencia con lenguajes de programación: \\ \\
+\TextField[name=lenguajes,multiline=true,bordercolor=black,align=0,width=\textwidth,height=15em]{}
+
+{\bf Conocimientos de inglés:}
+
+\begin{multicols}{3}
+
+Lectura:
+\begin{itemize}[itemsep=-2pt]
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=il]{}{=1}}}]{Ninguno}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=il]{}{=2}}}]{Principiante}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=il]{}{=3}}}]{Intermedio}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=il]{}{=4}}}]{Avanzado}
+\end{itemize}
+
+\columnbreak
+
+Redacción:
+\begin{itemize}[itemsep=-2pt]
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ir]{}{=1}}}]{Ninguno}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ir]{}{=2}}}]{Principiante}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ir]{}{=3}}}]{Intermedio}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ir]{}{=4}}}]{Avanzado}
+\end{itemize}
+
+\columnbreak
+
+Conversación:
+\begin{itemize}[itemsep=-2pt]
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ic]{}{=1}}}]{Ninguno}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ic]{}{=2}}}]{Principiante}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ic]{}{=3}}}]{Intermedio}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ic]{}{=4}}}]{Avanzado}
+\end{itemize}
+
+\end{multicols}
+
+Conocimientos de otros idiomas: \\  \\
+\TextField[name=idiomas,multiline=true,bordercolor=black,align=0,width=\textwidth,height=15em]{}
+
+\newpage
+
+{\bf Describe brevemente en tus propias palabras qué significan para
+  tí los siguientes conceptos y qué experiencia tienes con ellos hasta
+  la fecha}
+
+Ingeniería de sistemas: \\ \\
+\TextField[name=sis,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+Investigación de operaciones: \\ \\
+\TextField[name=or,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+Inteligencia computacional: \\ \\
+\TextField[name=int,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+\quad
+
+{\bf Plan de financiamiento de estudios:}
+
+{\textquestiondown}Cómo te apoyarás económicamente durante los
+estudios de posgrado?
+\begin{itemize}[itemsep=-2pt]
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ec]{}{=1}}}]{Solicito
+    beca de CONACyT de estudios de tiempo completo}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ec]{}{=2}}}]{Solicito
+    otra beca (especificar abajo)}
+\item[\raisebox{-4pt}{{\ChoiceMenu[radio,radiosymbol=\ding{52},name=ec]{}{=3}}}]{Ya cuento
+    con un apoyo (especificar abajo)}
+\end{itemize}
+
+Plan financiero (indicar cuántos dependientes económicos tienes): \\ \\
+\TextField[name=fin,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+\newpage
+
+{\textquestiondown}Tienes planes a futuro que quisieras compartir,
+como por ejemplo estancias en el extranjero o emprendemiento con una
+empresa propia? \\ \\
+\TextField[name=fut,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+{\textquestiondown}Cuáles son tus pasatiempos favoritos? \\ \\
+\TextField[name=pas,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+{\textquestiondown}Cómo te enteraste de este programa de posgrado? \\ \\
+\TextField[name=ent,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
+\quad
+
+\quad
+
+{\em Certifico que toda la información que he proveído en esta solicitud
+  está completa y correcta.}
+
+\quad
+
+\begin{center}
+  \begin{tabular}{cc}
+    \rule{5cm}{0.5pt}
+    &
+ \TextField[name=fecha,multiline=false,bordercolor=black,align=0,width=3cm,height=1.2em]{Fecha}
+    \\
+    Firma 
+\end{tabular}
+\end{center}
+
+\quad
+
+\quad
+
+\begin{flushright}
+  {\em Favor de imprimir (guardar) en PDF una vez llenado.}
+\end{flushright}
+
+\newpage
+
+{\sc Documentos por incluir en el expediente de solicitud en PDF}
+
+Deben ser claramente nombrados; si un documento no existe en tu caso,
+omítelo. Es importante que tu {\em curriculum vitae} sea actualizada,
+de preferencia con fotografía, incluya una lista de publicaciones (si
+es que tengas, indicando ISBN y DOI donde aplique), participación en
+congresos y estancias académicas. 
+
+Se puede incluir Hasta tres cartas de recomendación; son opcionales en
+maestría, se necesita por lo menos dos en doctorado.
+
+Para doctorado, es indispensable incluir un {\em anteproyecto} de 2--5
+páginas, en español o en inglés, con las siguientes secciones:
+Resumen, Introducción, Antecedentes, Estado del Arte, Contribución
+Esperada, Metodología, Calendario de Actividades, Referencias; anexado
+al anteproyecto, un visto bueno en escrito de parte del asesor (o en
+su caso, los co-asesores), un o dos párrafos de texto, indicando las
+fortalezas particulares del candidato y del proyecto propuesto. Por lo
+menos uno de los asesores debe ser actualmente un profesor del
+programa.
+
+\begin{flushright}
+\CheckBox{Esta solicitud} \\
+\CheckBox{Curriculum vitae} \\
+\CheckBox{Copias de kárdex de estudios superiores} \\
+\CheckBox{Tesis de grados anteriores} \\
+\CheckBox{Cartas de recomendación (doctorado)} \\
+\CheckBox{Anteproyecto (doctorado)}
+\end{flushright}
+
+Los documentos se colocan en una carpeta compartida (Google Drive,
+Dropbox o similar) y la URL de acceso de envia vía electrónica antes
+del cierre de la convocatoria a
+\begin{itemize}
+\item \url{admision.m@yalma.fime.uanl.mx} para el programa de maestría,
+\item \url{admision.d@yalma.fime.uanl.mx} para el programa doctoral.
+\end{itemize}
+
+Cada aspirante necesita además
+\begin{enumerate}
+\item presentar los {\bf exámenes de admisión del programa} y acudir a la
+  {\em entrevista} en las fechas establecidas por la comisión de admisión
+  correspondiente después del cierre de la convocatoria (se
+  comunicarán por correo electrónico con los aspirantes);
+\item presentar los {\bf exámenes generales de admisión de posgrado de la
+  UANL}: conocimientos generales (EXANI) e inglés (EXCI);
+\item realizar todos los {\bf trámites administrativos} que requiera la facultad o
+  la universidad  (verificar con departamento escolar de posgrado);
+\end{enumerate}
+es importante informarse directamente con la FIME y la UANL sobre los
+requisitos ya que la comisión de admisiones no tiene ningún poder
+sobre esos pasos, fechas o costos.
+
+
+
+  
+
+
+\end{Form}
+
+
+\end{document}
