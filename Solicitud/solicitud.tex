@@ -6,7 +6,7 @@
 \usepackage{xcolor}
 \usepackage{multicol}
 \usepackage{enumitem}
-\usepackage[top=1cm,left=20mm,right=25mm,bottom=2cm]{geometry}
+\usepackage[top=1cm,left=20mm,right=25mm,bottom=1cm]{geometry}
 
 
 \makeatletter
@@ -38,24 +38,29 @@
 \maketitle
 \thispagestyle{empty}
 
-{\em Favor de llenar directamente en computadora con Adobe Acrobat Reader.}
+{\em Favor de llenar directamente en computadora con Adobe Acrobat Reader o similar.}
 
 \begin{Form}
   {Inicio de estudios deseado:}
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=sem]{}{Otoño}
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=sem]{}{Primavera}
-  \TextField[name=year,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Año}
+  \TextField[name=year,multiline=false,bordercolor=black,align=0,width=2cm,height=1.2em]{Año}
 
   {Programa:}
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=pe]{}{Maestría}
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=pe]{}{Doctorado}
 
- \TextField[name=nom,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Nombre(s)}
- \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=6cm,height=1.2em]{Apellido(s)}
+ \TextField[name=nom,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{Nombre(s)}
+ \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Apellido(s)} \\
+ \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Pronombres preferidos}
 
- \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{Nacionalidad(es)}
+ 
+ \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Nacionalidad(es)}
 
- \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Fecha de nacimiento}
+ Fecha de nacimiento:
+ \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Día}
+ \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Mes}
+ \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Año}
 
  \TextField[name=curp,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{CURP}
  \TextField[name=rfc,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{RFC}
@@ -68,10 +73,10 @@
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Otro}
 
   {Domicilio actual} \\ \\
-  \TextField[name=act,multiline=true,bordercolor=black,align=0,width=10cm,height=8em]{}
+  \TextField[name=act,multiline=true,bordercolor=black,align=0,width=12cm,height=6em]{}
 
   {Domicilio permanente (si diferente del actual)} \\  \\
-  \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=10cm,height=10em]{}
+  \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=12cm,height=6em]{}
   
   {\em Teléfonos:}
 
@@ -79,9 +84,12 @@
   \TextField[name=oficina,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Oficina}
   \TextField[name=cel,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Celular}
 
-  \TextField[name=email,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Correo
-    electrónico}
+  {\em Correo electrónico:}
+  \TextField[name=email,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Principal}
+  \TextField[name=email,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Auxiliar}
 
+{\em Sitios web:}
+  
   \TextField[name=website,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Página
     personal}
 
@@ -89,16 +97,17 @@
     GitHub o similar (público)}
 
 \begin{flushright}
-  {\em Dejar en blanco aquellos campos que no aplican.}
+  {\em Favor de colocar NA en aquellos campos que no apliquen en su caso..}
 \end{flushright}
   
 \newpage
 
 \begin{flushright}
-  {\em Dejar en blanco aquellos campos que no aplican.}
+  {\em Favor de colocar NA en aquellos campos que no apliquen en su caso..}
 \end{flushright}
   
-{\bf Última fecha de presentación exámenes de admisión a posgrado de la UANL:}
+{\bf Fecha de presentación exámenes de admisión a posgrado de la UANL} (última o programada):
+
 
   \TextField[name=exani,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{EXANI
   (conocimientos generales)}
@@ -114,9 +123,9 @@
 \TextField[name=nb,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{Número de beca}
 
 {\bf Grados académicos anteriores de estudios superiores}: \\
-indicar escuela, programa, periodo (desde-hasta mes/año), grado
-obtenido y promedio \\ \\
-\TextField[name=prev,multiline=true,bordercolor=black,align=0,width=\textwidth,height=10em]{}
+Indicar escuela, nombre del programa, periodo (desde-hasta mes/año), grado obtenido y
+promedio.
+\\ \\ \TextField[name=prev,multiline=true,bordercolor=black,align=0,width=\textwidth,height=10em]{}
 
 {\bf Motivos de postulación}: 
 
@@ -222,6 +231,9 @@ empresa propia? \\ \\
 {\textquestiondown}Cómo te enteraste de este programa de posgrado? \\ \\
 \TextField[name=ent,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
 
+{\textquestiondown}Hay alguna otra cosa sobre ti que te gustaría que conocieramos? \\ \\
+\TextField[name=ent,multiline=true,bordercolor=black,align=0,width=\textwidth,height=8em]{}
+
 \quad
 
 \quad
@@ -274,20 +286,24 @@ programa.
 
 \begin{flushright}
 \CheckBox{Esta solicitud} \\
-\CheckBox{Curriculum vitae} \\
-\CheckBox{Copias de kárdex de estudios superiores} \\
-\CheckBox{Tesis de grados anteriores} \\
-\CheckBox{Cartas de recomendación (doctorado)} \\
-\CheckBox{Anteproyecto (doctorado)}
+\CheckBox{Curriculum vitae en formato libre} \\
+\CheckBox{Copias de kárdex de estudios superiores a la preparatoria} \\
+\CheckBox{Tesis de grados anteriores en PDF (si es que haya)} \\
+\CheckBox{Cartas de recomendación (solamente para doctorado)} \\
+\CheckBox{Anteproyecto (solamente para doctorado)}
 \end{flushright}
 
-Los documentos se colocan en una carpeta compartida (Google Drive,
-Dropbox o similar) y la URL de acceso de envia vía electrónica antes
-del cierre de la convocatoria a
+Todos los documentos se colocan en formato PDF en una carpeta
+compartida (Google Drive, Dropbox o similar) y la URL de acceso de
+envia vía electrónica {\em antes del cierre de la convocatoria} a
 \begin{itemize}
 \item \url{admision.m@yalma.fime.uanl.mx} para el programa de maestría,
 \item \url{admision.d@yalma.fime.uanl.mx} para el programa doctoral.
 \end{itemize}
+Es necesario que la documentación esté completa antes de enviar el
+correo de acceso, pero se permite actualizar los archivos hasta el
+cierre de la convocatoria en el caso que descubras algún error entre
+el envió y el cierre,
 
 Cada aspirante necesita además
 \begin{enumerate}
@@ -295,19 +311,17 @@ Cada aspirante necesita además
   {\em entrevista} en las fechas establecidas por la comisión de admisión
   correspondiente después del cierre de la convocatoria (se
   comunicarán por correo electrónico con los aspirantes);
-\item presentar los {\bf exámenes generales de admisión de posgrado de la
-  UANL}: conocimientos generales (EXANI) e inglés (EXCI);
-\item realizar todos los {\bf trámites administrativos} que requiera la facultad o
-  la universidad  (verificar con departamento escolar de posgrado);
+\item presentar los {\bf exámenes generales de admisión de posgrado de
+  la UANL}: conocimientos generales (EXANI) e inglés (EXCI), con la
+  vigencia que requiere la UANL;
+\item realizar todos los {\bf trámites administrativos} que requiera
+  la facultad o la universidad (verificar con departamento escolar de
+  posgrado, ;a somoisión de admisiones {\bf no} canaliza estos
+  trámites);
 \end{enumerate}
 es importante informarse directamente con la FIME y la UANL sobre los
-requisitos ya que la comisión de admisiones no tiene ningún poder
-sobre esos pasos, fechas o costos.
-
-
-
-  
-
+requisitos ya que la comisión de admisiones no tiene ningún poder o
+conocimiento específico sobre los pasos, fechas o costos.
 
 \end{Form}
 
