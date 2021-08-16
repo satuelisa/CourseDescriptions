@@ -51,11 +51,10 @@
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=pe]{}{Doctorado}
 
  \TextField[name=nom,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{Nombre(s)}
- \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Apellido(s)} \\
- \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Pronombre preferido}
+ \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Apellido(s)} 
 
- 
- \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Nacionalidad(es)}
+ \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=2cm,height=1.2em]{Pronombre preferido}
+  \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Nacionalidad(es)}
 
  Fecha de nacimiento:
  \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Día}
@@ -72,11 +71,17 @@
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Viudo}
   \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Otro}
 
-  {Domicilio actual} \\ \\
-  \TextField[name=act,multiline=true,bordercolor=black,align=0,width=12cm,height=6em]{}
+  {\em Domicilio:}
 
-  {Domicilio permanente (si diferente del actual)} \\  \\
-  \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=12cm,height=6em]{}
+  Actual \\
+  \TextField[name=act,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{}
+
+  Permanente \\ \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{}
+  (si difiere del actual)
+
+  {\em Contacto(s) de emergencia:} (nombre, relación, teléfono(s) y/o correo electrónico)
+  \\  
+  \TextField[name=emer,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{}  
   
   {\em Teléfonos:}
 
@@ -107,7 +112,6 @@
 \end{flushright}
   
 {\bf Fecha de presentación exámenes de admisión a posgrado de la UANL} (última o programada):
-
 
   \TextField[name=exani,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{EXANI
   (conocimientos generales)}
@@ -265,14 +269,28 @@ empresa propia? \\ \\
 
 {\sc Documentos por incluir en el expediente de solicitud en PDF}
 
-Deben ser claramente nombrados; si un documento no existe en tu caso,
+Todos los documentos se colocan en formato PDF en una carpeta
+compartida (Google Drive, Dropbox o similar) y la URL de acceso de
+envia vía electrónica {\em antes del cierre de la convocatoria} a
+\begin{itemize}
+\item \url{admision.m@yalma.fime.uanl.mx} para el programa de maestría,
+\item \url{admision.d@yalma.fime.uanl.mx} para el programa doctoral.
+\end{itemize}
+Es necesario que la documentación esté completa antes de enviar el
+correo de acceso, pero se permite actualizar los archivos hasta el
+cierre de la convocatoria en el caso que descubras algún error entre
+el envió y el cierre, Deben ser claramente nombrados; si un documento no existe en tu caso,
 omítelo. Es importante que tu {\em curriculum vitae} sea actualizada,
 de preferencia con fotografía, incluya una lista de publicaciones (si
 es que tengas, indicando ISBN y DOI donde aplique), participación en
 congresos y estancias académicas. 
 
-Se puede incluir Hasta tres cartas de recomendación; son opcionales en
-maestría, se necesita por lo menos dos en doctorado.
+Se consideran hasta tres {\bf cartas de recomendación}, enviados en
+PDF {\em de parte de quien recomienda} directamente al correo de la
+comisión de admisiones correspondiente; son {\em opcionales} en
+maestría, pero en doctorado es {\em obligatorio} contar con por lo
+menos dos. En su caso, incluir en su expediente un listado de nombres
+y correos de quiénes enviarán las cartas.
 
 Para doctorado, es indispensable incluir un {\em anteproyecto} de 2--5
 páginas, en español o en inglés, con las siguientes secciones:
@@ -289,21 +307,10 @@ programa.
 \CheckBox{Curriculum vitae en formato libre} \\
 \CheckBox{Copias de kárdex de estudios superiores a la preparatoria} \\
 \CheckBox{Tesis de grados anteriores en PDF (si es que haya)} \\
-\CheckBox{Cartas de recomendación (solamente para doctorado)} \\
+\CheckBox{Listado de cartas de recomendación (solamente para doctorado)} \\
 \CheckBox{Anteproyecto (solamente para doctorado)}
 \end{flushright}
 
-Todos los documentos se colocan en formato PDF en una carpeta
-compartida (Google Drive, Dropbox o similar) y la URL de acceso de
-envia vía electrónica {\em antes del cierre de la convocatoria} a
-\begin{itemize}
-\item \url{admision.m@yalma.fime.uanl.mx} para el programa de maestría,
-\item \url{admision.d@yalma.fime.uanl.mx} para el programa doctoral.
-\end{itemize}
-Es necesario que la documentación esté completa antes de enviar el
-correo de acceso, pero se permite actualizar los archivos hasta el
-cierre de la convocatoria en el caso que descubras algún error entre
-el envió y el cierre,
 
 Cada aspirante necesita además
 \begin{enumerate}
@@ -317,9 +324,9 @@ Cada aspirante necesita además
 \item realizar todos los {\bf trámites administrativos} que requiera
   la facultad o la universidad (verificar con departamento escolar de
   posgrado, ;a somoisión de admisiones {\bf no} canaliza estos
-  trámites);
+  trámites).
 \end{enumerate}
-es importante informarse directamente con la FIME y la UANL sobre los
+Es importante informarse directamente con la FIME y la UANL sobre los
 requisitos ya que la comisión de admisiones no tiene ningún poder o
 conocimiento específico sobre los pasos, fechas o costos.
 
