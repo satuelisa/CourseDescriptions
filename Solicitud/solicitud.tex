@@ -27,7 +27,7 @@
 \renewcommand{\baselinestretch}{1.4}
 \pagestyle{empty}
 
-\title{\Large Solicitud de admisión al Posgrado}
+\title{\Large Solicitud de admisión}
   
 \author{Posgrado en Ingeniería de Sistemas}\affil{Facultad de Ingeniería Mecánica y
   Eléctrica}
@@ -53,7 +53,7 @@
  \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Apellido(s)} 
 
  \TextField[name=ape,multiline=false,bordercolor=black,align=0,width=2cm,height=1.2em]{Pronombre preferido}
-  \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Nacionalidad(es)}
+ \TextField[name=nac,multiline=false,bordercolor=black,align=0,width=7cm,height=1.2em]{Nacionalidad(es)}
 
  Fecha de nacimiento:
  \TextField[name=fn,multiline=false,bordercolor=black,align=0,width=1cm,height=1.2em]{Día}
@@ -63,19 +63,11 @@
  \TextField[name=curp,multiline=false,bordercolor=black,align=0,width=5cm,height=1.2em]{CURP}
  \TextField[name=rfc,multiline=false,bordercolor=black,align=0,width=4cm,height=1.2em]{RFC}
 
-  {Estado civil:}
-  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Soltero}
-  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Casado}
-  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Divorciado}
-  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Viudo}
-  \ChoiceMenu[radio,radiosymbol=\ding{52},print,name=civil]{}{Otro}
+{\em Domicilio:}
 
-  {\em Domicilio:}
+  Actual \\ \TextField[name=act,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{}
 
-  Actual \\
-  \TextField[name=act,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{}
-
-  Permanente \\ \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{}
+  Permanente \\ \TextField[name=perm,multiline=true,bordercolor=black,align=0,width=13cm,height=4em]{} \\
   (si difiere del actual)
 
   {\em Contacto(s) de emergencia:} (nombre, relación, teléfono(s) y/o correo electrónico)
@@ -272,19 +264,21 @@ Todos los documentos se colocan en formato PDF en una carpeta
 compartida (Google Drive, Dropbox o similar) y la URL de acceso de
 envia vía electrónica {\em antes del cierre de la convocatoria} a
 \begin{itemize}
-\item \url{admision.m@yalma.fime.uanl.mx} para el programa de maestría,
-\item \url{admision.d@yalma.fime.uanl.mx} para el programa doctoral.
+\item \url{admision.m@yalma.fime.uanl.mx} para el programa de {\em maestría},
+\item \url{admision.d@yalma.fime.uanl.mx} para el programa {\em doctoral}.
 \end{itemize}
 Es necesario que la documentación esté completa antes de enviar el
 correo de acceso, pero se permite actualizar los archivos hasta el
 cierre de la convocatoria en el caso que descubras algún error entre
-el envío y el cierre, Deben ser claramente nombrados; si un documento no existe en tu caso,
-omítelo. Es importante que tu {\em curriculum vitae} sea actualizada,
-de preferencia con fotografía, incluya una lista de publicaciones (si
-es que tengas, indicando ISBN y DOI donde aplique), participación en
-congresos y estancias académicas. 
+el envío y el cierre.
 
-Se consideran hasta tres {\bf cartas de recomendación}, enviados en
+Todos los archivos deben ser claramente nombrados; si un documento no
+existe en tu caso, omítelo. Es importante que tu {\em curriculum
+  vitae} sea actualizado, incluya una lista de publicaciones (si es
+que tengas, indicando ISBN y DOI donde aplique), participación en
+congresos y estancias académicas.
+
+Se consideran hasta tres {\bf cartas de recomendación}, enviadas en
 PDF {\em de parte de quien recomienda} directamente al correo de la
 comisión de admisiones correspondiente; son {\em opcionales} en
 maestría, pero en doctorado es {\em obligatorio} contar con por lo
@@ -294,24 +288,24 @@ y correos de quiénes enviarán las cartas.
 Para doctorado, es indispensable incluir un {\em anteproyecto} de 2--5
 páginas, en español o en inglés, con las siguientes secciones:
 Resumen, Introducción, Antecedentes, Estado del Arte, Contribución
-Esperada, Metodología, Calendario de Actividades, Referencias; anexado
-al anteproyecto, un visto bueno en escrito de parte del asesor (o en
-su caso, los co-asesores), uno o dos párrafos de texto, indicando las
-fortalezas particulares del candidato y del proyecto propuesto. Por lo
-menos uno de los asesores debe ser actualmente un profesor del
-programa.
+Esperada, Metodología, Calendario de Actividades, Referencias. Anexado
+al anteproyecto, incluir un visto bueno en escrito de parte del asesor
+(o en su caso, los co-asesores): uno o dos párrafos de texto,
+indicando las fortalezas particulares del candidato y del proyecto
+propuesto. Por lo menos uno de los asesores debe actualmente ser un
+profesor del programa.
 
 \begin{flushright}
 \CheckBox{Esta solicitud} \\
 \CheckBox{Curriculum vitae en formato libre} \\
 \CheckBox{Copias de kárdex de estudios superiores a la preparatoria} \\
 \CheckBox{Tesis de grados anteriores en PDF (si es que haya)} \\
-\CheckBox{Listado de cartas de recomendación (solamente para doctorado)} \\
+\CheckBox{Publicaciones en PDF (si es que haya)} \\
+\CheckBox{Listado de cartas de recomendación (requerido para doctorado)} \\
 \CheckBox{Anteproyecto (solamente para doctorado)}
 \end{flushright}
 
-
-Cada aspirante necesita además
+Cada aspirante necesita además:
 \begin{enumerate}
 \item presentar los {\bf exámenes de admisión del programa} y acudir a la
   {\em entrevista} en las fechas establecidas por la comisión de admisión
@@ -321,10 +315,11 @@ Cada aspirante necesita además
   la UANL}: conocimientos generales (EXANI) e inglés (EXCI), con la
   vigencia que requiere la UANL;
 \item realizar todos los {\bf trámites administrativos} que requiera
-  la facultad o la universidad (verificar con departamento escolar de
-  posgrado, la comisión de admisiones {\bf no} canaliza estos
+  la facultad o la universidad (verificar con el departamento escolar de
+  posgrado --- la comisión de admisiones {\bf no} canaliza estos
   trámites).
 \end{enumerate}
+
 Es importante informarse directamente con la FIME y la UANL sobre los
 requisitos ya que la comisión de admisiones no tiene ningún poder o
 conocimiento específico sobre los pasos, fechas o costos.
