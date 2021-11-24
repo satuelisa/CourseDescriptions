@@ -1,0 +1,121 @@
+\documentclass[legalpaper,landscape]{article}
+\usepackage[left=0mm,top=5mm,bottom=2mm,right=0mm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\newcommand{\arturo}{Dr.\ Jos\'{e} Arturo Berrones Santos}
+\newcommand{\elisa}{Dra.\ Satu Elisa Schaeffer}
+\newcommand{\cesar}{Dr.\ C\'{e}sar Emilio Villarreal Rodr\'{\i}guez}
+\newcommand{\angy}{Dra.\ Mar\'{\i}a Ang\'{e}lica Salazar Aguilar}
+\newcommand{\vincent}{Dr.\ Vincent Boyer}
+\newcommand{\ada}{Dra.\ Ada Margarita \'{A}lvarez Socarr\'{a}s}
+\newcommand{\iris}{Dra.\ Iris Abril Mart\'{\i}nez Salazar}
+\newcommand{\sara}{Dra.\ Sara Ver\'{o}nica S\'{a}nchez Rodr\'{\i}guez}
+\newcommand{\roger}{Dr.\ Roger Zirahu\'{e}n R\'{\i}os Mercado}
+\newcommand{\igor}{Dr.\ Igor Litvinchev}
+\newcommand{\romeo}{Dr.\ Romeo S\'{a}nchez Nigenda}
+\newcommand{\ferny}{Dr.\ Fernando L\'{o}pez Irarragorri}
+
+\newcommand{\coord}{{\bf Coordinador Acad\'{e}mico \\ del Posgrado en Ingenier\'{\i}a de Sistemas}}
+\newcommand{\nab}{{\bf N\'{u}cleo Acad\'{e}mico B\'{a}sico}}
+\newcommand{\msc}{{\bf Comisi\'{o}n Acad\'{e}mica \\ de Maestr\'{\i}a}}
+\newcommand{\dsc}{{\bf Comisi\'{o}n Acad\'{e}mica \\ de Doctorado}}
+\newcommand{\est}{{\bf Comisi\'{o}n de \\ Estad\'{\i}sticas y \\ Compilaci\'{o}n de \\ Informac\'{o}n de Estudiantes}}
+\newcommand{\vinc}{{\bf Comisi\'{o}n de Vinculaci\'{o}n}}
+\newcommand{\red}{{\em Coordinador de Redise\~{n}o}}
+\newcommand{\clases}{{\em Coordinador de Clases}}
+\pagestyle{empty}
+\begin{document}
+\thispagestyle{empty}
+
+\tikzset{
+  basic/.style  = {draw, text width = 7cm, drop shadow, font=\sffamily, rectangle},
+  root/.style   = {basic, thin, align=center, fill=gray!45, minimum height = 16mm},
+  com/.style = {basic, thin,align=center, fill=gray!30, text
+    width=15em, minimum height = 22mm},
+  person/.style = {basic, thin, align=left, fill=gray!20, text width=17em, node distance = 35pt}
+}
+
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=70mm},
+  edge from parent/.style={->,draw},
+  >=latex]
+
+\node[root] {\coord \\ \cesar}
+  child {node[com] (nab) {\nab}}
+  child [below of = nab, yshift=-20pt] {node[com] (msc) {\msc}}
+  child [below of = msc, xshift=-100pt, yshift=-250pt] {node[com] (dsc) {\dsc}}
+  child [xshift=-100pt, yshift=-220pt] {node[com] (est) {\est}}
+  child [xshift=-100pt, yshift=-150pt] {node[com] (vinc) {\vinc}}
+  child [yshift=20pt ,xshift=-170pt]{node[com] (red) {\red \\ \arturo}}
+  child [yshift=-70pt, xshift=-400pt] {node[com] (clases) {\clases \\ \elisa}};
+
+\begin{scope}[every node/.style={person}]
+\node [below of = nab, xshift=20pt, yshift=-20pt] (nab1) {\iris};
+\node [below of = nab1] (nab2) {\romeo};
+\node [below of = nab2] (nab3) {\sara};
+\node [below of = nab3] (nab4) {\arturo};
+\node [below of = nab4] (nab5) {\elisa};
+\node [below of = nab5] (nab6) {\ferny};
+\node [below of = nab6] (nab7) {\cesar};
+\node [below of = nab7] (nab8) {\angy};
+\node [below of = nab8] (nab9) {\vincent};
+\node [below of = nab9] (nab10) {\roger};
+
+\node [below of = msc, xshift=20pt, yshift=-25pt] (msc1) {\iris \\ (responsable)};
+\node [below of = msc1] (msc2) {\sara};
+\node [below of = msc2] (msc3) {\angy};
+\node [below of = msc3] (msc4) {\romeo};
+
+\node [below of = dsc, xshift=20pt, yshift=-25pt] (dsc1) {\elisa \\ (responsable)};
+\node [below of = dsc1] (dsc2) {\igor};
+\node [below of = dsc2] (dsc3) {\arturo};
+\node [below of = dsc3] (dsc4) {\ferny};
+\node [below of = dsc4] (dsc5) {\vincent};
+
+\node [below of = est, xshift=20pt, yshift=-25pt] (est1) {\roger \\ (responsable)};
+\node [below of = est1] (est2) {\romeo};
+\node [below of = est2] (est3) {\sara};
+\node [below of = est3] (est4) {\arturo};
+
+\node [below of = vinc, xshift=20pt, yshift=-25pt] (vinc1) {\igor \\ (responsable)};
+\node [below of = vinc1] (vinc2) {\elisa};
+\node [below of = vinc2] (vinc3) {\vincent};
+
+\end{scope}
+
+\draw[->] (nab.west) |- (nab1.west);
+\draw[->] (nab.west) |- (nab2.west);
+\draw[->] (nab.west) |- (nab3.west);
+\draw[->] (nab.west) |- (nab4.west);
+\draw[->] (nab.west) |- (nab5.west);
+\draw[->] (nab.west) |- (nab6.west);
+\draw[->] (nab.west) |- (nab7.west);
+\draw[->] (nab.west) |- (nab8.west);
+\draw[->] (nab.west) |- (nab9.west);
+\draw[->] (nab.west) |- (nab10.west);
+
+\draw[->] (msc.west) |- (msc1.west);
+\draw[->] (msc.west) |- (msc2.west);
+\draw[->] (msc.west) |- (msc3.west);
+\draw[->] (msc.west) |- (msc4.west);
+
+\draw[->] (dsc.west) |- (dsc1.west);
+\draw[->] (dsc.west) |- (dsc2.west);
+\draw[->] (dsc.west) |- (dsc3.west);
+\draw[->] (dsc.west) |- (dsc4.west);
+\draw[->] (dsc.west) |- (dsc5.west);
+
+\draw[->] (est.west) |- (est1.west);
+\draw[->] (est.west) |- (est2.west);
+\draw[->] (est.west) |- (est3.west);
+\draw[->] (est.west) |- (est4.west);
+
+\draw[->] (vinc.west) |- (vinc1.west);
+\draw[->] (vinc.west) |- (vinc2.west);
+\draw[->] (vinc.west) |- (vinc3.west);
+
+
+\end{tikzpicture}
+
+\end{document}
