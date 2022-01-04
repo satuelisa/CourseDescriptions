@@ -1,0 +1,252 @@
+\documentclass{article}
+\usepackage[spanish, mexico]{babel}  
+\usepackage{color,colortbl}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr} % before geometry
+\usepackage[paperheight=10in,paperwidth=25in,left=5mm,right=5mm,top=5mm,bottom=5mm]{geometry}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{graphics}
+\usepackage{varwidth}
+\usepackage{tikz}
+
+\definecolor{gral}{HTML}{ffffff}
+\definecolor{prog}{HTML}{99ff99}
+\definecolor{meth}{HTML}{3399ff}
+\definecolor{comp}{HTML}{99ff33}
+\definecolor{math}{HTML}{9999ff}
+\definecolor{phys}{HTML}{9933ff}
+\definecolor{opta}{HTML}{ffcccc}
+\definecolor{fina}{HTML}{aaaaaa}
+
+
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{obl} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=gral, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{met} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=meth, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]  
+\tikzstyle{mat} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=math, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{phy} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=phys, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{pro} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=prog, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{com} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=comp, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{fin} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=fina, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]    
+
+\tikzstyle{omet} = [draw, rounded rectangle, dotted, minimum height=2em, minimum width=2em, fill=meth, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]  
+\tikzstyle{omat} = [draw, rounded rectangle, dotted, minimum height=2em, minimum width=2em, fill=math, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{ophy} = [draw, rounded rectangle, dotted, minimum height=2em, minimum width=2em, fill=phys, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{opro} = [draw, rounded rectangle, dotted, minimum height=2em, minimum width=2em, fill=prog, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{ocom} = [draw, rounded rectangle, dotted, minimum height=2em, minimum width=2em, fill=comp, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]
+\tikzstyle{ofin} = [draw, rounded rectangle, dotted, minimum height=2em, minimum width=2em, fill=fina, execute at begin node={\begin{varwidth}{40mm}},
+  execute at end node={\end{varwidth}}]    
+
+
+\tikzstyle{sem} = [scale=1.3, minimum height=1em, minimum width=2em]
+\tikzstyle{ele} = [scale=0.7, minimum height=1em, minimum width=2em]
+
+\tikzstyle{line} = [draw, thick, -latex', shorten >=0pt]
+\tikzstyle{one} = [draw, dashed, -latex', shorten >=0pt]
+\usepackage{enumitem}
+\begin{document}
+
+\begin{center}
+  \begin{tikzpicture}
+  \matrix[row sep=8mm, column sep=1mm] at (0, 2) {
+    \node[sem](s1){Primer semestre}; \\
+    \node[phy](qg){Qu\'{\i}mica general \& lab};\\
+    \node[phy](f1){F\'{\i}sica I \& lab};\\
+    \node[mat](m1){Matem\'{a}ticas I: C\'{a}lculo diferencial};\\
+    \node[mat](api){\'{A}lgebra para ingenier\'{\i}a};\\
+    \node[pro](mdp){Metodolog\'{\i}a de programaci\'{o}n};\\
+    \node[obl](dpi){Dibujo para ingenier\'{\i}a};\\
+    \node[obl](cdlp){Cultura de la paz};\\
+    \node[obl](rsyds){Responsabilidad social y desarrollo sustentable};\\
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (5, 0) {
+    \node[sem](s1){Segundo semestre}; \\
+    \node[phy](f2){F\'{\i}sica II \& lab};\\
+    \node[mat](m2){Matem\'{a}ticas II: C\'{a}lculo integral};\\
+    \node[mat](md){Matem\'{a}ticas discretas};\\        
+    \node[opro](lac){Lenguaje C};\\
+    \node[opro](pep){Programaci\'{o}n en Python};\\    
+    \node[met](leei){Liderazgo, emprendimiento e innovaci\'{o}n};\\   
+    \node[obl](ipi){Ingl\'{e}s para ingenier\'{\i}a};\\
+    \node[obl](eycdl){\'{E}tica y cultura de legalidad};\\
+    \node[obl](cdg){Cultura de g\'{e}nero};\\
+    \node[ele](e2){Elegir una optativa}; \\    
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (10, 1) {
+    \node[sem](s1){Tercer semestre}; \\
+    \node[phy](f3){F\'{\i}sica III \& lab};\\
+    \node[mat](m3){Matem\'{a}ticas III};\\    
+    \node[com](sd){Sistemas digitales \& lab};\\
+    \node[pro](ayedd){Algoritmos y estructuras de datos};\\
+    \node[pro](poao){Programaci\'{o}n orientada a objetos \& lab};\\
+    \node[met](ca){Contabilidad administrativa};\\
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (15, 2) {
+    \node[sem](s1){Cuarto semestre}; \\
+    \node[mat](pye){Probabilidad y estad\'{\i}stica};\\    
+    \node[phy](f4){F\'{\i}sica IV \& lab};\\
+    \node[mat](m4){Matem\'{a}ticas IV};\\    
+    \node[com](at){Arquitectura tecnol\'{o}gica};\\
+    \node[com](tycdd){Transmisi\'{o}n y comunicaci\'{o}n de datos};\\    
+    \node[pro](bdd){Bases de datos};\\\\\\\\\\\\
+    \node[met](mdd){Metodolog\'{\i}as de desarrollo};\\    
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (20, 1) {
+    \node[sem](s1){Quinto semestre}; \\
+    \node[mat](dde){Dise\~{n}o de experimentos};\\    
+    \node[pro](sa){Sistemas adaptativos};\\
+    \node[omat](mn){M\'{e}todos num\'{e}ricos};\\    
+    \node[com](so){Sistemas operativos};\\    
+    \node[com](rc){Redes computacionales};\\\\
+    \node[opro](vdi){Visualizaci\'{o}n de informaci\'{o}n};\\    
+    \node[opro](pf){Programaci\'{o}n funcional};\\    
+    \node[omet](dyo){Desarrollo y operaciones};\\\\\\
+    \node[met](ihc){Interacci\'{o}n humano-computadora};\\
+    \node[ele](e5){Elegir dos optativas}; \\        
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (25, 1) {
+    \node[sem](s1){Sexto semestre}; \\
+    \node[omat](cdd){Ciencia de datos};\\\\\\
+    \node[com](ci){C\'{o}mputo integrado};\\
+    \node[mat](o){Optimizaci\'{o}n};\\
+    \node[mat](siyc){Seguridad inform\'{a}tica y criptograf\'{\i}a};\\\\
+    \node[pro](aw){Aplicaciones web};\\\\
+    \node[com](iddm){Ingenier\'{\i}a de dispositivos m\'{o}viles \& lab};\\\\
+    \node[ocom](ayc){Automatizaci\'{o}n y control};\\
+    \node[omet](da){Desarrollo \'{a}gil};\\
+    \node[omet](pdne){Planeaci\'{o}n de negocios emergentes};\\    
+    \node[ele](e6){Elegir dos optativas}; \\            
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (32, 1) {
+    \node[sem](s1){S\'{e}ptimo semestre}; \\
+    \node[mat](ia){Inteligencia artificial};\\                
+    \node[omat](mys){Modelado y simulaci\'{o}n};\\
+    \node[com](sdi){Sistemas distribuidos};\\    
+    \node[opro](ls){Lenguajes script};\\    
+    \node[pro](cp){C\'{o}mputo paralelo};\\
+    \node[omat](tsdo){Temas selectos de optimizaci\'{o}n};\\        
+    \node[omat](tdi){Teor\'{\i}a de informaci\'{o}n};\\
+    \node[omet](idc){Ingenier\'{\i}a de calidad};\\
+    \node[fin](pi1){Proyecto integrador I};\\
+    \node[ocom](cya){Controladores y actuadores};\\    
+    \node[ele](e7){Elegir tres optativas}; \\            
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (40, 2) {
+    \node[sem](s1){Octavo semestre}; \\
+    \node[com](tsdte){T\'{o}picos selectos de tecnolog\'{\i}as emergentes};\\
+    \node[omet](adcdc){Administraci\'{o}n de c\'{e}ntros de c\'{o}mputo};\\
+    \node[opro](celn){C\'{o}mputo en la nube};\\    
+    \node[pro](vc){Visi\'{o}n computacional};\\
+    \node[opro](gc){Gr\'{a}ficas computacionales};\\
+    \node[omat](tdc){Teor\'{\i}a de computaci\'{o}n};\\
+    \node[omat](am){Aprendizaje m\'{a}quina};\\    
+    \node[omat](vyvf){Verificaci\'{o}n y validaci\'{o}n formal};\\
+    \node[omet](aypddg){Almacenaje y procesamiento de datos grandes};\\    
+    \node[fin](pi2){Proyecto integrador II};\\                
+    \node[ocom](idsa){Ingenier\'{\i}a de sistemas aut\'{o}nomos};\\    
+    \node[ele](e8){Elegir cuatro optativas}; \\                
+  };
+    \matrix[row sep=8mm, column sep=1mm] at (45, -4) {
+    \node[sem](s1){Noveno semestre}; \\
+    \node[fin](ss){Servicio social};\\
+    \node[ofin](c1){Certificaci\'{o}n I};\\
+    \node[ofin](mo1){Movilidad I};\\
+    \node[ofin](i1){Investigaci\'{o}n I};\\
+    \node[ofin](le1){Libre elección I};\\
+    \node[ele](e2){Elegir una optativa}; \\
+};
+    \matrix[row sep=8mm, column sep=1mm] at (50, -4) {
+    \node[sem](s1){D\'{e}cimo semestre}; \\
+    \node[fin](pp){Pr\'{a}cticas profesionales};\\
+    \node[ofin](c2){Certificaci\'{o}n II};\\
+    \node[ofin](mo2){Movilidad II};\\
+    \node[ofin](i2){Investigaci\'{o}n II$^\ast$};\\
+    \node[ofin](le2){Libre elección II};\\    
+    \node[ele](e2){Elegir una optativa};\\
+  };
+  \draw [line] (api) -- (md);
+  \draw [line] (m1) -- (m2);
+  \draw [line] (m2) -- (m3);
+  \draw [line] (m3) -- (m4);
+  \draw [line] (f1) -- (f2);
+  \draw [line] (f2) -- (f3);
+  \draw [line] (f3) -- (f4);
+  \draw [line] (mdp) -- (lac);
+  \draw [line] (mdp) -- (pep);
+  \draw [line] (md) -- (sd);
+  \draw [line] (sd) -- (at);
+  \draw [line] (sd) -- (tycdd);
+  \draw [line] (ayedd) -- (tycdd);    
+  \draw [line] (at) -- (so);
+  \draw [line] (tycdd) -- (rc);  
+  \draw [line] (at) -- (rc);
+  \draw [line] (so) -- (ci);
+  \draw [line] (mdd) -- (ihc);
+  \draw [line] (mdd) -- (dyo);
+  \draw [line] (poao) -- (pf);
+  \draw [line] (pye) -- (sa);
+  \draw [line] (pye) -- (dde);
+  \draw [line] (dde) -- (cdd);
+  \draw [line] (mdd) -- (da);
+  \draw [line] (rc) -- (aw);
+  \draw [line] (rc) -- (iddm);
+  \draw [line] (rc) -- (siyc);    
+  \draw [one] (lac) -- (ayedd);
+  \draw [one] (pep) -- (ayedd);
+  \draw [one] (lac) -- (poao);
+  \draw [one] (pep) -- (poao);
+  \draw [line] (poao) -- (bdd);
+  \draw [line] (pi1) -- (pi2);
+  \draw [line] (sa) -- (ia);
+  \draw [line] (ci) -- (cp);
+  \draw [line] (rc) -- (ci);
+  \draw [line] (ci) -- (sdi);
+  \draw [line] (i1) -- (i2);
+  \draw [line] (pye) -- (mn);
+  \draw [line] (bdd) -- (vdi);
+  \draw [line] (ayc) -- (cya);
+  \draw [line] (cya) -- (idsa);
+  \draw [line] (aw) -- (pi1);
+  \draw [line] (ia) -- (tsdte);
+  \draw [line] (cp) -- (vc);
+  \draw [line] (siyc) -- (tdi);
+  \draw [line] (o) -- (tsdo);
+  \draw [line] (cdd) -- (mys);
+  \draw [line] (aw) -- (idc);
+  \draw [line] (ci) -- (ls);
+  \draw [line] (cp) -- (gc);
+  \draw [line] (sdi) -- (adcdc);
+  \draw [one] (mys) -- (am);
+  \draw [one] (tdi) -- (am);
+  \draw [one] (mys) -- (tdc);
+  \draw [one] (tdi) -- (tdc);
+  \draw [one] (mys) -- (vyvf);
+  \draw [one] (tdi) -- (vyvf);      
+  \draw [line] (sdi) -- (celn);
+  \draw [line] (pi2) -- (c1);
+  \draw [line] (pi2) -- (mo1);
+  \draw [line] (pi2) -- (i1);
+  \draw [one] (idc) -- (aypddg);
+  \draw [one] (ls) -- (aypddg);  
+
+  
+\end{tikzpicture}
+\end{center}
+\end{document}
+
+
+
+
