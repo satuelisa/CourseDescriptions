@@ -58,7 +58,7 @@
 
 
 \tikzstyle{txt} = [scale=1, minimum height=1em, minimum width=2em]
-\tikzstyle{sem} = [scale=1.3, minimum height=1em, minimum width=2em]
+\tikzstyle{sem} = [scale=1.3, minimum height=1em, minimum width=2em, execute at begin node={\begin{varwidth}{27mm}}, execute at end node={\end{varwidth}}]  
 \tikzstyle{ele} = [scale=0.7, minimum height=1em, minimum width=2em]
 
 \tikzstyle{line} = [draw, thick, -latex', shorten >=0pt]
@@ -69,129 +69,130 @@
 \begin{center}
   \begin{tikzpicture}
   \matrix[row sep=8mm, column sep=1mm] at (0, 2) {
-    \node[sem](s1){Primer semestre}; \\
-    \node[phy](qg){Qu\'{\i}mica general \& lab};\\
-    \node[phy](f1){F\'{\i}sica I \& lab};\\
-    \node[mat](m1){Matem\'{a}ticas I: C\'{a}lculo diferencial};\\
-    \node[mat](api){\'{A}lgebra para ingenier\'{\i}a};\\
-    \node[pro](mdp){Metodolog\'{\i}a de programaci\'{o}n};\\
-    \node[obl](dpi){Dibujo para ingenier\'{\i}a};\\
-    \node[obl](cdlp){Cultura de la paz};\\
-    \node[obl](rsyds){Responsabilidad social y desarrollo sustentable};\\
+    \node[sem](s1){Primer semestre (27 cr\'{e}ditos)}; \\
+    \node[phy](qg){Qu\'{\i}mica general \& lab (4)};\\
+    \node[phy](f1){F\'{\i}sica I \& lab (4)};\\
+    \node[mat](m1){Matem\'{a}ticas I: C\'{a}lculo diferencial (4)};\\
+    \node[mat](api){\'{A}lgebra para ingenier\'{\i}a (3)};\\
+    \node[pro](mdp){Metodolog\'{\i}a de programaci\'{o}n (4)};\\
+    \node[obl](dpi){Dibujo para ingenier\'{\i}a (4)};\\
+    \node[obl](cdlp){Cultura de la paz (2)};\\
+    \node[obl](rsyds){Responsabilidad social y desarrollo sustentable (2)};\\
   };
-    \matrix[row sep=8mm, column sep=1mm] at (5, 0) {
-      \node[sem](s1){Segundo semestre}; \\
+    \matrix[row sep=8mm, column sep=1mm] at (5, 1) {
+      \node[sem](s1){Segundo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e2){Elegir una optativa}; \\          
-    \node[phy](f2){F\'{\i}sica II \& lab};\\
-    \node[mat](m2){Matem\'{a}ticas II: C\'{a}lculo integral};\\
-    \node[mat](md){Matem\'{a}ticas discretas};\\\\
-    \node[opro](lac){Lenguaje C};\\
-    \node[opro](pep){Programaci\'{o}n en Python};\\    
-    \node[met](leei){Liderazgo, emprendimiento e innovaci\'{o}n};\\   
-    \node[obl](ipi){Ingl\'{e}s para ingenier\'{\i}a};\\
-    \node[obl](eycdl){\'{E}tica y cultura de legalidad};\\
-    \node[obl](cdg){Cultura de g\'{e}nero};\\
+    \node[phy](f2){F\'{\i}sica II \& lab (4)};\\
+    \node[mat](m2){Matem\'{a}ticas II: C\'{a}lculo integral (4)};\\
+    \node[mat](md){Matem\'{a}ticas discretas (4)};\\\\
+    \node[opro](lac){Lenguaje C (4)};\\
+    \node[opro](pep){Programaci\'{o}n en Python (4)};\\    
+    \node[met](leei){Liderazgo, emprendimiento e innovaci\'{o}n (2)};\\   
+    \node[obl](eycdl){\'{E}tica y cultura de legalidad (2)};\\
+    \node[obl](cdg){Cultura de g\'{e}nero (2)};\\
   };
     \matrix[row sep=8mm, column sep=1mm] at (11, 2) {
-    \node[sem](s1){Tercer semestre}; \\
-    \node[phy](f3){F\'{\i}sica III \& lab};\\
-    \node[mat](m3){Matem\'{a}ticas III};\\    
-    \node[com](sd){Sistemas digitales \& lab};\\
-    \node[pro](ayedd){Algoritmos y estructuras de datos};\\
-    \node[pro](poao){Programaci\'{o}n orientada a objetos \& lab};\\
-    \node[met](ca){Contabilidad administrativa};\\
+    \node[sem](s1){Tercer semestre (22 cr\'{e}ditos)}; \\
+    \node[phy](f3){F\'{\i}sica III \& lab (4)};\\
+    \node[mat](m3){Matem\'{a}ticas III (3)};\\\\\\
+    \node[com](sd){Sistemas digitales \& lab (3)};\\\\\\
+    \node[pro](poao){Programaci\'{o}n orientada a objetos \& lab (4)};\\\\\\
+    \node[pro](ayedd){Algoritmos y estructuras de datos (4)};\\
+    \node[met](ca){Contabilidad administrativa (4)};\\
   };
-    \matrix[row sep=8mm, column sep=1mm] at (16, 1) {
-    \node[sem](s1){Cuarto semestre}; \\
-    \node[mat](pye){Probabilidad y estad\'{\i}stica};\\    
-    \node[phy](f4){F\'{\i}sica IV \& lab};\\
-    \node[mat](m4){Matem\'{a}ticas IV};\\    
-    \node[com](at){Arquitectura tecnol\'{o}gica};\\
-    \node[com](tycdd){Transmisi\'{o}n y comunicaci\'{o}n de datos};\\    
-    \node[pro](bdd){Bases de datos};\\\\\\\\\\\\
-    \node[met](mdd){Metodolog\'{\i}as de desarrollo};\\    
+    \matrix[row sep=8mm, column sep=1mm] at (17, 0) {
+    \node[sem](s1){Cuarto semestre (22 cr\'{e}ditos)}; \\
+    \node[mat](pye){Probabilidad y estad\'{\i}stica (3)};\\    
+    \node[phy](f4){F\'{\i}sica IV \& lab (4)};\\
+    \node[mat](m4){Matem\'{a}ticas IV (3)};\\    
+    \node[com](at){Arquitectura tecnol\'{o}gica (3)};\\
+    \node[pro](bdd){Bases de datos (3)};\\\\\\\\
+    \node[com](tycdd){Transmisi\'{o}n y comunicaci\'{o}n de datos (3)};\\\\\\
+    \node[met](mdd){Metodolog\'{\i}as de desarrollo (3)};\\    
   };
-    \matrix[row sep=8mm, column sep=1mm] at (21, 1) {
-      \node[sem](s1){Quinto semestre}; \\
+    \matrix[row sep=8mm, column sep=1mm] at (22, 1) {
+      \node[sem](s1){Quinto semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e5){Elegir dos optativas}; \\              
-    \node[mat](dde){Dise\~{n}o de experimentos};\\    
-    \node[pro](sa){Sistemas adaptativos};\\
-    \node[omat](mn){M\'{e}todos num\'{e}ricos};\\    
-    \node[com](so){Sistemas operativos};\\    
-    \node[com](rc){Redes computacionales};\\\\
-    \node[opro](vdi){Visualizaci\'{o}n de informaci\'{o}n};\\    
-    \node[opro](pf){Programaci\'{o}n funcional};\\    
-    \node[omet](dyo){Desarrollo y operaciones};\\
-    \node[met](ihc){Interacci\'{o}n humano-computadora};\\\\\\
+    \node[mat](dde){Dise\~{n}o de experimentos (3)};\\    
+    \node[pro](sa){Sistemas adaptativos (3)};\\
+    \node[omat](mn){M\'{e}todos num\'{e}ricos (3)};\\    
+    \node[com](so){Sistemas operativos (4)};\\\\    
+    \node[com](rc){Redes computacionales (3)};\\\\
+    \node[opro](vdi){Visualizaci\'{o}n de informaci\'{o}n (3)};\\            
+    \node[opro](pf){Programaci\'{o}n funcional (3)};\\            
+    \node[omet](dyo){Desarrollo y operaciones (3)};\\
+    \node[met](ihc){Interacci\'{o}n humano-computadora (3)};\\\\\\
   };
-    \matrix[row sep=8mm, column sep=1mm] at (26, 1) {
-      \node[sem](s1){Sexto semestre}; \\
-    \node[ele](e6){Elegir dos optativas}; \\                  
-    \node[omat](cdd){Ciencia de datos};\\\\\\
-    \node[mat](o){Optimizaci\'{o}n};\\    
-    \node[com](ci){C\'{o}mputo integrado};\\\\
-    \node[mat](siyc){Seguridad inform\'{a}tica y criptograf\'{\i}a};\\
-    \node[pro](aw){Aplicaciones web};\\\\
-    \node[com](iddm){Ingenier\'{\i}a de dispositivos m\'{o}viles \& lab};\\
-    \node[ocom](ayc){Automatizaci\'{o}n y control};\\\\
-    \node[omet](pdne){Planeaci\'{o}n de negocios emergentes};\\    
-    \node[omet](da){Desarrollo \'{a}gil};\\
+    \matrix[row sep=8mm, column sep=1mm] at (27, 1) {
+      \node[sem](s1){Sexto semestre (22 cr\'{e}ditos)}; \\
+    \node[ele](e6){Elegir tres optativas}; \\                  
+    \node[omat](cdd){Ciencia de datos (3)};\\\\\\
+    \node[ocom](ayc){Automatizaci\'{o}n y control (3)};\\
+    \node[com](ci){C\'{o}mputo integrado (3)};\\
+    \node[mat](o){Optimizaci\'{o}n (3)};\\        
+    \node[omat](si){Seguridad inform\'{a}tica (3)};\\
+    \node[omat](cr){Criptograf\'{\i}a (3)};\\    
+    \node[pro](aw){Aplicaciones web (3)};\\\\
+    \node[com](iddm){Ingenier\'{\i}a de dispositivos m\'{o}viles \& lab (4)};\\\\
+    \node[omet](pdne){Planeaci\'{o}n de negocios emergentes (3)};\\    
+    \node[omet](da){Desarrollo \'{a}gil (3)};\\
   };
-    \matrix[row sep=8mm, column sep=1mm] at (32, 2) {
-      \node[sem](s1){S\'{e}ptimo semestre}; \\
+    \matrix[row sep=8mm, column sep=1mm] at (33, 2) {
+    \node[sem](s1){S\'{e}ptimo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e7){Elegir tres optativas}; \\                  
-    \node[omat](mys){Modelado y simulaci\'{o}n};\\      
-    \node[mat](ia){Inteligencia artificial};\\                
-    \node[omat](tsdo){Temas selectos de optimizaci\'{o}n};\\
-    \node[omat](tdi){Teor\'{\i}a de informaci\'{o}n};\\    
-        \node[com](sdi){Sistemas distribuidos};\\
-    \node[pro](cp){C\'{o}mputo paralelo};\\\\
-    \node[opro](ls){Lenguajes script};\\        
-    \node[omet](idc){Ingenier\'{\i}a de calidad};\\    \\
-    \node[fin](pi1){Proyecto integrador I};\\
-    \node[ocom](cya){Controladores y actuadores};\\    
+    \node[omat](mys){Modelado y simulaci\'{o}n (3)};\\      
+    \node[mat](ia){Inteligencia artificial (3)};\\                
+    \node[ocom](cya){Controladores y actuadores (4)};\\
+    \node[omat](mh){Metaheur\'{\i}sticas (3)};\\
+    \node[com](sdi){Sistemas distribuidos (3)};\\
+    \node[pro](cp){C\'{o}mputo paralelo (3)};\\
+    \node[opro](ls){Lenguajes script (3)};\\            
+    \node[omat](tdi){Teor\'{\i}a de la informaci\'{o}n (3)};\\    
+    \node[omet](idc){Ingenier\'{\i}a de calidad (3)};\\    \\
+    \node[fin](pi1){Proyecto integrador I (4)};\\
   };
     \matrix[row sep=8mm, column sep=1mm] at (40, 2) {
-      \node[sem](s1){Octavo semestre}; \\
+    \node[sem](s1){Octavo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e8){Elegir cuatro optativas}; \\                      
-    \node[com](tsdte){T\'{o}picos selectos de tecnolog\'{\i}as emergentes};\\
-    \node[omat](am){Aprendizaje m\'{a}quina};\\    
-    \node[omet](adcdc){Administraci\'{o}n de c\'{e}ntros de c\'{o}mputo};\\
-    \node[opro](celn){C\'{o}mputo en la nube};\\
-    \node[omat](vyvf){Verificaci\'{o}n y validaci\'{o}n formal};\\
-    \node[omat](tdc){Teor\'{\i}a de computaci\'{o}n};\\    
-    \node[opro](gc){Gr\'{a}ficas computacionales};\\
-    \node[pro](vc){Visi\'{o}n computacional};\\        
-    \node[omet](aypddg){Almacenaje y procesamiento de datos grandes};\\        
-    \node[fin](pi2){Proyecto integrador II};\\                
-    \node[ocom](idsa){Ingenier\'{\i}a de sistemas aut\'{o}nomos};\\    
+    \node[com](te){Tecnolog\'{\i}as emergentes (3)};\\
+    \node[omat](am){Aprendizaje m\'{a}quina (3)};\\
+    \node[ocom](idsa){Ingenier\'{\i}a de sistemas aut\'{o}nomos (3)};\\        
+    \node[omat](vyvf){Verificaci\'{o}n formal (3)};\\
+    \node[opro](celn){C\'{o}mputo en la nube (3)};\\
+    \node[omet](adcdc){Confiabilidad de c\'{e}ntros de c\'{o}mputo (3)};\\
+    \node[opro](gc){Gr\'{a}ficas computacionales (3)};\\    
+    \node[pro](vc){Visi\'{o}n computacional (3)};\\
+    \node[omat](tdc){Teor\'{\i}a de la computaci\'{o}n (3)};\\        
+    \node[omet](aypddg){Almacenaje y procesamiento de datos grandes (3)};\\        
+    \node[fin](pi2){Proyecto integrador II (4)};\\                
   };
-    \matrix[row sep=8mm, column sep=1mm] at (45, -4) {
-      \node[sem](s1){Noveno semestre}; \\
+    \matrix[row sep=8mm, column sep=1mm] at (47, -5) {
+      \node[sem](s1){Noveno semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e2){Elegir una optativa}; \\      
-    \node[fin](ss){Servicio social};\\
-    \node[ofin](c1){Certificaci\'{o}n I};\\
-    \node[ofin](mo1){Movilidad I};\\
-    \node[ofin](i1){Investigaci\'{o}n I};\\
-    \node[ofin](le1){Libre elección I};\\
+    \node[fin](ss){Servicio social (16)};\\
+    \node[ofin](c1){Certificaci\'{o}n I (6)};\\
+    \node[ofin](mo1){Movilidad I (6)};\\
+    \node[ofin](i1){Investigaci\'{o}n I (6)};\\
+    \node[ofin](le1){Libre elección I (6)};\\
 };
-    \matrix[row sep=8mm, column sep=1mm] at (52, 0) {
+    \matrix[row sep=8mm, column sep=1mm] at (54, 0) {
 
-      \node[sem](t0){Leyenda:}; & & & \node[obl](lobl){Unidad obligatoria};\\
-      & & & \node[opt](lopt){Unidad optativa};\\
+      \node[sem](t0){Leyenda:}; & & & \node[obl](lobl){Unidad obligatoria (cr)};\\
+      & & & \node[opt](lopt){Unidad optativa (cr)};\\
       \node[txt](t1){Requisito(s)}; & \node[obl](ej1){...}; & & \node[obl](ej2){...};\\
       \node[txt](t1){Cumplir con uno}; & \node[opt](ej3){...}; & & \node[obl](ej4){...};\\\\\\
-      \node[sem](s1){D\'{e}cimo semestre}; \\
+      \node[sem](s1){D\'{e}cimo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e2){Elegir una optativa};\\      
-    \node[fin](pp){Pr\'{a}cticas profesionales};\\
-    \node[ofin](c2){Certificaci\'{o}n II};\\
-    \node[ofin](mo2){Movilidad II};\\
-    \node[ofin](i2){Investigaci\'{o}n II$^\ast$};\\
-    \node[ofin](le2){Libre elección II};\\    
+    \node[fin](pp){Pr\'{a}cticas profesionales (16)};\\
+    \node[ofin](c2){Certificaci\'{o}n II (6)};\\
+    \node[ofin](mo2){Movilidad II (6)};\\
+    \node[ofin](i2){Investigaci\'{o}n II$^\ast$ (6)};\\
+    \node[ofin](le2){Libre elección II (6)};\\    
     };
   \draw [line] (ej1) -- (ej2);
   \draw [one] (ej3) -- (ej4);        
   \draw [line] (api) -- (md);
+  \draw [line] (md) -- (pye);
   \draw [line] (m1) -- (m2);
   \draw [line] (m2) -- (m3);
   \draw [line] (m3) -- (m4);
@@ -201,6 +202,8 @@
   \draw [line] (mdp) -- (lac);
   \draw [line] (mdp) -- (pep);
   \draw [line] (md) -- (sd);
+  \draw [line] (ihc) -- (pdne);
+  \draw [line] (mdd) -- (ihc);  
   \draw [line] (sd) -- (at);
   \draw [line] (sd) -- (tycdd);
   \draw [line] (ayedd) -- (tycdd);    
@@ -209,15 +212,17 @@
   \draw [line] (at) -- (rc);
   \draw [line] (so) -- (ci);
   \draw [line] (mdd) -- (ihc);
-  \draw [line] (mdd) -- (dyo);
+  \draw [line] (poao) -- (mdd);
   \draw [line] (poao) -- (pf);
   \draw [line] (pye) -- (sa);
   \draw [line] (pye) -- (dde);
   \draw [line] (dde) -- (cdd);
   \draw [line] (mdd) -- (da);
   \draw [line] (rc) -- (aw);
+  \draw [line] (mn) -- (ayc);  
   \draw [line] (rc) -- (iddm);
-  \draw [line] (rc) -- (siyc);    
+  \draw [line] (rc) -- (si);
+  \draw [line] (rc) -- (cr);      
   \draw [one] (lac) -- (ayedd);
   \draw [one] (pep) -- (ayedd);
   \draw [one] (lac) -- (poao);
@@ -234,10 +239,11 @@
   \draw [line] (ayc) -- (cya);
   \draw [line] (cya) -- (idsa);
   \draw [line] (aw) -- (pi1);
-  \draw [line] (ia) -- (tsdte);
+  \draw [line] (ia) -- (te);
+  \draw [line] (m4) -- (o);  
   \draw [line] (cp) -- (vc);
-  \draw [line] (siyc) -- (tdi);
-  \draw [line] (o) -- (tsdo);
+  \draw [line] (si) -- (tdi);
+  \draw [line] (o) -- (mh);
   \draw [line] (cdd) -- (mys);
   \draw [line] (aw) -- (idc);
   \draw [line] (ci) -- (ls);
