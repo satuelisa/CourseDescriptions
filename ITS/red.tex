@@ -6,7 +6,7 @@
 \usepackage[paperheight=10in,paperwidth=25in,left=5mm,right=5mm,top=5mm,bottom=5mm]{geometry}
 \usepackage{graphicx}
 \usepackage{rotating}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{graphics}
 \usepackage{varwidth}
 \usepackage{tikz}
@@ -21,7 +21,7 @@
 \definecolor{fina}{HTML}{aaaaaa}
 
 
-\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shapes,arrows,calc}
 \tikzstyle{obl} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=gral, execute at begin node={\begin{varwidth}{40mm}},
   execute at end node={\end{varwidth}}]
 \tikzstyle{met} = [draw, rectangle, thick, minimum height=2em, minimum width=2em, fill=meth, execute at begin node={\begin{varwidth}{40mm}},
@@ -63,6 +63,21 @@
 
 \tikzstyle{line} = [draw, thick, -latex', shorten >=0pt]
 \tikzstyle{one} = [draw, dotted, -latex', shorten >=0pt]
+
+\tikzset{
+    hyperlink node/.style={
+        alias=sourcenode,
+        append after command={
+            let \p1 = (sourcenode.north west),
+                \p2=(sourcenode.south east),
+                \n1={\x2-\x1},
+                \n2={\y1-\y2} in
+            node [inner sep=0pt,outer sep=0pt,anchor=north west,at=(\p1)] {\hyperlink{#1}{\XeTeXLinkBox{\phantom{\rule{\n1}{\n2}}}}}
+        }
+    }
+}
+
+
 \usepackage{enumitem}
 \begin{document}
 
@@ -84,9 +99,9 @@
     \node[ele](e2){Elegir una optativa}; \\          
     \node[phy](f2){F\'{\i}sica II \& lab (4)};\\
     \node[mat](m2){Matem\'{a}ticas II: C\'{a}lculo integral (4)};\\
-    \node[mat](md){Matem\'{a}ticas discretas (4)};\\\\
-    \node[opro](lac){Lenguaje C (4)};\\
-    \node[opro](pep){Programaci\'{o}n en Python (4)};\\    
+    \node[mat, hyperlink node=md](md){Matem\'{a}ticas discretas (4)};\\\\
+    \node[opro, hyperlink node=lac](lac){Lenguaje C (4)};\\
+    \node[opro, hyperlink node=pep](pep){Programaci\'{o}n en Python (4)};\\    
     \node[met](leei){Liderazgo, emprendimiento e innovaci\'{o}n (2)};\\   
     \node[obl](eycdl){\'{E}tica y cultura de legalidad (2)};\\
     \node[obl](cdg){Cultura de g\'{e}nero (2)};\\
@@ -95,85 +110,85 @@
     \node[sem](s1){Tercer semestre (22 cr\'{e}ditos)}; \\
     \node[phy](f3){F\'{\i}sica III \& lab (4)};\\
     \node[mat](m3){Matem\'{a}ticas III (3)};\\\\\\
-    \node[com](sd){Sistemas digitales \& lab (3)};\\\\\\
-    \node[pro](poao){Programaci\'{o}n orientada a objetos \& lab (4)};\\\\\\
-    \node[pro](ayedd){Algoritmos y estructuras de datos (4)};\\
+    \node[com, hyperlink node=sd](sd){Sistemas digitales \& lab (3)};\\\\\\
+    \node[pro, hyperlink node=poao](poao){Programaci\'{o}n orientada a objetos \& lab (4)};\\\\\\
+    \node[pro, hyperlink node=ayedd](ayedd){Algoritmos y estructuras de datos (4)};\\
     \node[met](ca){Contabilidad administrativa (4)};\\
   };
     \matrix[row sep=8mm, column sep=1mm] at (17, 0) {
     \node[sem](s1){Cuarto semestre (22 cr\'{e}ditos)}; \\
-    \node[mat](pye){Probabilidad y estad\'{\i}stica (3)};\\    
+    \node[mat, hyperlink node=pye](pye){Probabilidad y estad\'{\i}stica (3)};\\    
     \node[phy](f4){F\'{\i}sica IV \& lab (4)};\\
     \node[mat](m4){Matem\'{a}ticas IV (3)};\\    
-    \node[com](at){Arquitectura tecnol\'{o}gica (3)};\\
-    \node[pro](bdd){Bases de datos (3)};\\\\\\\\
-    \node[com](tycdd){Transmisi\'{o}n y comunicaci\'{o}n de datos (3)};\\\\\\
-    \node[met](mdd){Metodolog\'{\i}as de desarrollo (3)};\\    
+    \node[com, hyperlink node=at](at){Arquitectura tecnol\'{o}gica (3)};\\
+    \node[pro, hyperlink node=bdd](bdd){Bases de datos (3)};\\\\\\\\
+    \node[com, hyperlink node=tydcc](tycdd){Transmisi\'{o}n y comunicaci\'{o}n de datos (3)};\\\\\\
+    \node[met, hyperlink node=mdd](mdd){Metodolog\'{\i}as de desarrollo (3)};\\    
   };
     \matrix[row sep=8mm, column sep=1mm] at (22, 1) {
       \node[sem](s1){Quinto semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e5){Elegir dos optativas}; \\              
-    \node[mat](dde){Dise\~{n}o de experimentos (3)};\\    
-    \node[pro](sa){Sistemas adaptativos (3)};\\
-    \node[omat](mn){M\'{e}todos num\'{e}ricos (3)};\\    
-    \node[com](so){Sistemas operativos (4)};\\\\    
-    \node[com](rc){Redes computacionales (3)};\\\\
-    \node[opro](vdi){Visualizaci\'{o}n de informaci\'{o}n (3)};\\            
-    \node[opro](pf){Programaci\'{o}n funcional (3)};\\            
-    \node[omet](dyo){Desarrollo y operaciones (3)};\\
-    \node[met](ihc){Interacci\'{o}n humano-computadora (3)};\\\\\\
+    \node[mat, hyperlink node=dde](dde){Dise\~{n}o de experimentos (3)};\\    
+    \node[pro, hyperlink node=sa](sa){Sistemas adaptativos (3)};\\
+    \node[omat, hyperlink node=mn](mn){M\'{e}todos num\'{e}ricos (3)};\\    
+    \node[com, hyperlink node=so](so){Sistemas operativos (4)};\\\\    
+    \node[com, hyperlink node=rc](rc){Redes computacionales (3)};\\\\
+    \node[opro, hyperlink node=vdi](vdi){Visualizaci\'{o}n de informaci\'{o}n (3)};\\            
+    \node[opro, hyperlink node=pf](pf){Programaci\'{o}n funcional (3)};\\            
+    \node[omet, hyperlink node=dyo](dyo){Desarrollo y operaciones (3)};\\
+    \node[met, hyperlink node=ihc](ihc){Interacci\'{o}n humano-computadora (3)};\\\\\\
   };
     \matrix[row sep=8mm, column sep=1mm] at (27, 1) {
       \node[sem](s1){Sexto semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e6){Elegir tres optativas}; \\                  
-    \node[omat](cdd){Ciencia de datos (3)};\\\\\\
-    \node[ocom](ayc){Automatizaci\'{o}n y control (3)};\\
-    \node[com](ci){C\'{o}mputo integrado (3)};\\\\
-    \node[mat](o){Optimizaci\'{o}n (3)};\\\\
-    \node[omat](cr){Criptograf\'{\i}a (3)};\\    
-    \node[omat](si){Seguridad inform\'{a}tica (3)};\\
-    \node[pro](aw){Aplicaciones web (3)};\\\\
-    \node[com](iddm){Ingenier\'{\i}a de dispositivos m\'{o}viles \& lab (4)};\\
-    \node[omet](pdne){Planeaci\'{o}n de negocios emergentes (3)};\\    
-    \node[omet](da){Desarrollo \'{a}gil (3)};\\
+    \node[omat, hyperlink node=cdd](cdd){Ciencia de datos (3)};\\\\\\
+    \node[ocom, hyperlink node=ayc](ayc){Automatizaci\'{o}n y control (3)};\\
+    \node[com, hyperlink node=ci](ci){C\'{o}mputo integrado (3)};\\\\
+    \node[mat, hyperlink node=o](o){Optimizaci\'{o}n (3)};\\\\
+    \node[omat, hyperlink node=cr](cr){Criptograf\'{\i}a (3)};\\    
+    \node[omat, hyperlink node=si](si){Seguridad inform\'{a}tica (3)};\\
+    \node[pro, hyperlink node=aw](aw){Aplicaciones web (3)};\\\\
+    \node[com, hyperlink node=iddm](iddm){Ingenier\'{\i}a de dispositivos m\'{o}viles \& lab (4)};\\
+    \node[omet, hyperlink node=pdne](pdne){Planeaci\'{o}n de negocios emergentes (3)};\\    
+    \node[omet, hyperlink node=da](da){Desarrollo \'{a}gil (3)};\\
   };
     \matrix[row sep=8mm, column sep=1mm] at (33, 2) {
     \node[sem](s1){S\'{e}ptimo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e7){Elegir tres optativas}; \\                  
-    \node[omat](mys){Modelado y simulaci\'{o}n (3)};\\      
-    \node[mat](ia){Inteligencia artificial (3)};\\                
-    \node[ocom](cya){Controladores y actuadores (4)};\\
-    \node[omat](mh){Metaheur\'{\i}sticas (3)};\\
-    \node[com](sdi){Sistemas distribuidos (3)};\\
-    \node[pro](cp){C\'{o}mputo paralelo (3)};\\
-    \node[opro](ls){Lenguajes script (3)};\\            
-    \node[omat](tdi){Teor\'{\i}a de la informaci\'{o}n (3)};\\\\
-    \node[omet](idc){Ingenier\'{\i}a de calidad (3)};\\    \\
-    \node[fin](pi1){Proyecto integrador I (4)};\\
+    \node[omat, hyperlink node=mys](mys){Modelado y simulaci\'{o}n (3)};\\      
+    \node[mat, hyperlink node=ia](ia){Inteligencia artificial (3)};\\                
+    \node[ocom, hyperlink node=cya](cya){Controladores y actuadores (4)};\\
+    \node[omat, hyperlink node=mh](mh){Metaheur\'{\i}sticas (3)};\\
+    \node[com, hyperlink node=sdi](sdi){Sistemas distribuidos (3)};\\
+    \node[pro, hyperlink node=cp](cp){C\'{o}mputo paralelo (3)};\\
+    \node[opro, hyperlink node=ls](ls){Lenguajes script (3)};\\            
+    \node[omat, hyperlink node=tdi](tdi){Teor\'{\i}a de informaci\'{o}n (3)};\\\\
+    \node[omet, hyperlink node=idc](idc){Ingenier\'{\i}a de calidad (3)};\\    \\
+    \node[fin, hyperlink node=pi1](pi1){Proyecto integrador I (4)};\\
   };
     \matrix[row sep=8mm, column sep=1mm] at (40, 2) {
     \node[sem](s1){Octavo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e8){Elegir cuatro optativas}; \\                      
-    \node[com](te){Tecnolog\'{\i}as emergentes (3)};\\
-    \node[omat](am){Aprendizaje m\'{a}quina (3)};\\
-    \node[ocom](idsa){Ingenier\'{\i}a de sistemas aut\'{o}nomos (3)};\\        
-    \node[omat](vyvf){Verificaci\'{o}n formal (3)};\\
-    \node[opro](celn){C\'{o}mputo en la nube (3)};\\
-    \node[omet](adcdc){Confiabilidad de c\'{e}ntros de c\'{o}mputo (3)};\\
-    \node[opro](gc){Gr\'{a}ficas computacionales (3)};\\    
-    \node[pro](vc){Visi\'{o}n computacional (3)};\\
-    \node[omat](tdc){Teor\'{\i}a de la computaci\'{o}n (3)};\\        
-    \node[omet](aypddg){Almacenaje y procesamiento de datos grandes (3)};\\        
-    \node[fin](pi2){Proyecto integrador II (4)};\\                
+    \node[com, hyperlink node=te](te){Tecnolog\'{\i}as emergentes (3)};\\
+    \node[omat, hyperlink node=am](am){Aprendizaje m\'{a}quina (3)};\\
+    \node[ocom, hyperlink node=idsa](idsa){Ingenier\'{\i}a de sistemas aut\'{o}nomos (3)};\\        
+    \node[omat, hyperlink node=vf](vf){Verificaci\'{o}n formal (3)};\\
+    \node[opro, hyperlink node=celn](celn){C\'{o}mputo en la nube (3)};\\
+    \node[omet,hyperlink node=cdc](cdc){Confiabilidad de c\'{e}ntros de c\'{o}mputo (3)};\\
+    \node[opro, hyperlink node=gc](gc){Gr\'{a}ficas computacionales (3)};\\    
+    \node[pro, hyperlink node=vc](vc){Visi\'{o}n computacional (3)};\\
+    \node[omat, hyperlink node=tdc](tdc){Teor\'{\i}a de la computaci\'{o}n (3)};\\        
+    \node[omet, hyperlink node=ayp](ayp){Almacenaje y procesamiento de datos grandes (3)};\\        
+    \node[fin, hyperlink node=pi2](pi2){Proyecto integrador II (4)};\\                
   };
     \matrix[row sep=8mm, column sep=1mm] at (47, -5) {
       \node[sem](s1){Noveno semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e2){Elegir una optativa}; \\      
     \node[fin](ss){Servicio social (16)};\\
-    \node[ofin](c1){Certificaci\'{o}n I (6)};\\
+    \node[ofin, hyperlink node=cert](c1){Certificaci\'{o}n I (6)};\\
     \node[ofin](mo1){Movilidad I (6)};\\
     \node[ofin](i1){Investigaci\'{o}n I (6)};\\
-    \node[ofin](le1){Libre elección I (6)};\\
+    \node[ofin](le1){Libre elecci\'{o}n I (6)};\\
 };
     \matrix[row sep=8mm, column sep=1mm] at (54, 0) {
 
@@ -184,10 +199,10 @@
       \node[sem](s1){D\'{e}cimo semestre (22 cr\'{e}ditos)}; \\
     \node[ele](e2){Elegir una optativa};\\      
     \node[fin](pp){Pr\'{a}cticas profesionales (16)};\\
-    \node[ofin](c2){Certificaci\'{o}n II (6)};\\
+    \node[ofin, hyperlink node=cert](c2){Certificaci\'{o}n II (6)};\\
     \node[ofin](mo2){Movilidad II (6)};\\
     \node[ofin](i2){Investigaci\'{o}n II$^\ast$ (6)};\\
-    \node[ofin](le2){Libre elección II (6)};\\    
+    \node[ofin](le2){Libre elecci\'{o}n II (6)};\\    
     };
   \draw [line] (ej1) -- (ej2);
   \draw [one] (ej3) -- (ej4);        
@@ -208,7 +223,8 @@
   \draw [line] (sd) -- (tycdd);
   \draw [line] (ayedd) -- (tycdd);    
   \draw [line] (at) -- (so);
-  \draw [line] (tycdd) -- (rc);  
+  \draw [line] (tycdd) -- (rc);
+  \draw [line] (tycdd) -- (dyo);    
   \draw [line] (at) -- (rc);
   \draw [line] (so) -- (ci);
   \draw [line] (mdd) -- (ihc);
@@ -249,20 +265,940 @@
   \draw [line] (aw) -- (idc);
   \draw [line] (ci) -- (ls);
   \draw [line] (cp) -- (gc);
-  \draw [line] (sdi) -- (adcdc);
+  \draw [line] (sdi) -- (cdc);
   \draw [line] (ia) -- (am);
   \draw [line] (tdi) -- (tdc);
-  \draw [line] (sdi) -- (vyvf);
+  \draw [line] (sdi) -- (vf);
   \draw [line] (sdi) -- (celn);
-  \draw [line] (pi2) -- (c1);
-  \draw [line] (pi2) -- (mo1);
   \draw [line] (pi2) -- (i1);
-  \draw [line] (idc) -- (aypddg);
-  \draw [line] (ls) -- (aypddg);  
+  \draw [line] (idc) -- (ayp);
+  \draw [line] (ls) -- (ayp);  
 
   
 \end{tikzpicture}
 \end{center}
+
+\hypertarget{md}{\section*{Matem\'{a}ticas discretas}}
+
+Segundo semestre. Tres cr\'{e}ditos.
+
+\begin{itemize}
+\item{Representaci\'{o}n en bases}
+\item{L\'{o}gica booleana}
+\item{Conjuntos}
+\item{Permutaciones}  
+\item{Grafos simples no dirigidos}
+\item{Caminos y distancias}
+\item{\'{A}rboles de expansi\'{o}n}
+\item{Aut\'{o}matas}
+\item{M\'{a}quinas Turing}
+\end{itemize}
+
+\hypertarget{sd}{\section*{Sistemas digitales}}
+
+Tercer semestre. Tres cr\'{e}ditos. Incluye laboratorio. Requiere {\em Matem\'{a}ticas discretas}.
+
+\begin{itemize}
+\item{Puertas, variables y tablas de verdad}
+\item{Axiomas booleanas}
+\item{Minimizaci\'{o}n algebr\'{a}ica}
+\item{Retrasos y temporizaci\'{o}n}
+\item{Lenguages de descripci\'{o}n}
+\item{Mapas de Karnaugh}
+\item{L\'{o}gica secuencial}
+\item{M\'{a}quinas de estado finito}
+\end{itemize}
+
+\newpage
+
+
+\hypertarget{lac}{\section*{Lenguaje C}}
+
+Tres cr\'{e}ditos. Optativa de segundo semestre.
+
+\begin{itemize}
+\item{Variables}  
+\item{Tipos, operadores y expresiones}
+\item{Condiciones}
+\item{Ciclos}
+\item{Entrada y salida en consola}
+\item{Flujo de control}
+\item{Subrutinas y estructura de programa}
+\item{Punteros}
+\item{Arreglos}
+\item{Estructuras}
+\item{Entrada y salida con archivos}  
+\end{itemize}
+
+\hypertarget{pep}{\section*{Programaci\'{o}n en Python}}
+
+Cuatro cr\'{e}ditos. Optativa de segundo semestre.
+
+\begin{itemize}
+\item{Variables}
+\item{Operadores y expresiones}
+\item{Condiciones}
+\item{Ciclos}
+\item{Entrada y salida en consola}  
+\item{Flujo de control}
+\item{Subrutinas y estructura de programa}
+\item{Listas}
+\item{Entrada y salida con archivos}    
+\item{Funciones an\'{o}nimas (lambda)}
+\item{Mecanismos de comprensi\'{o}n}
+\end{itemize}
+
+\newpage
+
+\hypertarget{ayedd}{\section*{Algoritmos y estructuras de datos}} 
+
+Tercer semestre. Cuatro cr\'{e}ditos. Requiere la optativa de segundo
+semestre (C o Python).
+
+\begin{itemize}
+\item{Problemas de decisi\'{o}n}
+\item{Complejidad computacional}
+\item{Clases de complejidad P y NP}    
+\item{Recursi\'{o}n}
+\item{Listas, pilas y colas}
+\item{Tablas de dispersi\'{o}n}  
+\item{\'{A}rboles binarios}
+\item{Mont\'{i}culos}
+\item{Grafos dirigidos}  
+\item{Recorrido y b\'{u}squeda}
+\item{Complejidad asint\'{o}tica}
+\item{T\'{e}cnica dividir-conquistar}
+\end{itemize}
+
+
+\hypertarget{poao}{\section*{Programaci\'{o}n orientada a objetos}}
+
+Tercer semeste. Cuatro cr\'{e}ditos. Incluye laboratorio. Requiere la
+optativa de segundo semestre (C o Python).
+
+\begin{itemize}
+\item{Compilaci\'{o}n e interpretaci\'{o}n (pr\'{a}ctica en laboratorio)}
+\item{Clases y objetos}
+\item{Herencia, polimorfismo e interfaces}
+\item{Lenguage UML (generaci\'{o}n de diagramas en laboratorio)}
+\item{Patrones de dise\~{n}o}
+\item{Persistencia y serializaci\'{o}n (pr\'{a}ctica en laboratorio)}
+\item{Manejo de eventos, excepciones y errores (pr\'{a}ctica en laboratorio)}
+\item{Pruebas unitarisa (pr\'{a}ctica en laboratorio)}
+\item{Interfaces gr\'{a}ficas (pr\'{a}ctica en laboratorio)}
+\end{itemize}
+
+\newpage
+
+\hypertarget{pye}{\section*{Probabilidad y estad\'{\i}stica }}
+
+Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{md}{\em Matem\'{a}ticas discretas}.
+
+\begin{itemize}
+\item{Probabilidad b\'{a}sica}
+\item{Distribuciones discretas}
+\item{Probabilidad condicional}
+\item{Distribuciones cont\'{i}nuas}
+\item{Momentos}
+\item{Funciones generadoras}
+\item{Teoremas asint\'{o}ticas}
+\item{Modelos de urnas}
+\item{Regresi\'{o}n lineal}
+\item{Procesos Markovianos y de Poisson}    
+\item{Teor\'{i}a de colas}  
+\end{itemize}
+
+\hypertarget{dde}{\section*{Dise\~{n}o de experimentos}}
+
+Quinto semestre. Tres cr\'{e}ditos. Requiere {\em Probabilidad y estad\'{i}stica}.
+
+\begin{itemize}
+\item{Validez y formulaci\'{o}n de hip\'{o}tesis}
+\item{Inferencia estad\'{i}stica}
+\item{Pruebas estad\'{i}sticas para medias}
+\item{Poder de pruebas estad\'{i}sticas}
+\item{Pruebas de distribuci\'{o}n libre}
+\item{An\'{a}lisis de varianza}
+\item{Transformadas}
+\item{Dise\~{n}os en bloques}
+\item{Dise\~{n}os factoriales}
+\item{Efecto y muestreo}
+\end{itemize}
+
+\newpage
+
+\hypertarget{at}{\section*{Arquitectura tecnol\'{o}gica}} 
+
+Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{sd}{\em Sistemas digitales}.
+
+\begin{itemize}
+\item{Instrucciones y procesadores}
+\item{Yerarqu\'{i}a de memoria}
+\item{Memoria virtual}
+\item{Almacenaje en discos}
+\item{Desempe\~{n}o de entrada y salida}
+\item{Arquitectura de software}
+\item{Requerimientos y atributos de calidad}
+\item{Estilos arquitect\'{o}nicos; arquitectura limpia}
+\item{Principios de dise\~{n}o}
+\item{Software como servicio, microservicios}
+\end{itemize}
+
+\hypertarget{so}{\section*{Sistemas operativos}}  
+
+Quinto semestre. Cuatro cr\'{e}ditos. Requiere {\em Arquitectura tecnol\'{o}gica}.
+
+\begin{itemize}
+\item{Procesos e hilos}
+\item{Exclusi\'{o}n mutua (deadlock, livelock \& starvation)}
+\item{Sem\'{a}foros, candados, variables de condici\'{o}n y monitores}
+\item{Calendarizaci\'{o}n de ejecuci\'{o}n}
+\item{Manejo de memoria}
+\item{Asignaci\'{o}n y reemplazo de p\'{a}ginas}
+\item{Sistemas de archivos}
+\item{Acceso a redes; sockets}
+\item{Seguridad en sistemas operativos}
+\end{itemize}
+
+\newpage
+
+\hypertarget{bdd}{\section*{Bases de datos}}    
+
+Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{poao}{\em
+  Programaci\'{o}n orientada a objetos}.
+
+\begin{itemize}
+\item{Modelos relacionales}
+\item{\'{A}lgebra relacional}
+\item{Claves y dependencias}
+\item{Esquemas}
+\item{Modelo entidad-relaci\'{o}n}
+\item{Principios de dise\~{n}o}
+\item{Consultas}
+\item{Vistas e \'{i}ndices}
+\item{Lenguaje SQL}
+\item{Bases de datos no relacionales}
+\item{Representaci\'{o}n XML}
+\item{Representaci\'{o}n JSON}  
+\end{itemize}
+
+\hypertarget{vdi}{\section*{Visualizaci\'{o}n de informaci\'{o}n}}
+
+Optativa de quinto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{bdd}{\em Bases de datos}.
+
+\begin{itemize}
+\item{An\'{a}lisis exploratorio de datos}
+\item{Esquemas de colores y contrastes}
+\item{Selecci\'{o}n de formas y grosores}
+\item{Datos cuantitativos}
+\item{Datos cualitativos}
+\item{Series de tiempo}
+\item{Datos georeferenciados}
+\item{Visualizaci\'{o}n de texto}
+\item{Visualizaci\'{o}n animada}  
+\item{Visualizaci\'{o}n interactiva}
+\end{itemize}
+
+\newpage
+
+\hypertarget{tydcc}{\section*{Transmisi\'{o}n y comunicaci\'{o}n de datos}}   
+
+Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{sd}{\em
+  Sistemas digitales}.
+
+\begin{itemize}
+\item{Modelos de telecomunicaciones}  
+\item{Protocolos de telecomunicaciones}
+\item{TCP/IP}
+\item{Medios de transmisi\'{o}n}
+\item{Codificaci\'{o}n de se\~{n}ales}
+\item{Protocolos de enlace y multiplex}
+\item{Circuitos y paquetes}
+\item{Transferencia as\'{i}ncrona}
+\item{Retraso, p\'{e}rdida y desempe\~{n}o}
+\end{itemize}
+
+\hypertarget{rc}{\section*{Redes computacionales}}  
+
+Quinto semeste. Tres cr\'{e}ditos. Requiere {\em Transmisi\'{o}n y
+  comunicaci\'{o}n de datos}.
+
+\begin{itemize}
+\item{Est\'{a}ndares y modelos}
+\item{Redes al\'{a}mbricas}
+\item{Redes inal\'{a}mbricas}
+\item{Calidad de servicio}
+\item{Ruteo}
+\item{Medidas de desempe\~{n}o de ruteo}  
+\item{Ahorro de energ\'{i}a}
+\item{Redes de telefon\'{i}a}
+\item{Redes satelitales}
+\item{Redes ad hoc}
+\item{Redes sensoras}    
+\item{Simuladores de redes}
+\end{itemize}
+
+\newpage
+
+\hypertarget{mdd}{\section*{Metodolog\'{\i}as de desarrollo}}
+
+Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{poao}{\em
+  Programaci\'{o}n orientada a objetos}.
+
+\begin{itemize}
+\item{Ciclos de vida}
+\item{Evaluaci\'{o}n}
+\item{Herramientas de planeaci\'{o}n y desarrollo en equipo}
+\item{Patrones y antipatrones}
+\item{Modelado de madurez de capacidades}
+\item{Modelos de contenedores}
+\item{Modelos cont\'{i}nuos}
+\item{Metodolog\'{i}as \'{a}giles}
+\item{Metodolog\'{i}as basados en pruebas}  
+\item{Ejemplos de metodolog\'{i}as espec\'{i}ficas}
+\end{itemize}
+
+\hypertarget{dyo}{\section*{Desarrollo y operaciones}} 
+
+Optativa de quinto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{tycdd}{\em Transmisi\'{o}n y comunicaci\'{o}n de datos}.
+
+\begin{itemize}
+\item{Definiciones b\'{a}sicas}
+\item{Objetivos principales}
+\item{Integraci\'{o}n con metodolog\'{i}as diversas}
+\item{Integraci\'{o}n y despliegue}
+\item{Contenedores y virtualizaci\'{o}n}
+\item{Administraci\'{o}n de configuraciones}
+\item{Pruebas}
+\item{Herramientas}
+\end{itemize}
+
+\newpage
+
+\hypertarget{sa}{\section*{Sistemas adaptativos}} 
+
+Quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{pye}{\em
+  Probabilidad y estad\'{i}stica}.
+
+\begin{itemize}
+\item{Aut\'{o}matas celulares}
+\item{Sistemas multiagente}
+\item{Algoritmos gen\'{e}ticos}
+\item{Perceptrones}
+\item{L\'{o}gica difusa}
+\item{Teor\'{i}a de juegos}
+\item{Teor\'{i}a de colaboraci\'{o}n}
+\end{itemize}
+
+\hypertarget{mn}{\section*{M\'{e}todos num\'{e}ricos}}
+
+Optativa de quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{pye}{\em
+  Probabilidad y estad\'{i}stica}.
+
+\begin{itemize}
+\item{Aritm\'{e}tica de punto flotante}
+\item{Errores de redondeo}
+\item{Convergencia}
+\item{Ecuaciones no lineales}
+\item{Interpolaci\'{o}n}
+\item{Integraci\'{o}n num\'{e}rica}
+\item{Diferenciaci\'{o}n num\'{e}rica}
+\item{Valores y vectores propios}
+\item{Aproximaci\'{o}n de m\'{i}nimos quadrados}
+\end{itemize}
+
+\newpage
+
+\hypertarget{ayc}{\section*{Automatizaci\'{o}n y control}} 
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em M\'{e}todos num\'{e}ricos}.
+
+\begin{itemize}
+\item{Sistemas de control}
+\item{Diagramas de flujo de se\~{n}ales}
+\item{Linealizaci\'{o}n}
+\item{An\'{a}lisis en el dominio del tiempo}
+\item{An\'{a}lisis en el dominio de la frecuencia}
+\item{An\'{a}lisis en el espacio de estados}
+\item{Propiedades estructurales}
+\end{itemize}
+
+\hypertarget{pf}{\section*{Programaci\'{o}n funcional}}
+
+Optativa de quinto semestre. Tres cr\'{e}ditos. Require
+\hyperlink{poao}{\em Programaci\'{o}n orientada a objetos}.
+
+\begin{itemize}
+\item{Evaluaci\'{o}n de expresiones}
+\item{Ejemplos de lenguages funcionales}
+\item{Estret\'{e}gias de reducci\'{o}n}
+\item{Tipos fuertes}
+\item{Operaciones con listas}
+\item{Recursi\'{o}n e inducci\'{o}n}
+\item{Estructuras ramificadas}
+\item{An\'{a}lisis de eficiencia}
+\item{An\'{a}lisis gram\'{a}tico (parsing) de expresiones aritm\'{e}ticas}
+\end{itemize}
+
+\newpage
+
+\hypertarget{ihc}{\section*{Interacci\'{o}n humano-computadora}}   
+
+Quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{mdd}{\em
+  Metodolog\'{i}as de desarrollo}.
+
+\begin{itemize}
+\item{Percepci\'{o}n y procesamiento; formas y colores}
+\item{Percepci\'{o}n visual y expectaci\'{o}n; principios Gestalt}
+\item{Limitantes cognitivos; atenci\'{o}n, memoria, contexto}
+\item{Modelos mentales}
+\item{Niveles de expertise}
+\item{Pasos habilitadores, met\'{a}foras y affordancia}
+\item{Equipo y t\'{e}cnicas de evaluaci\'{o}n en laboratorio}
+\item{Dise\~{n}o conceptual y prototipeo}
+\item{Evaluaci\'{o}n heur\'{i}stica}
+\item{Caminata cognitiva}
+\item{Protocolo de pensar en voz alta}
+\item{Medidas de desempe\~{n}o en IHC}
+\item{C\'{o}mputo ubicuo}
+\item{Realidad aumentada}
+\item{Realidad virtual}
+\end{itemize}
+
+\newpage
+
+\hypertarget{cdd}{\section*{Ciencia de datos}}   
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{dde}{\em Dise\~{n}o de experimentos}.
+
+\begin{itemize}
+\item{Preparaci\'{o}n de datos}
+\item{Lectura y manipulaci\'{o}n de datos}
+\item{Estad\'{i}stica descriptiva}
+\item{Visualizaci\'{o}n estad\'{i}stica}
+\item{Pruebas estad\'{i}sticas}
+\item{Regresi\'{o}n m\'{u}ltiple}
+\item{An\'{a}lisis de componentes principales}
+\item{M\'{a}quinas de vectores de soporte}  
+\item{Series de tiempo y pron\'{o}sticos}
+\end{itemize}
+
+\hypertarget{mys}{\section*{Modelado y simulaci\'{o}n}}
+
+Optativa de s\'{e}ptimo semestre. Tres cr\'{e}ditos. Require
+\hyperlink{cdd}{\em Ciencia de datos}.
+
+\begin{itemize}
+\item{Lenguage R}
+\item{Movimiento Browniano}
+\item{Interacci\'{o}n entre part\'{i}culas (din\'{a}mica molecular)}  
+\item{Diagramas de Voronoi y triangulaci\'{o}n Delaunay}  
+\item{Modelos epidemiol\'{o}gicos}
+\item{M\'{e}todo Monte-Carlo}
+\item{Procesos de nacimiento y muerte}
+\item{Sistemas ca\'{o}ticos}
+\item{Fractales}
+\item{Medici\'{o}n de precisi\'{o}n y desempe\~{n}o}
+\end{itemize}
+
+\newpage
+
+\hypertarget{ci}{\section*{C\'{o}mputo integrado}}  
+
+Sexto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{so}{\em
+  Sistemas operativos}.
+
+\begin{itemize}
+\item{Lenguaje ensamblador}
+\item{Microcontroladores}
+\item{Simuladores y emuladores}
+\item{Manejo de memoria}
+\item{Perif\'{e}ricos}
+\item{Interrupciones}
+\item{Sistemas operativos espec\'{i}ficos}
+\item{T\'{e}cnicas de optimizaci\'{o}n}
+\item{Usabilidad, privacidad y seguridad}
+\end{itemize}
+
+\newpage
+
+\hypertarget{o}{\section*{Optimizaci\'{o}n}}  
+
+Sexto semestre. Tres cr\'{e}ditos. Requiere {\em Matem\'{a}ticas IV}.
+
+\begin{itemize}
+\item{Problemas de optimizaci\'{o}n}
+\item{Programaci\'{o}n lineal: variables, restricciones y objetivos}
+\item{Algoritmo Simplex}
+\item{Flujo en redes}
+\item{Acoplamiento}
+\item{Programaci\'{o}n din\'{a}mica}
+\item{T\'{e}cnica ramificar-acotar}
+\item{Frentes de Pareto}
+\end{itemize}
+
+\hypertarget{mh}{\section*{Metaheur\'{\i}sticas}} 
+
+Optativa de s\'{e}ptimo semestre. Tres cr\'{e}ditos. Requiere {\em Optimizaci\'{o}n}.
+
+\begin{itemize}
+\item{Ejemplos de problemas NP-duros}  
+\item{Construcci\'{o}n de soluciones iniciales}
+\item{B\'{u}squeda local}
+\item{Escape de \'{o}ptimos locales}
+\item{Criterios de desempe\~{n}o}  
+\item{M\'{e}todos inspirados en la naturaleza}
+\item{Ajuste automatizado de par\'{a}metros}
+\item{Hyperheur\'{i}sticos}
+\end{itemize}
+
+\newpage
+
+\hypertarget{cr}{\section*{Criptograf\'{\i}a}}
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{rc}{\em Redes computacionales}.
+
+\begin{itemize}
+\item{Aritm\'{e}tica modular}
+\item{Cifras}
+\item{Protocolos}
+\item{Funciones unidireccionales}
+\item{Algoritmo RSA}
+\item{Firmas digitales}
+\item{Cifras de bloque}
+\item{Cifras de flujo}
+\item{Cifras homomorfas}
+\item{Dispersi\'{o}n resistente a colisiones}
+\end{itemize}
+
+\hypertarget{si}{\section*{Seguridad inform\'{a}tica}} 
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{rc}{\em Redes computacionales}.
+
+\begin{itemize}
+\item{Ingenier\'{i}a social}
+\item{Manejo de riesgos}
+\item{Comunicaci\'{o}n y conciencia}
+\item{Gobernabilidad y pol\'{i}ticas}
+\item{Toma de decisiones}
+\item{Seguridad y usabilidad}
+\item{Cultura de seguridad}
+\item{Cumplimiento}
+\item{Pruebas de penetraci\'{o}n}
+\item{Privacidad}
+\end{itemize}
+
+\newpage
+
+\hypertarget{aw}{\section*{Aplicaciones web}}  
+
+Sexto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{rc}{\em Redes computacionales}.
+
+\begin{itemize}
+\item{Sistemas de cliente-servidor}
+\item{HTML}
+\item{CSS}
+\item{Servidores web}
+\item{Hosting}
+\item{Contenido din\'{a}mico (CGI)}  
+\item{Frontend y backend}
+\item{Usabilidad web}
+\item{Web m\'{o}vil}
+\item{Internet de las cosas}  
+\end{itemize}
+
+\hypertarget{iddm}{\section*{Ingenier\'{\i}a de dispositivos m\'{o}viles}} 
+
+Sexto semestre. Cuatro cr\'{e}ditos. Incluye laboratorio. Requiere
+\hyperlink{rc}{\em Redes computacionales}.
+
+\begin{itemize}
+\item{Hardware m\'{o}vil}
+\item{Propiedades de pantallas}  
+\item{Acceso a micr\'{o}fonos y bocinas (pr\'{a}ctica en laboratorio)}  
+\item{Acceso a sensores y c\'{a}maras (pr\'{a}ctica en laboratorio)}      
+\item{Sistemas operativos m\'{o}viles}
+\item{Consumo de energia (pr\'{a}ctica en laboratorio)}  
+\item{Usabilidad}
+\item{Accessibilidad}
+\item{Seguridad (pr\'{a}ctica en laboratorio)}  
+\item{Privacidad (pr\'{a}ctica en laboratorio)}  
+\item{Tecnolog\'{i}as emergentes}
+\end{itemize}
+
+\newpage
+
+\hypertarget{pdne}{\section*{Planeaci\'{o}n de negocios emergentes}}
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{ihc}{\em Interacci\'{o}n humano-computadora}.
+
+\begin{itemize}
+\item{Estudios de mercado}
+\item{An\'{a}lisis competitiva}
+\item{Proposici\'{o}n de valor}
+\item{Elevator pitch}
+\item{Producto m\'{i}nimo viable}
+\item{Identificaci\'{o}n de clientes}
+\item{Estrat\'{e}gia de negocios}
+\item{Medidas de desempe\~{n}o}
+\item{Requisitos legales}
+\end{itemize}
+
+\hypertarget{da}{\section*{Desarrollo \'{a}gil}} 
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
+\hyperlink{mdd}{\em Metodolog\'{i}as de desarrollo}.
+
+\begin{itemize}
+\item{Programaci\'{o}n por pares y grupos}
+\item{Programaci\'{o}n extrema}
+\item{C\'{o}digo limpio}
+\item{Refactorizaci\'{o}n}
+  \item{Desarrollo basado en pruebas}
+\item{Desarrollo basado en comportamiento (behavior)}
+\item{Entrega continua}
+\item{Scrum}
+\item{Administraci\'{o}n de proyectos \'{a}giles}
+\end{itemize}
+
+\newpage
+
+\hypertarget{ia}{\section*{Inteligencia artificial}}
+
+S\'{e}ptimo semestre. Tres cr\'{e}ditos.
+
+\begin{itemize}
+\item{Agentes y entornos}
+\item{Estrat\'{e}gias de b\'{u}squeda}
+\item{Satisfacci\'{o}n de restricciones}
+\item{B\'{u}squeda adversarial}
+\item{Razonamiento determinista}
+\item{L\'{o}gica proposicional y de primer \'{o}rden; inferencia (prolog)}
+\item{Representaci\'{o}n de conocimiento}
+\item{Planeaci\'{o}n y actuaci\'{o}n}
+\item{Incertidumbre}
+\item{Razonamiento probabilista}
+\end{itemize}
+
+\hypertarget{am}{\section*{Aprendizaje m\'{a}quina}} 
+
+Optativa de octavo semestre. Tres cr\'{e}ditos. Requiere {\em Inteligencia artificial}.
+
+\begin{itemize}
+\item{Aprendizaje supervisado}
+\item{Clasificaci\'{o}n}
+\item{Agrupamiento}  
+\item{Error, sesgo y varianza}
+\item{Criterios de desempe\~{n}o}
+\item{Redes neuronales}
+\item{Aprendizaje no supervisado}
+\item{Aprendizaje reforzado}  
+\item{An\'{a}lisis de texto}
+\item{Aprendizaje profundo}
+\end{itemize}
+
+\newpage
+
+\hypertarget{cya}{\section*{Controladores y actuadores}} 
+
+Cuatro cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Require
+\hyperlink{ayc}{\em Automatizaci\'{o}n y control}.
+
+\begin{itemize}
+\item{Sistemas mecatr\'{o}nicos}
+\item{Tipos de sensores}
+\item{Tipos de actuadores}
+\item{Emuladores y simuladores}  
+\item{Modelado mecatr\'{o}nico}
+\item{Sistemas de ciclo cerrado}
+\item{Posicionamiento}
+\item{Coordinaci\'{o}n multiagente}
+\end{itemize}
+
+\hypertarget{idsa}{\section*{Ingenier\'{\i}a de sistemas
+    aut\'{o}nomos}} Tres cr\'{e}ditos. Optativa de octavo
+semestre. Requiere {\em Controladores y actuadores}.
+
+\begin{itemize}
+\item{Observaci\'{o}n de etorno}
+\item{Identificaci\'{o}n de objetos}
+\item{Ubicaci\'{o}n}
+\item{Navegaci\'{o}n}
+\item{Agarre y manipulaci\'{o}n}
+\item{Coordinaci\'{o}n de parvadas (swarm)}
+\item{Robots aut\'{o}nomos}
+\item{Veh\'{i}culos aut\'{o}nomos}
+\end{itemize}
+
+\newpage
+
+\hypertarget{sdi}{\section*{Sistemas distribuidos}} 
+
+Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
+  C\'{o}mputo integrado}.
+
+\begin{itemize}
+\item{Algoritmos distribuidos}
+\item{Manejo de memoria}
+\item{Sistemas de archivos}
+\item{Consistencia y replicaci\'{o}n}
+\item{Tolerancia a fallas}
+\item{Superc\'{o}mputo}
+\item{Algoritmos auto-estabilizadores}
+\end{itemize}
+
+\hypertarget{cp}{\section*{C\'{o}mputo paralelo}} 
+
+Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
+  C\'{o}mputo integrado}.
+
+\begin{itemize}
+\item{Algoritmos paralelos}
+\item{Procesos y concurrencia}
+\item{Memoria compartida y coherencia de cache}
+\item{Sistemas de memoria distribuida}
+\item{Intercambio de mensajes (MPI)}
+\item{Direccionamiento global}
+\item{Medici\'{o}n de desempe\~{n}o}
+\item{Sincronizaci\'{o}n}
+\item{Programaci\'{o}n para GPU}
+\end{itemize}
+
+\newpage
+
+\hypertarget{ls}{\section*{Lenguajes script}}
+
+Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre.
+ Requiere \hyperlink{ci}{\em
+  C\'{o}mputo integrado}.
+
+\begin{itemize}
+\item{Lenguajes de la familia shell}
+\item{Argumentos en l\'{i}nea de instrucciones}
+\item{C\'{o}digos de error}
+\item{Redirecci\'{o}n y mecanismos pipeline}
+\item{Lenguaje \texttt{(g)awk}}
+\item{Lenguaje \texttt{sed}}
+\item{Herramienta \texttt{sort}}  
+\item{Herramienta \texttt{tr}}
+\item{Herramienta \texttt{grep}}
+\item{Herramienta \texttt{screen}}
+\item{Herramienta \texttt{crontab}}
+\item{Herramientas \texttt{curl} y \texttt{wget}}  
+\item{Otras herramientas de l\'{i}nea de instrucciones}
+\end{itemize}
+
+\newpage
+
+\hypertarget{tdi}{\section*{Teor\'{\i}a de informaci\'{o}n}}
+
+Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
+\hyperlink{cr}{\em Criptograf\'{i}a}.
+
+\begin{itemize}
+\item{Informaci\'{o}n y entropia}
+\item{Formatos de representaci\'{o}n digital}
+\item{Codificaci\'{o}n}
+\item{C\'{o}digos de bloque}
+\item{Detecci\'{o}n de errores}
+\item{Recuperaci\'{o}n de errores}
+\item{Compresi\'{o}n sin perdida}
+\item{Compresi\'{o}n con perdida}
+\end{itemize}
+
+\hypertarget{tdc}{\section*{Teor\'{\i}a de la computaci\'{o}n}}
+
+Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
+{\em Teor\'{i}a de informaci\'{o}n}.
+
+\begin{itemize}
+\item{Modelos de c\'{o}mputo}
+\item{Lengujes regulares}
+\item{Aut\'{o}matas finitos}
+\item{Expresiones regulares}
+\item{Lenguajes libre de contexto}
+\item{Problemas decidibles; problema de detenci\'{o}n}
+\item{Reducibilidad}
+\item{Clase PSPACE}
+\item{Problemas insolubles}
+\end{itemize}
+
+\newpage
+
+\hypertarget{idc}{\section*{Ingenier\'{\i}a de calidad}} 
+
+Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
+\hyperlink{aw}{\em Aplicaciones web}.
+
+\begin{itemize}
+\item{Aseguramiento de calidad y pruebas}
+\item{Aspectos organizacionales}
+\item{Integraci\'{o}n con metodolog\'{i}as de desarrollo}
+\item{Monitoreo y control de procesos}
+\item{T\'{e}cnicas y herramientas de automatizaci\'{o}n}
+\item{Medidas de desempe\~{n}o}
+\item{Est\'{a}ndares de calidad de software}
+\end{itemize}
+
+\hypertarget{vf}{\section*{Verificaci\'{o}n formal}} 
+
+Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
+\hyperlink{sdi}{\em Sistemas distribuidos}.
+
+\begin{itemize}
+\item{Formas normales de l\'{o}gica proposicional}
+\item{Diagramas binarios de decisi\'{o}n}
+\item{L\'{o}gica predicativa de primer y segundo orden}
+\item{Demostraciones de validez}
+\item{Modelado de sistemas concurrentes}
+\item{L\'{o}gica temporal lineal}
+\item{Modelos l\'{o}gicos de sistemas}
+\item{Verificaci\'{o}n de modelos}
+\item{Redes Petri}
+\end{itemize}
+
+\newpage
+
+\hypertarget{vc}{\section*{Visi\'{o}n computacional}} 
+
+Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{cp}{\em
+  C\'{o}mputo paralelo}.
+
+\begin{itemize}
+\item{Representaci\'{o}n digital de im\'{a}genes}
+\item{Canales y m\'{a}scaras}
+\item{Detecci\'{o}n de bordes}
+\item{Detecci\'{o}n de entidades}
+\item{Detecci\'{o}n de l\'{i}neas rectas}
+\item{Detecci\'{o}n de c\'{i}rculos y elipses}
+\item{Detecci\'{o}n de movimiento bidimensional}
+\item{Detecci\'{o}n de movimiento tridimensional}
+\end{itemize}
+
+\hypertarget{gc}{\section*{Gr\'{a}ficas computacionales}}
+
+Tres cr\'{e}ditos. Optativa de octavo semestre.  Requiere
+\hyperlink{cp}{\em C\'{o}mputo paralelo}.
+
+\begin{itemize}
+\item{Conceptos y herramientas (OpenGL)}  
+\item{Transformadas bidimensionales}
+\item{Transformadas tridimensionales}  
+\item{Texturas}
+\item{Identificaci\'{o}n de superficies visibles}  
+\item{Iluminaci\'{o}n}
+\item{Manipulaci\'{o}n y almacenaje de im\'{a}genes}
+\end{itemize}
+
+\newpage
+
+\hypertarget{cdc}{\section*{Confiabilidad de c\'{e}ntros de c\'{o}mputo}} 
+
+Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
+\hyperlink{sdi}{\em Sistemas distribuidos}.
+
+\begin{itemize}
+\item{Medici\'{o}n de confiabilidad (SRE)}
+\item{Expectativas de clientes}
+\item{Mecanismos de operaci\'{o}n confiables}
+\item{Objetivos de nivel de servicio (SLO)}
+\item{Indicadores de nivel de servicio (SLI)}
+\item{Acuerdos de nivel de servicio (SLA)}
+\item{Monitoreo automatizado}
+\item{Selecci\'{o}n de m\'{e}tricas}
+\item{Quantificaci\'{o}n de riesgos}
+\item{Consecuencias de fallas}
+\end{itemize}
+
+\hypertarget{ayp}{\section*{Almacenaje y procesamiento de datos grandes}}
+
+Tres cr\'{e}ditos.
+Optativa de octavo semestre. Requiere
+\hyperlink{ls}{\em Lenguajes script}.
+
+\begin{itemize}
+\item{Conceptos, paradigmas y plaatformas}
+\item{Herramientas de programaci\'{o}n}
+\item{Extracci\'{o}n e integraci\'{o}n}
+\item{Almacenaje}
+\item{Escalabilidad de \'{i}ndices}
+\item{Procesamiento de grafos}
+\item{Procesamiento de flujos (streams)}
+\item{An\'{a}lisis probabilista}
+\item{Visualizaci\'{o}n}
+\item{Privacidad y anonimidad}
+\end{itemize}
+
+\newpage
+
+\hypertarget{celn}{\section*{C\'{o}mputo en la nube}} 
+
+Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
+\hyperlink{sdi}{\em Sistemas distribuidos}.
+
+\begin{itemize}
+\item{Principios de arquitectura en la nube}
+\item{Plataformas de c\'{o}mputo en la nube}
+\item{Paralelismo en la nube}
+\item{Almacenaje distribuido}
+\item{Virtualizaci\'{o}n}
+\item{Seguridad}
+\item{Sistemas operativos de n\'{u}cleos m\'{u}ltiples}
+\item{T\'{e}cnicas map-reduce}
+\item{Proveedores de servicio actuales}
+\end{itemize}
+
+\hypertarget{te}{\section*{Tecnolog\'{\i}as emergentes}} 
+
+Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{ia}{\em
+  Inteligencia artificial}.
+
+Discusi\'{o}n de t\'{o}picos selectos de inter\'{e}s actual como por ejemplo
+procesamiento de lenguage natural, bioinform\'{a}tica, criptomonedas o
+blockchain.
+
+\newpage
+
+\hypertarget{pi1}{\section*{Proyecto integrador I}} 
+
+Cuatro cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{aw}{\em
+  Aplicaciones web}.
+
+Se produce un plan de trabajo que detalla un proyecto del \'{a}rea de
+tecnolog\'{i}a de software junto con un prototipo inicial en un
+repositorio p\'{u}blico. Se debe especificar la metodolog\'{i}a a seguir y
+mantener una bit\'{a}cora semanal.
+
+El tama\~{n}o de los grupos de trabajo es de dos a siete personas, a la
+par con la complejidad del proyecto propuesto. Cada equipo debe
+nombrar un gerente de proyecto y aclarar el papel de cada integrante
+al inicio.
+
+\hypertarget{pi2}{\section*{Proyecto integrador II}} 
+
+Cuatro cr\'{e}ditos. Noveno semestre. Requiere {\em Proyecto integrador I}.
+
+Se crea la versi\'{o}n final del producto de software junto con la
+documentaci\'{o}n pertinente en el mismo repositorio p\'{u}blico creado en la
+primera unidad. Se debe mantener una bit\'{a}cora semanal.
+
+
+\newpage
+
+\hypertarget{cert}{\section*{Certificaci\'{o}n I \& II}} 
+
+Cualquier combinaci\'{o}n de certificaciones externas con reconocimiento
+internacional que cubra una cantidad de horas por lo menos igual a la
+cantidad de cr\'{e}ditos otorgados, como por ejemplo certificaciones de
+AWS, MS Azure o Google.
+
 \end{document}
 
 
