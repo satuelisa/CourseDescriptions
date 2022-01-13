@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr} % before geometry
 \usepackage[paperheight=10in,paperwidth=25in,left=5mm,right=5mm,top=5mm,bottom=5mm]{geometry}
+\usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{rotating}
 \usepackage[hidelinks]{hyperref}
@@ -278,25 +279,56 @@
 \end{tikzpicture}
 \end{center}
 
+\newpage
+
+\begin{multicols}{4}
+
+\section*{Perfil de egreso}
+
+El egresado ser\'{a} un ingeniero capaz de desarrollar software innovador
+y de calidad para sistemas inteligentes, embebidos, m\'{o}viles y remotos,
+con un fundamento s\'{o}lido te\'{o}rico, empleando metodolog\'{i}as y
+herramientas de estado de arte, promoviendo la investigaci\'{o}n y el
+desarrollo tecnol\'{o}gico, con la finalidad de proveer soluciones que
+satisfagan los requerimientos de los clientes de la Industria del
+Software a nivel Nacional e Internacional.
+
+\vfill\null \columnbreak
+
 \hypertarget{md}{\section*{Matem\'{a}ticas discretas}}
 
-Segundo semestre. Tres cr\'{e}ditos.
+Segundo semestre. Tres cr\'{e}ditos. Se utiliza el lenguaje Python en
+lugar de una calculadora f\'{i}sica.
 
 \begin{itemize}
-\item{Representaci\'{o}n en bases}
+\item{Representaci\'{o}n de enteros en varias bases}
 \item{L\'{o}gica booleana}
 \item{Conjuntos}
 \item{Permutaciones}  
-\item{Grafos simples no dirigidos}
-\item{Caminos y distancias}
-\item{\'{A}rboles de expansi\'{o}n}
+\item{Grafos simples no dirigidos; grados, caminos y distancias, \'{a}rboles de expansi\'{o}n}
 \item{Aut\'{o}matas}
 \item{M\'{a}quinas Turing}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Ejercicios de representaci\'{o}n de enteros}
+\item[10\%]{Ejercicios de l\'{o}gica booleana}
+\item[10\%]{Ejercicios de conjuntos}
+\item[10\%]{Ejercicios de permutaciones}
+\item[15\%]{Examen de medio curso}
+\item[10\%]{Ejercicios de grafos}
+\item[10\%]{Ejercicios de aut\'{o}matas}
+\item[10\%]{Ejercicios de M\'{a}quinas Turing}        
+\item[15\%]{Examen ordinario}
+\end{description}
+
+\vfill\null \columnbreak
+
 \hypertarget{sd}{\section*{Sistemas digitales}}
 
-Tercer semestre. Tres cr\'{e}ditos. Incluye laboratorio. Requiere {\em Matem\'{a}ticas discretas}.
+Tercer semestre. Tres cr\'{e}ditos. Incluye laboratorio. Requiere {\em
+  Matem\'{a}ticas discretas}. El laboratorio consiste en ejercicios
+con hardware y emuladores, mientras la clase cubre conceptos te\'{o}ricos.
 
 \begin{itemize}
 \item{Puertas, variables y tablas de verdad}
@@ -309,90 +341,174 @@ Tercer semestre. Tres cr\'{e}ditos. Incluye laboratorio. Requiere {\em Matem\'{a
 \item{M\'{a}quinas de estado finito}
 \end{itemize}
 
-\newpage
+{\em Solicitar al Ing.\ Ju\'{a}n \'{A}ngel la ponderaci\'{o}n y el programa
+  anal\'{i}tico ajustado al temario actualizado}
 
+\newpage
 
 \hypertarget{lac}{\section*{Lenguaje C}}
 
-Tres cr\'{e}ditos. Optativa de segundo semestre.
+Tres cr\'{e}ditos. Optativa de segundo semestre. Se utiliza el
+compilador GCC con un editor de libre elecci\'{o}n.
 
 \begin{itemize}
-\item{Variables}  
-\item{Tipos, operadores y expresiones}
+\item{Variables, tipos, operadores y expresiones}
 \item{Condiciones}
 \item{Ciclos}
 \item{Entrada y salida en consola}
-\item{Flujo de control}
-\item{Subrutinas y estructura de programa}
+\item{Subrutinas y cabeceras}
 \item{Punteros}
 \item{Arreglos}
 \item{Estructuras}
 \item{Entrada y salida con archivos}  
 \end{itemize}
 
+\begin{description}
+\item[5\%]{Programas con aritm\'{e}tica b\'{a}sica}
+\item[5\%]{Programas con condiciones} 
+\item[10\%]{Programas con ciclos}
+\item[10\%]{Programas con I/O de consola}
+\item[10\%]{Examen de medio curso}
+\item[10\%]{Programas con subrutinas}
+\item[10\%]{Programas con punteros}
+\item[10\%]{Programas con arreglos}
+\item[10\%]{Programas con estructuras}
+\item[10\%]{Programas con I/O de archivos}            
+\item[10\%]{Examen ordinario}
+\end{description}
+
+\vfill\null \columnbreak
+
 \hypertarget{pep}{\section*{Programaci\'{o}n en Python}}
 
-Cuatro cr\'{e}ditos. Optativa de segundo semestre.
+Cuatro cr\'{e}ditos. Optativa de segundo semestre. Se utiliza el
+editor de IDLE.
 
 \begin{itemize}
-\item{Variables}
-\item{Operadores y expresiones}
+\item{Variables, tipos, operadores y expresiones}
 \item{Condiciones}
 \item{Ciclos}
 \item{Entrada y salida en consola}  
-\item{Flujo de control}
-\item{Subrutinas y estructura de programa}
-\item{Listas}
+\item{Subrutinas y librer\'{i}as propias}
+\item{Listas y conjuntos}
+\item{Diccionarios}  
 \item{Entrada y salida con archivos}    
 \item{Funciones an\'{o}nimas (lambda)}
 \item{Mecanismos de comprensi\'{o}n}
 \end{itemize}
 
-\newpage
+\begin{description}
+\item[5\%]{Programas con aritm\'{e}tica b\'{a}sica}
+\item[5\%]{Programas con condiciones} 
+\item[10\%]{Programas con ciclos}
+\item[10\%]{Programas con I/O de consola}
+\item[10\%]{Examen de medio curso}
+\item[10\%]{Programas con subrutinas}
+\item[10\%]{Programas con listas y conjuntos}
+\item[10\%]{Programas con diccionarios}
+\item[10\%]{Programas con I/O de archivos}              
+\item[10\%]{Programas con funciones an\'{o}nimas}
+\item[10\%]{Examen ordinario}
+\end{description}
+
+\vfill\null \columnbreak
 
 \hypertarget{ayedd}{\section*{Algoritmos y estructuras de datos}} 
 
 Tercer semestre. Cuatro cr\'{e}ditos. Requiere la optativa de segundo
-semestre (C o Python).
+semestre (C o Python); los ejemplos en clase se dan en Python.
 
 \begin{itemize}
 \item{Problemas de decisi\'{o}n}
 \item{Complejidad computacional}
 \item{Clases de complejidad P y NP}    
-\item{Recursi\'{o}n}
+\item{Recursi\'{o}nl; t\'{e}cnica dividir-conquistar}
 \item{Listas, pilas y colas}
-\item{Tablas de dispersi\'{o}n}  
+\item{Tablas de dispersi\'{o}n}
 \item{\'{A}rboles binarios}
 \item{Mont\'{i}culos}
-\item{Grafos dirigidos}  
-\item{Recorrido y b\'{u}squeda}
+\item{Grafos dirigidos; recorrido y b\'{u}squeda}
 \item{Complejidad asint\'{o}tica}
-\item{T\'{e}cnica dividir-conquistar}
 \end{itemize}
 
+\begin{description}
+\item[5\%]{Problema de alcance (reachability)}
+\item[5\%]{Problema de coloreo (2-coloring \& 3-coloring)}
+\item[10\%]{Algoritmo de ordenamiento por fusi\'{o}n (mergesort)}
+\item[10\%]{Examen de medio curso}
+\item[10\%]{Ejercicios con funciones de dispersi\'{o}n}
+\item[10\%]{Ejercicios te\'{o}ricos de construcci\'{o}n de y b\'{u}squeda en \'{a}rboles binarios}
+\item[10\%]{Ejercicios te\'{o}ricos de construcci\'{o}n de y b\'{u}squeda en mont\'{i}culos Fibonacci}
+\item[10\%]{Ordenamiento topol\'{o}gico}
+\item[10\%]{B\'{u}squedas DFS y BFS}
+\item[10\%]{Ejercicios te\'{o}ricos de la notaci\'{o}n de peor caso con pseudoc\'{o}digos}
+\item[10\%]{Examen ordinario}
+\end{description}
+
+\vfill\null \columnbreak
 
 \hypertarget{poao}{\section*{Programaci\'{o}n orientada a objetos}}
 
 Tercer semeste. Cuatro cr\'{e}ditos. Incluye laboratorio. Requiere la
-optativa de segundo semestre (C o Python).
+optativa de segundo semestre (C o Python). El laboratorio consiste en
+la implementaci\'{o}n de los conceptos en Java, Python y C++, variando el
+lenguaje para cubrir los tres lenguajes a nivel b\'{a}sico. En la clase se
+discuten la teor\'{i}a y los conceptos igual como las diferencias
+conceptuales y gram\'{a}ticas entre los lenguajes de este tipo en general,
+sin limitarse solamente a los tres que se aplican en el
+laboratorio. La clase y el laboratorio comparten en tema del proyecto
+integrador: se dise\~{n}a para la clase y se implementa en el laboratorio.
 
 \begin{itemize}
 \item{Compilaci\'{o}n e interpretaci\'{o}n (pr\'{a}ctica en laboratorio)}
 \item{Clases y objetos}
-\item{Herencia, polimorfismo e interfaces}
 \item{Lenguage UML (generaci\'{o}n de diagramas en laboratorio)}
+\item{Herencia, polimorfismo e interfaces}
 \item{Patrones de dise\~{n}o}
 \item{Persistencia y serializaci\'{o}n (pr\'{a}ctica en laboratorio)}
 \item{Manejo de eventos, excepciones y errores (pr\'{a}ctica en laboratorio)}
-\item{Pruebas unitarisa (pr\'{a}ctica en laboratorio)}
+\item{Pruebas unitarias (pr\'{a}ctica en laboratorio)}
 \item{Interfaces gr\'{a}ficas (pr\'{a}ctica en laboratorio)}
 \end{itemize}
+
+\subsection*{Clase}
+
+\begin{description}
+\item[10\%]{Diagrama de clases en UML}
+\item[10\%]{Diagrama de secuencia en UML}
+\item[20\%]{Examen de medio curso}
+\item[5\%]{Patrones de creaci\'{o}n}
+\item[5\%]{Patrones de estructura}
+\item[5\%]{Patrones de comportamiento}
+\item[25\%]{Proyecto integrador: dise\~{n}o de una GUI$^\ast$}      
+\item[20\%]{Examen ordinario}
+\end{description}
+
+\subsection*{Laboratorio}
+
+\begin{description}
+\item[5\%]{Compilaci\'{o}n de programas sencillos en Java}
+\item[5\%]{Compilaci\'{o}n de programas sencillos en C++}
+\item[5\%]{Interpretaci\'{o}n de programas sencillos en Python}  
+\item[10\%]{Generaci\'{o}n autom\'{a}tica de diagramas de UML desde c\'{o}digo}
+\item[10\%]{Generaci\'{o}n autom\'{a}tica de c\'{o}digo desde diagramas de UML}
+\item[5\%]{Serializaci\'{o}n en Java}
+\item[5\%]{Serializaci\'{o}n en C++}
+\item[5\%]{Serializaci\'{o}n en Python}
+\item[5\%]{Manejo de eventos en Java}
+\item[5\%]{Manejo de eventos en C++}
+\item[5\%]{Manejo de eventos en Python}
+\item[15\%]{Pruebas unitarias en un lenguaje de libre selecci\'{o}n}
+\item[20\%]{Proyecto integrador: construcci\'{o}n de GUI en un lenguaje de libre selecci\'{o}n$^\ast$}  
+\end{description}
 
 \newpage
 
 \hypertarget{pye}{\section*{Probabilidad y estad\'{\i}stica }}
 
-Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{md}{\em Matem\'{a}ticas discretas}.
+Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{md}{\em
+  Matem\'{a}ticas discretas}. Se utiliza el lenguaje R en lugar de una
+calculadora f\'{i}sica.
 
 \begin{itemize}
 \item{Probabilidad b\'{a}sica}
@@ -402,11 +518,28 @@ Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{md}{\em Matem\'{a}ticas 
 \item{Momentos}
 \item{Funciones generadoras}
 \item{Teoremas asint\'{o}ticas}
-\item{Modelos de urnas}
 \item{Regresi\'{o}n lineal}
 \item{Procesos Markovianos y de Poisson}    
-\item{Teor\'{i}a de colas}  
+\item{Modelos de urnas; teor\'{i}a de colas}  
 \end{itemize}
+
+\begin{description}
+\item[5\%]{Ejercicios de conceptos b\'{a}sicos de probabilidad y conjuntos}
+\item[5\%]{Distribuci\'{o}n binomial}
+\item[5\%]{Distribuci\'{o}n geom\'{e}trica}  
+\item[5\%]{Teorema de Bayes}
+\item[5\%]{Distribuci\'{o}n de Poisson}
+\item[10\%]{Examen de medio curso}
+\item[10\%]{Valores esperados y varianzas de distribuciones}
+\item[5\%]{Teorema central de l\'{i}mite}
+\item[5\%]{Regresi\'{o}n lineal en R}
+\item[5\%]{Distribuci\'{o}n estacionaria te\'{o}rico y experimental}
+\item[20\%]{Proyecto integrador: un modelo de llegada de clientes y el
+  an\'{a}lisis de tiempos de espera}
+\item[20\%]{Examen ordinario}    
+\end{description}
+
+\vfill\null \columnbreak
 
 \hypertarget{dde}{\section*{Dise\~{n}o de experimentos}}
 
@@ -423,6 +556,40 @@ Quinto semestre. Tres cr\'{e}ditos. Requiere {\em Probabilidad y estad\'{i}stica
 \item{Dise\~{n}os en bloques}
 \item{Dise\~{n}os factoriales}
 \item{Efecto y muestreo}
+\end{itemize}
+
+\vfill\null \columnbreak
+
+\hypertarget{o}{\section*{Optimizaci\'{o}n}}  
+
+Sexto semestre. Tres cr\'{e}ditos. Requiere {\em Matem\'{a}ticas IV}.
+
+\begin{itemize}
+\item{Problemas de optimizaci\'{o}n}
+\item{Programaci\'{o}n lineal: variables, restricciones y objetivos}
+\item{Algoritmo Simplex}
+\item{Flujo en redes}
+\item{Acoplamiento}
+\item{Programaci\'{o}n din\'{a}mica}
+\item{T\'{e}cnica ramificar-acotar}
+\item{Frentes de Pareto}
+\end{itemize}
+
+\vfill\null \columnbreak
+
+\hypertarget{mh}{\section*{Metaheur\'{\i}sticas}} 
+
+Optativa de s\'{e}ptimo semestre. Tres cr\'{e}ditos. Requiere {\em Optimizaci\'{o}n}.
+
+\begin{itemize}
+\item{Ejemplos de problemas NP-duros}  
+\item{Construcci\'{o}n de soluciones iniciales}
+\item{B\'{u}squeda local}
+\item{Escape de \'{o}ptimos locales}
+\item{Criterios de desempe\~{n}o}  
+\item{M\'{e}todos inspirados en la naturaleza}
+\item{Ajuste automatizado de par\'{a}metros}
+\item{Hyperheur\'{i}sticos}
 \end{itemize}
 
 \newpage
@@ -444,6 +611,8 @@ Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{sd}{\em Sistemas digital
 \item{Software como servicio, microservicios}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{so}{\section*{Sistemas operativos}}  
 
 Quinto semestre. Cuatro cr\'{e}ditos. Requiere {\em Arquitectura tecnol\'{o}gica}.
@@ -460,7 +629,7 @@ Quinto semestre. Cuatro cr\'{e}ditos. Requiere {\em Arquitectura tecnol\'{o}gica
 \item{Seguridad en sistemas operativos}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{bdd}{\section*{Bases de datos}}    
 
@@ -481,6 +650,8 @@ Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{poao}{\em
 \item{Representaci\'{o}n XML}
 \item{Representaci\'{o}n JSON}  
 \end{itemize}
+
+\vfill\null \columnbreak
 
 \hypertarget{vdi}{\section*{Visualizaci\'{o}n de informaci\'{o}n}}
 
@@ -519,6 +690,8 @@ Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{sd}{\em
 \item{Retraso, p\'{e}rdida y desempe\~{n}o}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{rc}{\section*{Redes computacionales}}  
 
 Quinto semeste. Tres cr\'{e}ditos. Requiere {\em Transmisi\'{o}n y
@@ -539,7 +712,7 @@ Quinto semeste. Tres cr\'{e}ditos. Requiere {\em Transmisi\'{o}n y
 \item{Simuladores de redes}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{mdd}{\section*{Metodolog\'{\i}as de desarrollo}}
 
@@ -550,7 +723,7 @@ Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{poao}{\em
 \item{Ciclos de vida}
 \item{Evaluaci\'{o}n}
 \item{Herramientas de planeaci\'{o}n y desarrollo en equipo}
-\item{Patrones y antipatrones}
+\item{Uso de patrones y antipatrones}
 \item{Modelado de madurez de capacidades}
 \item{Modelos de contenedores}
 \item{Modelos cont\'{i}nuos}
@@ -558,6 +731,8 @@ Cuarto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{poao}{\em
 \item{Metodolog\'{i}as basados en pruebas}  
 \item{Ejemplos de metodolog\'{i}as espec\'{i}ficas}
 \end{itemize}
+
+\vfill\null \columnbreak
 
 \hypertarget{dyo}{\section*{Desarrollo y operaciones}} 
 
@@ -592,6 +767,8 @@ Quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{pye}{\em
 \item{Teor\'{i}a de colaboraci\'{o}n}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{mn}{\section*{M\'{e}todos num\'{e}ricos}}
 
 Optativa de quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{pye}{\em
@@ -609,21 +786,7 @@ Optativa de quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{pye}{\em
 \item{Aproximaci\'{o}n de m\'{i}nimos quadrados}
 \end{itemize}
 
-\newpage
-
-\hypertarget{ayc}{\section*{Automatizaci\'{o}n y control}} 
-
-Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em M\'{e}todos num\'{e}ricos}.
-
-\begin{itemize}
-\item{Sistemas de control}
-\item{Diagramas de flujo de se\~{n}ales}
-\item{Linealizaci\'{o}n}
-\item{An\'{a}lisis en el dominio del tiempo}
-\item{An\'{a}lisis en el dominio de la frecuencia}
-\item{An\'{a}lisis en el espacio de estados}
-\item{Propiedades estructurales}
-\end{itemize}
+\vfill\null \columnbreak
 
 \hypertarget{pf}{\section*{Programaci\'{o}n funcional}}
 
@@ -667,7 +830,7 @@ Quinto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{mdd}{\em
 \item{Realidad virtual}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{cdd}{\section*{Ciencia de datos}}   
 
@@ -685,6 +848,8 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{M\'{a}quinas de vectores de soporte}  
 \item{Series de tiempo y pron\'{o}sticos}
 \end{itemize}
+
+\vfill\null \columnbreak
 
 \hypertarget{mys}{\section*{Modelado y simulaci\'{o}n}}
 
@@ -704,7 +869,7 @@ Optativa de s\'{e}ptimo semestre. Tres cr\'{e}ditos. Require
 \item{Medici\'{o}n de precisi\'{o}n y desempe\~{n}o}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{ci}{\section*{C\'{o}mputo integrado}}  
 
@@ -721,38 +886,6 @@ Sexto semestre. Tres cr\'{e}ditos. Requiere \hyperlink{so}{\em
 \item{Sistemas operativos espec\'{i}ficos}
 \item{T\'{e}cnicas de optimizaci\'{o}n}
 \item{Usabilidad, privacidad y seguridad}
-\end{itemize}
-
-\newpage
-
-\hypertarget{o}{\section*{Optimizaci\'{o}n}}  
-
-Sexto semestre. Tres cr\'{e}ditos. Requiere {\em Matem\'{a}ticas IV}.
-
-\begin{itemize}
-\item{Problemas de optimizaci\'{o}n}
-\item{Programaci\'{o}n lineal: variables, restricciones y objetivos}
-\item{Algoritmo Simplex}
-\item{Flujo en redes}
-\item{Acoplamiento}
-\item{Programaci\'{o}n din\'{a}mica}
-\item{T\'{e}cnica ramificar-acotar}
-\item{Frentes de Pareto}
-\end{itemize}
-
-\hypertarget{mh}{\section*{Metaheur\'{\i}sticas}} 
-
-Optativa de s\'{e}ptimo semestre. Tres cr\'{e}ditos. Requiere {\em Optimizaci\'{o}n}.
-
-\begin{itemize}
-\item{Ejemplos de problemas NP-duros}  
-\item{Construcci\'{o}n de soluciones iniciales}
-\item{B\'{u}squeda local}
-\item{Escape de \'{o}ptimos locales}
-\item{Criterios de desempe\~{n}o}  
-\item{M\'{e}todos inspirados en la naturaleza}
-\item{Ajuste automatizado de par\'{a}metros}
-\item{Hyperheur\'{i}sticos}
 \end{itemize}
 
 \newpage
@@ -775,6 +908,8 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Dispersi\'{o}n resistente a colisiones}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{si}{\section*{Seguridad inform\'{a}tica}} 
 
 Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
@@ -793,7 +928,7 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Privacidad}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{aw}{\section*{Aplicaciones web}}  
 
@@ -812,6 +947,8 @@ Sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Web m\'{o}vil}
 \item{Internet de las cosas}  
 \end{itemize}
+
+\vfill\null \columnbreak
 
 \hypertarget{iddm}{\section*{Ingenier\'{\i}a de dispositivos m\'{o}viles}} 
 
@@ -851,6 +988,8 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Requisitos legales}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{da}{\section*{Desarrollo \'{a}gil}} 
 
 Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
@@ -866,6 +1005,23 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Entrega continua}
 \item{Scrum}
 \item{Administraci\'{o}n de proyectos \'{a}giles}
+\end{itemize}
+
+\vfill\null \columnbreak
+
+\hypertarget{idc}{\section*{Ingenier\'{\i}a de calidad}} 
+
+Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
+\hyperlink{aw}{\em Aplicaciones web}.
+
+\begin{itemize}
+\item{Aseguramiento de calidad y pruebas}
+\item{Aspectos organizacionales}
+\item{Integraci\'{o}n con metodolog\'{i}as de desarrollo}
+\item{Monitoreo y control de procesos}
+\item{T\'{e}cnicas y herramientas de automatizaci\'{o}n}
+\item{Medidas de desempe\~{n}o}
+\item{Est\'{a}ndares de calidad de software}
 \end{itemize}
 
 \newpage
@@ -887,6 +1043,8 @@ S\'{e}ptimo semestre. Tres cr\'{e}ditos.
 \item{Razonamiento probabilista}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{am}{\section*{Aprendizaje m\'{a}quina}} 
 
 Optativa de octavo semestre. Tres cr\'{e}ditos. Requiere {\em Inteligencia artificial}.
@@ -904,7 +1062,59 @@ Optativa de octavo semestre. Tres cr\'{e}ditos. Requiere {\em Inteligencia artif
 \item{Aprendizaje profundo}
 \end{itemize}
 
+\vfill\null \columnbreak
+
+\hypertarget{vc}{\section*{Visi\'{o}n computacional}} 
+
+Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{cp}{\em
+  C\'{o}mputo paralelo}.
+
+\begin{itemize}
+\item{Representaci\'{o}n digital de im\'{a}genes}
+\item{Canales y m\'{a}scaras}
+\item{Detecci\'{o}n de bordes}
+\item{Detecci\'{o}n de entidades}
+\item{Detecci\'{o}n de l\'{i}neas rectas}
+\item{Detecci\'{o}n de c\'{i}rculos y elipses}
+\item{Detecci\'{o}n de movimiento bidimensional}
+\item{Detecci\'{o}n de movimiento tridimensional}
+\end{itemize}
+
+\vfill\null \columnbreak
+
+\hypertarget{gc}{\section*{Gr\'{a}ficas computacionales}}
+
+Tres cr\'{e}ditos. Optativa de octavo semestre.  Requiere
+\hyperlink{cp}{\em C\'{o}mputo paralelo}.
+
+\begin{itemize}
+\item{Conceptos y herramientas (OpenGL)}  
+\item{Transformadas bidimensionales}
+\item{Transformadas tridimensionales}  
+\item{Texturas}
+\item{Identificaci\'{o}n de superficies visibles}  
+\item{Iluminaci\'{o}n}
+\item{Manipulaci\'{o}n y almacenaje de im\'{a}genes}
+\end{itemize}
+
 \newpage
+
+\hypertarget{ayc}{\section*{Automatizaci\'{o}n y control}} 
+
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em M\'{e}todos num\'{e}ricos}.
+
+\begin{itemize}
+\item{Sistemas de control}
+\item{Diagramas de flujo de se\~{n}ales}
+\item{Linealizaci\'{o}n}
+\item{An\'{a}lisis en el dominio del tiempo}
+\item{An\'{a}lisis en el dominio de la frecuencia}
+\item{An\'{a}lisis en el espacio de estados}
+\item{Propiedades estructurales}
+\end{itemize}
+
+\vfill\null \columnbreak
+
 
 \hypertarget{cya}{\section*{Controladores y actuadores}} 
 
@@ -921,6 +1131,8 @@ Cuatro cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Require
 \item{Posicionamiento}
 \item{Coordinaci\'{o}n multiagente}
 \end{itemize}
+
+\vfill\null \columnbreak
 
 \hypertarget{idsa}{\section*{Ingenier\'{\i}a de sistemas
     aut\'{o}nomos}} Tres cr\'{e}ditos. Optativa de octavo
@@ -954,6 +1166,8 @@ Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
 \item{Algoritmos auto-estabilizadores}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{cp}{\section*{C\'{o}mputo paralelo}} 
 
 Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
@@ -971,7 +1185,7 @@ Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
 \item{Programaci\'{o}n para GPU}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{ls}{\section*{Lenguajes script}}
 
@@ -1013,6 +1227,8 @@ Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
 \item{Compresi\'{o}n con perdida}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{tdc}{\section*{Teor\'{\i}a de la computaci\'{o}n}}
 
 Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
@@ -1030,22 +1246,7 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Problemas insolubles}
 \end{itemize}
 
-\newpage
-
-\hypertarget{idc}{\section*{Ingenier\'{\i}a de calidad}} 
-
-Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
-\hyperlink{aw}{\em Aplicaciones web}.
-
-\begin{itemize}
-\item{Aseguramiento de calidad y pruebas}
-\item{Aspectos organizacionales}
-\item{Integraci\'{o}n con metodolog\'{i}as de desarrollo}
-\item{Monitoreo y control de procesos}
-\item{T\'{e}cnicas y herramientas de automatizaci\'{o}n}
-\item{Medidas de desempe\~{n}o}
-\item{Est\'{a}ndares de calidad de software}
-\end{itemize}
+\vfill\null \columnbreak
 
 \hypertarget{vf}{\section*{Verificaci\'{o}n formal}} 
 
@@ -1064,38 +1265,6 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Redes Petri}
 \end{itemize}
 
-\newpage
-
-\hypertarget{vc}{\section*{Visi\'{o}n computacional}} 
-
-Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{cp}{\em
-  C\'{o}mputo paralelo}.
-
-\begin{itemize}
-\item{Representaci\'{o}n digital de im\'{a}genes}
-\item{Canales y m\'{a}scaras}
-\item{Detecci\'{o}n de bordes}
-\item{Detecci\'{o}n de entidades}
-\item{Detecci\'{o}n de l\'{i}neas rectas}
-\item{Detecci\'{o}n de c\'{i}rculos y elipses}
-\item{Detecci\'{o}n de movimiento bidimensional}
-\item{Detecci\'{o}n de movimiento tridimensional}
-\end{itemize}
-
-\hypertarget{gc}{\section*{Gr\'{a}ficas computacionales}}
-
-Tres cr\'{e}ditos. Optativa de octavo semestre.  Requiere
-\hyperlink{cp}{\em C\'{o}mputo paralelo}.
-
-\begin{itemize}
-\item{Conceptos y herramientas (OpenGL)}  
-\item{Transformadas bidimensionales}
-\item{Transformadas tridimensionales}  
-\item{Texturas}
-\item{Identificaci\'{o}n de superficies visibles}  
-\item{Iluminaci\'{o}n}
-\item{Manipulaci\'{o}n y almacenaje de im\'{a}genes}
-\end{itemize}
 
 \newpage
 
@@ -1117,6 +1286,8 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Consecuencias de fallas}
 \end{itemize}
 
+\vfill\null \columnbreak
+
 \hypertarget{ayp}{\section*{Almacenaje y procesamiento de datos grandes}}
 
 Tres cr\'{e}ditos.
@@ -1136,7 +1307,7 @@ Optativa de octavo semestre. Requiere
 \item{Privacidad y anonimidad}
 \end{itemize}
 
-\newpage
+\vfill\null \columnbreak
 
 \hypertarget{celn}{\section*{C\'{o}mputo en la nube}} 
 
@@ -1155,6 +1326,9 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Proveedores de servicio actuales}
 \end{itemize}
 
+\end{multicols}
+\newpage
+
 \hypertarget{te}{\section*{Tecnolog\'{\i}as emergentes}} 
 
 Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{ia}{\em
@@ -1163,8 +1337,6 @@ Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{ia}{\em
 Discusi\'{o}n de t\'{o}picos selectos de inter\'{e}s actual como por ejemplo
 procesamiento de lenguage natural, bioinform\'{a}tica, criptomonedas o
 blockchain.
-
-\newpage
 
 \hypertarget{pi1}{\section*{Proyecto integrador I}} 
 
@@ -1189,15 +1361,14 @@ Se crea la versi\'{o}n final del producto de software junto con la
 documentaci\'{o}n pertinente en el mismo repositorio p\'{u}blico creado en la
 primera unidad. Se debe mantener una bit\'{a}cora semanal.
 
-
-\newpage
-
 \hypertarget{cert}{\section*{Certificaci\'{o}n I \& II}} 
 
 Cualquier combinaci\'{o}n de certificaciones externas con reconocimiento
 internacional que cubra una cantidad de horas por lo menos igual a la
 cantidad de cr\'{e}ditos otorgados, como por ejemplo certificaciones de
 AWS, MS Azure o Google.
+
+
 
 \end{document}
 
