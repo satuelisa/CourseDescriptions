@@ -3,7 +3,7 @@
 \usepackage{color,colortbl}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr} % before geometry
-\usepackage[paperheight=10in,paperwidth=25in,left=5mm,right=5mm,top=5mm,bottom=5mm]{geometry}
+\usepackage[paperheight=10in,paperwidth=25in,left=10mm,right=10mm,top=10mm,bottom=10mm]{geometry}
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{rotating}
@@ -11,6 +11,11 @@
 \usepackage{graphics}
 \usepackage{varwidth}
 \usepackage{tikz}
+\usepackage{enumitem}
+\setitemize{itemsep=-3pt}
+\setdescription{itemsep=-3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
 
 \definecolor{gral}{HTML}{ffffff}
 \definecolor{prog}{HTML}{99ff99}
@@ -1146,11 +1151,23 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Funciones unidireccionales}
 \item{Algoritmo RSA}
 \item{Firmas digitales}
+\item{Dispersi\'{o}n resistente a colisiones}
 \item{Cifras de bloque}
 \item{Cifras de flujo}
 \item{Cifras homomorfas}
-\item{Dispersi\'{o}n resistente a colisiones}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Ejercicios te\'{o}ricos de \'{a}lgebra modular}
+\item[10\%]{Implementaci\'{o}n de cifras sencillas}
+\item[10\%]{Implementaci\'{o}n del protocolo Diffie-Hellman}
+\item[10\%]{Implementaci\'{o}n del protocolo RSA para firmas digitales}
+\item[15\%]{Examen de medio curso}  
+\item[10\%]{Implementaci\'{o}n de una cifra resistente a colisiones}
+\item[20\%]{Proyecto integrador grupal: estudio comparativo de cifras
+  para un caso de estudio aplicado}
+\item[15\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1172,6 +1189,20 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Privacidad}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Investigaci\'{o}n de notas periodistas sobre ataques por
+  ingenier\'{i}a social}
+\item[10\%]{Redacci\'{o}n de un plan de manejo de riesgos para una
+  organizaci\'{o}n (hipot\'{e}ctica o verdadera)}
+\item[10\%]{Ensayo sobre cuestiones de usabilidad en la seguridad
+  inform\'{a}tica}
+\item[25\%]{Examen de medio curso}  
+\item[20\%]{Proyecto integrador grupal de caso de estudio: dise\~{n}o,
+  implementaci\'{o}n y an\'{a}lisis de pruebas de penetraci\'{o}n para un sistema
+  verdadero}
+\item[25\%]{Examen ordinario}
+\end{description}  
+
 \vfill\null \columnbreak
 
 \hypertarget{aw}{\section*{Aplicaciones web}}  
@@ -1183,14 +1214,32 @@ Sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Sistemas de cliente-servidor}
 \item{HTML}
 \item{CSS}
-\item{Servidores web}
 \item{Hosting}
+\item{Servidores web}
 \item{Contenido din\'{a}mico (CGI)}  
 \item{Frontend y backend}
 \item{Usabilidad web}
 \item{Web m\'{o}vil}
 \end{itemize}
 
+\begin{description}
+\item[15\%]{Implementaci\'{o}n de un servidor HTTP y un cliente sencillo
+  en Python o similar}
+\item[10\%]{Preparaci\'{o}n de un sitio web est\'{a}tico con HTML y CSS en un
+  hosting gratuito (por ejemplo GitHub Pages)}
+\item[10\%]{Examen de medio curso}  
+\item[15\%]{Instalaci\'{o}n y configuraci\'{o}n de un
+  servidor HTTP tipo Apache (en \texttt{localhost}), pruebas de
+  funcionalidad y desempe\~{n}o (se le colocan copias de los sitios
+  preparados en la actividad anterior por los integrantes)}
+\item[10\%]{Implementaci\'{o}n de un sitio din\'{a}mico (con CGI) sin
+  persistencia}
+\item[15\%]{Implementaci\'{o}n de un sitio din\'{a}mico con
+  persistencia (con archivos o bases de datos en el backend)}
+\item[15\%]{Implementaci\'{o}n de un sitio de frontend din\'{a}mico (por
+  ejemplo con JavaScript) que acceda a un backend con persistencia}
+\item[10\%]{Examen ordinario}
+\end{description}  
 \vfill\null \columnbreak
 
 \hypertarget{iddm}{\section*{Ingenier\'{\i}a de dispositivos m\'{o}viles}} 
@@ -1212,6 +1261,41 @@ Sexto semestre. Cuatro cr\'{e}ditos. Incluye laboratorio. Requiere
 \item{Tecnolog\'{i}as emergentes}
 \end{itemize}
 
+Los ejercicios pr\'{a}cticos se realizan por ejemplo en Android o iOS
+seg\'{u}n los intereses de los participantes, actualizando las
+herramientas recomendadas peri\'{o}dicamente para que est\'{e}n coherentes con
+el estado de arte en el mercado.
+
+\subsection*{Clase}
+
+\begin{description}
+\item[10\%]{Estudio comparativo de caracter\'{i}sticas de micr\'{o}fonos y
+  bocinas en dispositivos m\'{o}viles contemporaneos}
+\item[10\%]{Estudio comparativo de caracter\'{i}sticas de c\'{a}maras en
+  dispositivos m\'{o}viles contemporaneos}
+\item[10\%]{Estudio comparativo de caracter\'{i}sticas de sensores en
+  dispositivos m\'{o}viles contemporaneos}
+\item[20\%]{Examen de medio curso}  
+\item[20\%]{Proyecto integrador grupal: dise\~{n}o de una aplicaci\'{o}n
+  m\'{o}vil original}
+\item[10\%]{Ensayo sobre potenciales direcciones futuras en hardware y
+  software m\'{o}vil}
+\item[20\%]{Examen ordinario}
+\end{description}  
+
+\subsection*{Laboratorio}
+
+\begin{description}
+\item[15\%]{Ejercicios pr\'{a}cticos de acceso a micr\'{o}fonos y bocinas}
+\item[15\%]{Ejercicios pr\'{a}cticos de acceso a c\'{a}maras}
+\item[15\%]{Ejercicios pr\'{a}cticos de acceso a sensores diversos}
+\item[15\%]{Ejercicios pr\'{a}cticos de consumo de energia}
+\item[10\%]{Ejercicios pr\'{a}cticos de accessibilidad}
+\item[10\%]{Ejercicios pr\'{a}cticos de seguridad y privacidad}        
+\item[20\%]{Proyecto integrador grupal: implementaci\'{o}n de una aplicaci\'{o}n
+  m\'{o}vil original}
+\end{description}  
+
 \newpage
 
 \hypertarget{pdne}{\section*{Planeaci\'{o}n de negocios emergentes}}
@@ -1220,6 +1304,8 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \hyperlink{ihc}{\em Interacci\'{o}n humano-computadora}.
 
 \begin{itemize}
+\item{Estimaci\'{o}n de tiempos}
+\item{Principios de cotizaci\'{o}n}  
 \item{Estudios de mercado}
 \item{An\'{a}lisis competitivo}
 \item{Propuesta de valor}
@@ -1230,6 +1316,25 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Medidas de desempe\~{n}o}
 \item{Requisitos legales}
 \end{itemize}
+
+Todas las actividades son sobre un caso de estudio individual que
+propone el participante para una idea de empresa ``start-up''
+original, seria o ficticia.
+
+\begin{description}
+\item[10\%]{Diagrama Gantt de actividades con duraciones y
+  dependendias}
+\item[10\%]{Estimaci\'{o}n de costos de capital humano, infraestructura y
+  espacios}
+\item[10\%]{Plan de realizaci\'{o}n de un estudio de mercado}
+\item[10\%]{Plan de realizaci\'{o}n de un an\'{a}lisis competitivo}  
+\item[10\%]{Examen de medio curso}  
+\item[10\%]{Redacci\'{o}n de una propuesta de valor}
+\item[10\%]{Video de un ``elevator pitch''}
+\item[10\%]{Descripci\'{o}n del producto m\'{i}nimo viable}  
+\item[10\%]{Plan de identificaci\'{o}n de clientes}
+\item[10\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1243,12 +1348,23 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere
 \item{Programaci\'{o}n extrema}
 \item{C\'{o}digo limpio}
 \item{Refactorizaci\'{o}n}
-  \item{Desarrollo basado en pruebas}
+\item{Desarrollo basado en pruebas}
 \item{Desarrollo basado en comportamiento (behavior)}
 \item{Entrega continua}
 \item{Scrum}
 \item{Administraci\'{o}n de proyectos \'{a}giles}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Pr\'{a}ctica de programaci\'{o}n por pares}
+\item[10\%]{Pr\'{a}ctica de programaci\'{o}n por grupos}
+\item[10\%]{Pr\'{a}ctica de programaci\'{o}n extrema}  
+\item[10\%]{Redacci\'{o}n de un gu\'{i}a de estilo de c\'{o}digo}
+\item[15\%]{Examen de medio curso}  
+\item[10\%]{Pr\'{a}ctica de refactorizaci\'{o}n}
+\item[20\%]{Proyecto grupal: simulacro Scrum con un cliente externo}
+\item[15\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1261,11 +1377,21 @@ Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
 \item{Control de calidad y pruebas}
 \item{Aspectos organizacionales}
 \item{Integraci\'{o}n con metodolog\'{i}as de desarrollo}
+\item{Medidas de desempe\~{n}o}
 \item{Monitoreo y control de procesos}
 \item{T\'{e}cnicas y herramientas de automatizaci\'{o}n}
-\item{Medidas de desempe\~{n}o}
 \item{Est\'{a}ndares de calidad de software}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Resumen de un art\'{i}culo sobre control de calidad}
+\item[10\%]{Propuesta de pol\'{i}tica organizacional de calidad para un
+  caso de estudio}
+\item[20\%]{Examen de medio curso}  
+\item[20\%]{Proyecto grupal, fase uno: automatizaci\'{o}n de monitoreo de calidad}
+\item[20\%]{Proyecto grupal, fase dos: automatizaci\'{o}n de monitoreo de calidad}  
+\item[20\%]{Examen ordinario}
+\end{description}  
 
 \newpage
 
@@ -1279,18 +1405,31 @@ S\'{e}ptimo semestre. Tres cr\'{e}ditos.
 \item{Satisfacci\'{o}n de restricciones}
 \item{B\'{u}squeda adversaria}
 \item{Razonamiento determinista}
-\item{L\'{o}gica proposicional y de primer \'{o}rden; inferencia (prolog)}
+\item{L\'{o}gica proposicional y de primer orden; inferencia (Prolog)}
 \item{Representaci\'{o}n de conocimiento}
 \item{Planeaci\'{o}n y actuaci\'{o}n}
 \item{Incertidumbre}
 \item{Razonamiento probabil\'{i}stico}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Pr\'{a}ctica te\'{o}rica con el mundo de bloques}
+\item[10\%]{Pr\'{a}ctica de programaci\'{o}n con el mundo de bloques}
+\item[20\%]{Proyecto grupal: implementaci\'{o}n y estudio comparativo de
+  estrat\'{e}gias de b\'{u}squeda}
+\item[15\%]{Examen de medio curso}  
+\item[10\%]{Ejercicios te\'{o}ricos de l\'{o}gica proposicional}
+\item[10\%]{Ejercicios te\'{o}ricos de l\'{o}gica de primer orden}  
+\item[10\%]{Ejercicios pr\'{a}cticos de inferencia con Prolog o similar}  
+\item[15\%]{Examen ordinario}
+\end{description}  
+
 \vfill\null \columnbreak
 
 \hypertarget{am}{\section*{Aprendizaje m\'{a}quina}} 
 
-Optativa de octavo semestre. Tres cr\'{e}ditos. Requiere {\em Inteligencia artificial}.
+Optativa de octavo semestre. Tres cr\'{e}ditos. Requiere {\em
+  Inteligencia artificial}.
 
 \begin{itemize}
 \item{Aprendizaje supervisado}
@@ -1304,6 +1443,22 @@ Optativa de octavo semestre. Tres cr\'{e}ditos. Requiere {\em Inteligencia artif
 \item{An\'{a}lisis de texto}
 \item{Aprendizaje profundo}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Recopilaci\'{o}n, limpieza y etiquetado de un conjunto de datos}
+\item[10\%]{Implementaci\'{o}n de un m\'{e}todo de clasificaci\'{o}n para los
+  datos de la primera actividad}
+\item[10\%]{Implementaci\'{o}n de un m\'{e}todo de agrupamiento para los datos
+  de la primera actividad}
+\item[10\%]{Medici\'{o}n de error, sesgo y varianza para las
+  implementaciones de la segunda y la tercera actividad}
+\item[20\%]{Examen de medio curso}  
+\item[10\%]{Implementaci\'{o}n y ajuste de par\'{a}metros de una red neuronal
+  para los datos de la primera actividad}
+\item[10\%]{Implementaci\'{o}n de un m\'{e}todo no supervisado con los datos
+  de la primera actividad (sin utilizar las etiquetas)}
+\item[20\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1319,9 +1474,26 @@ Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{cp}{\em
 \item{Detecci\'{o}n de entidades}
 \item{Detecci\'{o}n de l\'{i}neas rectas}
 \item{Detecci\'{o}n de c\'{i}rculos y elipses}
-\item{Detecci\'{o}n de movimiento bidimensional}
-\item{Detecci\'{o}n de movimiento tridimensional}
+\item{Detecci\'{o}n de movimiento}
+\item{Caracterizaci\'{o}n y clasificaci\'{o}n de entidades}
 \end{itemize}
+
+\begin{description}
+\item[5\%]{Ejercicios de cambios de resoluci\'{o}n}
+\item[5\%]{Ejercicios de conversi\'{o}n a escalas de grises con $k$ tonos
+  para diversos valores de $k$}
+\item[5\%]{Ejercicios de umbralizaci\'{o}n}
+\item[5\%]{Ejercicios de m\'{a}scaras: promedio, mediana, m\'{a}ximo, m\'{i}nimo}
+\item[10\%]{Implementaci\'{o}n de un detector de bordes}
+\item[10\%]{Implementaci\'{o}n de un detector de entidades}
+\item[10\%]{Examen de medio curso}  
+\item[10\%]{Implementaci\'{o}n de un detector de rectas}
+\item[10\%]{Implementaci\'{o}n de un detector de c\'{i}rculos}
+\item[10\%]{Implementaci\'{o}n de un detector de movimiento}  
+\item[10\%]{Proyecto integrador: una aplicaci\'{o}n original en OpenCV o
+  similar}
+\item[10\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1340,11 +1512,25 @@ Tres cr\'{e}ditos. Optativa de octavo semestre.  Requiere
 \item{Manipulaci\'{o}n y almacenaje de im\'{a}genes}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Creaci\'{o}n de un ambiente sencillo en OpenGL o similar}
+\item[10\%]{Ejercicios te\'{o}ricos de transformadas}
+\item[10\%]{Ejercicio de creaci\'{o}n y aplicaci\'{o}n de una textura original}
+\item[15\%]{Examen de medio curso}  
+\item[10\%]{Ejercicios te\'{o}ricos de identificaci\'{o}n de superficies visibles}
+\item[10\%]{Ejercicio de creaci\'{o}n y aplicaci\'{o}n de una fuente de
+  iluminaci\'{o}n original}
+\item[20\%]{Proyecto integrador: creaci\'{o}n de un ambiente interactivo
+  de mayor complejidad en OpenGL o similar}
+\item[15\%]{Examen ordinario}
+\end{description}  
+
 \newpage
 
 \hypertarget{ayc}{\section*{Automatizaci\'{o}n y control}} 
 
-Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em M\'{e}todos num\'{e}ricos}.
+Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em
+  M\'{e}todos num\'{e}ricos}.
 
 \begin{itemize}
 \item{Sistemas de control}
