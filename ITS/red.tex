@@ -16,6 +16,7 @@
 \setdescription{itemsep=-3pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{3pt}
+\pagestyle{empty}
 
 \definecolor{gral}{HTML}{ffffff}
 \definecolor{prog}{HTML}{99ff99}
@@ -192,9 +193,9 @@
     \node[ele](e2){Elegir una optativa}; \\      
     \node[fin](ss){Servicio social (16)};\\
     \node[ofin, hyperlink node=cert](c1){Certificaci\'{o}n I (6)};\\
-    \node[ofin](mo1){Movilidad I (6)};\\
-    \node[ofin](i1){Investigaci\'{o}n I (6)};\\
-    \node[ofin](le1){Libre elecci\'{o}n I (6)};\\
+    \node[ofin, hyperlink node=mov](mo1){Movilidad I (6)};\\
+    \node[ofin, hyperlink node=inv](i1){Investigaci\'{o}n I (6)};\\
+    \node[ofin, hyperlink node=le](le1){Libre elecci\'{o}n I (6)};\\
 };
     \matrix[row sep=8mm, column sep=1mm] at (54, 0) {
 
@@ -206,9 +207,9 @@
     \node[ele](e2){Elegir una optativa};\\      
     \node[fin](pp){Pr\'{a}cticas profesionales (16)};\\
     \node[ofin, hyperlink node=cert](c2){Certificaci\'{o}n II (6)};\\
-    \node[ofin](mo2){Movilidad II (6)};\\
-    \node[ofin](i2){Investigaci\'{o}n II$^\ast$ (6)};\\
-    \node[ofin](le2){Libre elecci\'{o}n II (6)};\\    
+    \node[ofin, hyperlink node=mov](mo2){Movilidad II (6)};\\
+    \node[ofin, hyperlink node=inv](i2){Investigaci\'{o}n II (6)};\\
+    \node[ofin, hyperlink node=le](le2){Libre elecci\'{o}n II (6)};\\    
     };
   \draw [line] (ej1) -- (ej2);
   \draw [one] (ej3) -- (ej4);        
@@ -312,7 +313,7 @@ lugar de una calculadora f\'{i}sica.
 \item{Permutaciones}  
 \item{Grafos simples no dirigidos; grados, caminos y distancias, \'{a}rboles de expansi\'{o}n}
 \item{Aut\'{o}matas}
-\item{M\'{a}quinas Turing}
+\item{M\'{a}quinas Turing: definici\'{o}n y propiedades b\'{a}sicas}
 \end{itemize}
 
 \begin{description}
@@ -323,7 +324,7 @@ lugar de una calculadora f\'{i}sica.
 \item[15\%]{Examen de medio curso}
 \item[10\%]{Ejercicios de grafos}
 \item[10\%]{Ejercicios de aut\'{o}matas}
-\item[10\%]{Ejercicios de M\'{a}quinas Turing}        
+\item[10\%]{Ejercicios de ejecuci\'{o}n de M\'{a}quinas Turing}        
 \item[15\%]{Examen ordinario}
 \end{description}
 
@@ -340,7 +341,7 @@ con hardware y emuladores, mientras la clase cubre conceptos te\'{o}ricos.
 \item{Axiomas booleanas}
 \item{Minimizaci\'{o}n algebr\'{a}ica}
 \item{Retrasos y temporizaci\'{o}n}
-\item{Lenguages de descripci\'{o}n}
+\item{Lenguajes de descripci\'{o}n}
 \item{Mapas de Karnaugh}
 \item{L\'{o}gica secuencial}
 \item{M\'{a}quinas de estado finito}
@@ -436,24 +437,39 @@ semestre (C o Python); los ejemplos en clase se dan en Python.
 \item{\'{A}rboles binarios}
 \item{Mont\'{i}culos}
 \item{Grafos dirigidos; recorrido y b\'{u}squeda}
+\item{Algoritmos de cadenas: Boyer-Moore y Knuth-Morris-Pratt}
 \item{Complejidad asint\'{o}tica}
 \end{itemize}
 
 \begin{description}
+
 \item[5\%]{Problema de alcance (reachability)}
 \item[5\%]{Problema de coloreo (2-coloring \& 3-coloring)}
+
 \item[10\%]{Algoritmo de ordenamiento por fusi\'{o}n (mergesort)}
+
 \item[10\%]{Examen de medio curso}
-\item[10\%]{Ejercicios con funciones de dispersi\'{o}n}
+
+\item[5\%]{Ejercicios con funciones de dispersi\'{o}n}
+
 \item[10\%]{Ejercicios te\'{o}ricos de construcci\'{o}n y de
   b\'{u}squeda en \'{a}rboles binarios}
+
 \item[10\%]{Ejercicios te\'{o}ricos de construcci\'{o}n y de
   b\'{u}squeda en mont\'{i}culos Fibonacci}
+
 \item[10\%]{Ordenamiento topol\'{o}gico}
+
 \item[10\%]{B\'{u}squedas DFS y BFS}
-\item[10\%]{Ejercicios te\'{o}ricos de la notaci\'{o}n de peor caso
+
+\item[5\%]{Implementaci\'{o}n del algoritmo Boyer-Moore}
+\item[5\%]{Implementaci\'{o}n del algoritmo Knuth-Morris-Pratt}  
+
+\item[5\%]{Ejercicios te\'{o}ricos de la notaci\'{o}n de peor caso
   con pseudoc\'{o}digos}
+
 \item[10\%]{Examen ordinario}
+
 \end{description}
 
 \vfill\null \columnbreak
@@ -476,7 +492,7 @@ versiones como por ejemplo GitHub en el laboratorio.
 \begin{itemize}
 \item{Compilaci\'{o}n e interpretaci\'{o}n (pr\'{a}ctica en laboratorio)}
 \item{Clases y objetos}
-\item{Lenguage UML (generaci\'{o}n de diagramas en laboratorio)}
+\item{Lenguaje UML (generaci\'{o}n de diagramas en laboratorio)}
 \item{Herencia, polimorfismo e interfaces}
 \item{Patrones de dise\~{n}o}
 \item{Persistencia y serializaci\'{o}n (pr\'{a}ctica en laboratorio)}
@@ -988,7 +1004,7 @@ versiones como por ejemplo GitHub.
 
 \begin{itemize}
 \item{Evaluaci\'{o}n de expresiones}
-\item{Ejemplos de lenguages funcionales}
+\item{Ejemplos de lenguajes funcionales}
 \item{Estret\'{e}gias de reducci\'{o}n}
 \item{Tipado fuerte}
 \item{Operaciones con listas}
@@ -1095,7 +1111,7 @@ Optativa de s\'{e}ptimo semestre. Tres cr\'{e}ditos. Require
 de un repositorio con control de versiones como por ejemplo GitHub.
 
 \begin{itemize}
-\item{Lenguage R; medici\'{o}n de precisi\'{o}n y desempe\~{n}o}
+\item{Lenguaje R; medici\'{o}n de precisi\'{o}n y desempe\~{n}o}
 \item{Movimiento Browniano}
 \item{Interacci\'{o}n entre part\'{i}culas (din\'{a}mica molecular)}  
 \item{Diagramas de Voronoi y triangulaci\'{o}n Delaunay}  
@@ -1389,6 +1405,10 @@ GitHub.
 \item[15\%]{Examen ordinario}
 \end{description}  
 
+Con ``cliente externo'' se refiere a una persona o una organizaci\'{o}n
+quien no es el maestro ni los mismos participantes inscritos en la
+unidad.
+
 \vfill\null \columnbreak
 
 \hypertarget{idc}{\section*{Ingenier\'{\i}a de calidad}} 
@@ -1559,7 +1579,8 @@ GitHub.
 \hypertarget{ayc}{\section*{Automatizaci\'{o}n y control}} 
 
 Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em
-  M\'{e}todos num\'{e}ricos}.
+  M\'{e}todos num\'{e}ricos}. Es primordial el uso individual y grupal
+de un repositorio con control de versiones como por ejemplo GitHub.
 
 \begin{itemize}
 \item{Sistemas de control}
@@ -1571,13 +1592,25 @@ Optativa de sexto semestre. Tres cr\'{e}ditos. Requiere {\em
 \item{Propiedades estructurales}
 \end{itemize}
 
-\vfill\null \columnbreak
+\begin{description}
+\item[10\%]{Ejercicios te\'{o}ricos sobre funciones de transreferencia}
+\item[10\%]{Ejercicios te\'{o}ricos sobre diagramas de bloque y flujo de se\~{n}ales}
+\item[10\%]{Ejercicios pr\'{a}cticos sobre estabilidad}
+\item[20\%]{Examen de medio curso}
+\item[10\%]{Ensayo individual sobre propiedades estructurales}
+\item[20\%]{Proyecto integrador grupal: aplicaci\'{o}n pr\'{a}ctica de
+  t\'{e}cnicas de control}
+\item[20\%]{Examen ordinario}
+\end{description}  
 
+\vfill\null \columnbreak
 
 \hypertarget{cya}{\section*{Controladores y actuadores}} 
 
 Cuatro cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Require
-\hyperlink{ayc}{\em Automatizaci\'{o}n y control}.
+\hyperlink{ayc}{\em Automatizaci\'{o}n y control}.Es primordial el uso
+individual y grupal de un repositorio con control de versiones como
+por ejemplo GitHub.
 
 \begin{itemize}
 \item{Sistemas mecatr\'{o}nicos}
@@ -1590,11 +1623,31 @@ Cuatro cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Require
 \item{Coordinaci\'{o}n multiagente}
 \end{itemize}
 
+\begin{description}
+\item[5\%]{Ejercicios pr\'{a}cticos de lectura de sensores de hardware
+  sencillos}
+\item[5\%]{Ejercicios pr\'{a}cticos de control de actuadores de hardware
+  sencillos}
+\item[10\%]{Ejercicios pr\'{a}cticos combinando sensores y actuadores de
+  hardware sencillos}
+\item[10\%]{Ejercicios pr\'{a}cticos de emulaci\'{o}n y simulaci\'{o}n combinando
+  sensores y actuadores}
+\item[15\%]{Examen de medio curso}  
+\item[10\%]{Ejercicios te\'{o}ricos de modelos mecatr\'{o}nicos}
+\item[5\%]{Ejercicios te\'{o}ricos de sistemas de ciclo cerrado}
+\item[5\%]{Ejercicios pr\'{a}cticos de sistemas de ciclo cerrado}    
+\item[20\%]{Proyecto integrador grupal: implementaci\'{o}n de un sistema
+  l\'{i}der-seguidor}
+\item[15\%]{Examen ordinario}
+\end{description}  
+
 \vfill\null \columnbreak
 
 \hypertarget{idsa}{\section*{Ingenier\'{\i}a de sistemas
     aut\'{o}nomos}} Tres cr\'{e}ditos. Optativa de octavo
-semestre. Requiere {\em Controladores y actuadores}.
+semestre. Requiere {\em Controladores y actuadores}. Es primordial el
+uso individual y grupal de un repositorio con control de versiones
+como por ejemplo GitHub.
 
 \begin{itemize}
 \item{Observaci\'{o}n de etorno}
@@ -1607,72 +1660,153 @@ semestre. Requiere {\em Controladores y actuadores}.
 \item{Veh\'{i}culos aut\'{o}nomos}
 \end{itemize}
 
+{\em La unidad no cuenta con ex\'{a}menes escritos sino son puros
+  ejercicios pr\'{a}cticos.}
+
+\begin{description}
+\item[10\%]{Ejercicio pr\'{a}ctico individual de seguimiento de l\'{i}nea}
+\item[15\%]{Ejercicio de pr\'{a}ctico individual de detecci\'{o}n de obst\'{a}culos}
+\item[15\%]{Ejercicio de pr\'{a}ctico individual de evasi\'{o}n de obst\'{a}culos}  
+\item[15\%]{Ejercicio pr\'{a}ctico grupal: Torres de Hanoi}
+\item[15\%]{Ejercicio pr\'{a}ctico grupal: limpieza con un enjambre de agentes}  
+\item[10\%]{Estudio comparativo de robots de estado de arte
+  disponibles en el mercado y las direcciones futuras del campo}
+\item[20\%]{Ejercicio pr\'{a}ctico grupal con un emulador de manejo
+  aut\'{o}nomo vehicular terrestre}
+\end{description}  
+
 \newpage
 
 \hypertarget{sdi}{\section*{Sistemas distribuidos}} 
 
 Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
-  C\'{o}mputo integrado}.
+  C\'{o}mputo integrado}. Es primordial el uso individual y grupal de
+un repositorio con control de versiones como por ejemplo GitHub.
 
 \begin{itemize}
 \item{Algoritmos distribuidos}
-\item{Manejo de memoria}
-\item{Sistemas de archivos}
+\item{Manejo de memoria y memoria distribuida}
+\item{Sistemas distribuidos de archivos}
 \item{Consistencia y replicaci\'{o}n}
 \item{Tolerancia a fallas}
 \item{Superc\'{o}mputo}
 \item{Algoritmos auto-estabilizadores}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Ejercicios te\'{o}ricos de algoritmos distribuidos}
+\item[10\%]{Implementaci\'{o}n de algoritmos distribuidos sin memoria compartida}
+\item[10\%]{Implementaci\'{o}n de algoritmos distribuidos con memoria compartida}  
+\item[15\%]{Examen de medio curso}
+\item[10\%]{Ejercicios te\'{o}ricos de mecanismos de replicaci\'{o}n}
+\item[10\%]{Ejercicios pr\'{a}cticos de mecanismos de replicaci\'{o}n}
+\item[10\%]{Ejercicios pr\'{a}cticos de tolerancia a fallas}      
+\item[10\%]{Proyecto integrador grupal: dise\~{n}o e implementaci\'{o}n de un
+  algoritmo auto-estabilizante distribuido}
+\item[15\%]{Examen ordinario}
+\end{description}  
+
 \vfill\null \columnbreak
 
 \hypertarget{cp}{\section*{C\'{o}mputo paralelo}} 
 
 Tres cr\'{e}ditos. S\'{e}ptimo semestre. Requiere \hyperlink{ci}{\em
-  C\'{o}mputo integrado}.
+  C\'{o}mputo integrado}.  Es primordial el uso individual y grupal de
+un repositorio con control de versiones como por ejemplo GitHub.
+
+Es importante que al inicio se {\em repasen} los conceptos que se
+cubren en \emph{Sistemas operativos} en vez de volver a cubrirlos
+desde cero. 
 
 \begin{itemize}
+\item{Procesos y concurrencia; sincronizaci\'{o}n}
 \item{Algoritmos paralelos}
-\item{Procesos y concurrencia}
 \item{Memoria compartida y coherencia de cach\'{e}}
-\item{Sistemas de memoria distribuida}
 \item{Intercambio de mensajes (MPI)}
 \item{Direccionamiento global}
 \item{Medici\'{o}n de desempe\~{n}o}
-\item{Sincronizaci\'{o}n}
 \item{Programaci\'{o}n para GPU}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Ejercicios te\'{o}ricos de algoritmos paralelos}
+\item[10\%]{Implementaci\'{o}n de algoritmos paralelos sin memoria compartida}
+\item[10\%]{Implementaci\'{o}n de algoritmos paralelos con memoria compartida}    
+\item[15\%]{Examen de medio curso}
+\item[15\%]{Implementaci\'{o}n de algoritmos paralelos con intercambio de mensajes}
+\item[15\%]{Implementaci\'{o}n de algoritmos paralelos con direccionamiento global}        
+\item[10\%]{Proyecto integrador grupal: evaluaci\'{o}n de desempe\~{n}o de un
+  algoritmo paralelo de estado de arte}
+\item[15\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
 \hypertarget{ls}{\section*{Lenguajes script}}
 
-Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre.
- Requiere \hyperlink{ci}{\em
-  C\'{o}mputo integrado}.
+Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre.  Requiere
+\hyperlink{ci}{\em C\'{o}mputo integrado}. Es primordial el uso
+individual de un repositorio con control de versiones como
+por ejemplo GitHub.
+
+{\em La unidad no cuenta con ex\'{a}menes escritos sino son puros
+  ejercicios pr\'{a}cticos.}
 
 \begin{itemize}
 \item{Lenguajes de la familia shell}
 \item{Argumentos en l\'{i}nea de instrucciones}
 \item{C\'{o}digos de error}
-\item{Redirecci\'{o}n y mecanismos pipeline}
+\item{Redirecci\'{o}n y mecanismos de tuber\'{i}a (pipe)}
 \item{Lenguaje \texttt{(g)awk}}
 \item{Lenguaje \texttt{sed}}
 \item{Herramienta \texttt{sort}}  
 \item{Herramienta \texttt{tr}}
 \item{Herramienta \texttt{grep}}
+\item{Herramientas \texttt{curl} y \texttt{wget}}  
 \item{Herramienta \texttt{screen}}
 \item{Herramienta \texttt{crontab}}
-\item{Herramientas \texttt{curl} y \texttt{wget}}  
 \item{Otras herramientas de l\'{i}nea de instrucciones}
 \end{itemize}
+
+\begin{description}
+
+\item[5\%]{Un script de shell sin argumentos en l\'{i}nea de instrucciones}
+\item[5\%]{Un script de shell con argumentos en l\'{i}nea de instrucciones}
+
+\item[5\%]{Un script de shell que hace uso a c\'{o}digos de error de salida}
+\item[5\%]{Un script de shell que hace uso de redirecci\'{o}n}
+
+\item[5\%]{Un script de shell que hace uso de tuber\'{i}as}
+\item[5\%]{Un script de shell que hace uso de \texttt{(g)wak}}
+
+\item[5\%]{Un script de shell que hace uso de \texttt{sed}}
+\item[5\%]{Un script de shell que hace uso de \texttt{sort}}
+
+\item[5\%]{Un script de shell que hace uso de \texttt{tr}}
+\item[5\%]{Un script de shell que hace uso de \texttt{grep}}
+
+\item[5\%]{Un script de shell que hace uso de \texttt{curl}}
+\item[5\%]{Un script de shell que hace uso de \texttt{wget}}  
+
+\item[10\%]{Dise\~{n}o e implementaci\'{o}n de una soluci\'{o}n que hace uso de \texttt{screen}}
+\item[10\%]{Dise\~{n}o e implementaci\'{o}n de una soluci\'{o}n que hace uso de \texttt{crontab}}  
+
+\item[20\%]{Proyecto integrador: dise\~{n}o, implementaci\'{o}n y evaluaci\'{o}n
+  de una soluci\'{o}n de script de shell para un caso de estudio pr\'{a}ctico
+  con un cliente externo}
+\end{description}  
+
+Con ``cliente externo'' se refiere a una persona o una organizaci\'{o}n
+quien no es el maestro ni los mismos participantes inscritos en la
+unidad.
 
 \newpage
 
 \hypertarget{tdi}{\section*{Teor\'{\i}a de la informaci\'{o}n}}
 
 Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
-\hyperlink{cr}{\em Criptograf\'{i}a}.
+\hyperlink{cr}{\em Criptograf\'{i}a}.  Es primordial el uso individual
+de un repositorio con control de versiones como por ejemplo GitHub.
 
 \begin{itemize}
 \item{Informaci\'{o}n y entrop\'{i}a}
@@ -1681,9 +1815,22 @@ Tres cr\'{e}ditos. Optativa de s\'{e}ptimo semestre. Requiere
 \item{C\'{o}digos de bloque}
 \item{Detecci\'{o}n de errores}
 \item{Recuperaci\'{o}n de errores}
-\item{Compresi\'{o}n sin perdida}
-\item{Compresi\'{o}n con perdida}
+\item{Compresi\'{o}n sin p\'{e}rdida}
+\item{Compresi\'{o}n con p\'{e}rdida}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Ejercicios te\'{o}ricos de entropia}
+\item[10\%]{Ejercicios te\'{o}ricos de complejidad de Kolmogorov}
+\item[10\%]{Ejercicios te\'{o}ricos de codificaci\'{o}n}
+\item[10\%]{Implementaci\'{o}n de un c\'{o}digo de Huffman}
+\item[10\%]{Implementaci\'{o}n de detecci\'{o}n de errores con un c\'{o}digo bloque}
+\item[10\%]{Implementaci\'{o}n de correcci\'{o}n de errores con c\'{o}digo Reed-Solomon}      
+\item[15\%]{Examen de medio curso}  
+\item[10\%]{Implementaci\'{o}n de un algoritmo de compresi\'{o}n sin p\'{e}rdida}
+\item[10\%]{Implementaci\'{o}n de un algoritmo de compresi\'{o}n con p\'{e}rdida}  
+\item[15\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1697,12 +1844,25 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Lengujes regulares}
 \item{Aut\'{o}matas finitos}
 \item{Expresiones regulares}
-\item{Lenguajes libre de contexto}
+\item{Lenguajes libres de contexto}
 \item{Problemas decidibles; problema de detenci\'{o}n}
 \item{Reducibilidad}
 \item{Clase PSPACE}
 \item{Problemas insolubles}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Ejercicios te\'{o}ricos de dise\~{n}o de M\'{a}quinas Turing}  
+\item[10\%]{Ejercicios te\'{o}ricos de lenguajes regulares}
+\item[10\%]{Ejercicios te\'{o}ricos de aut\'{o}matas finitas deterministas}
+\item[10\%]{Ejercicios te\'{o}ricos de aut\'{o}matas finitas no-deterministas}
+\item[10\%]{Examen de medio curso}
+\item[10\%]{Ejercicios te\'{o}ricos de expresiones regulares}  
+\item[10\%]{Ejercicios te\'{o}ricos de lenguajes libres de contexto}
+\item[10\%]{Ejercicios te\'{o}ricos del problema de detenci\'{o}n}
+\item[10\%]{Ejercicios te\'{o}ricos de reducciones entre problemas NP-completos}      
+\item[10\%]{Examen ordinario}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1713,16 +1873,30 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 
 \begin{itemize}
 \item{Formas normales de l\'{o}gica proposicional}
-\item{Diagramas binarios de decisi\'{o}n}
+\item{Diagramas binarios de decisi\'{o}n (BDD)}
 \item{L\'{o}gica predicativa de primer y segundo orden}
 \item{Demostraciones de validez}
-\item{Modelado de sistemas concurrentes}
-\item{L\'{o}gica temporal lineal}
+\item{L\'{o}gica temporal lineal (LTL)}
+\item{L\'{o}gica de \'{a}rboles computacionales (CTL)}
 \item{Modelos l\'{o}gicos de sistemas}
-\item{Verificaci\'{o}n de modelos}
+\item{Modelado de sistemas concurrentes y distribuidos}
 \item{Redes Petri}
+\item{Herramientas de verificaci\'{o}n de modelos}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Conversi\'{o}n a forma normal conjunctiva (CNF)}
+\item[10\%]{Conversi\'{o}n a forma normal disyuntiva (DNF)}
+\item[10\%]{Valicadi\'{o}n en forma normal conjunctiva}
+\item[10\%]{Construcci\'{o}n de BDD}
+\item[10\%]{Minimizaci\'{o}n de BDD}  
+
+\item[10\%]{Examen de medio curso}  
+\item[10\%]{Ejercicios de LTL}
+\item[10\%]{Ejercicios de CTL}
+\item[10\%]{Ejercicios de redes Petri}    
+\item[10\%]{Examen ordinario}
+\end{description}  
 
 \newpage
 
@@ -1746,26 +1920,57 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Consecuencias de fallas}
 \end{itemize}
 
+\begin{description}
+\item[10\%]{Ejercicios pr\'{a}cticos de SRE}
+\item[10\%]{Ejercicios pr\'{a}cticos de KPI}
+\item[10\%]{Ejercicios pr\'{a}cticos de RCA}    
+\item[20\%]{Examen de medio curso}
+\item[10\%]{Ejercicio de definici\'{o}n de SLO para un caso de estudio}
+\item[10\%]{Ejercicio de definici\'{o}n de SLI para un caso de estudio}
+\item[10\%]{Ejercicio de definici\'{o}n de SLA para un caso de estudio}
+\item[20\%]{Examen ordinario}
+\end{description}  
+
 \vfill\null \columnbreak
 
 \hypertarget{ayp}{\section*{Almacenaje y procesamiento de datos grandes}}
 
-Tres cr\'{e}ditos.
-Optativa de octavo semestre. Requiere
-\hyperlink{ls}{\em Lenguajes script}.
+Tres cr\'{e}ditos.  Optativa de octavo semestre. Requiere
+\hyperlink{ls}{\em Lenguajes script}. Es primordial el uso individual
+de un repositorio con control de versiones como por ejemplo GitHub.
+
+{\em La unidad no cuenta con ex\'{a}menes escritos sino son puros
+  ejercicios pr\'{a}cticos.}
 
 \begin{itemize}
 \item{Conceptos, paradigmas y plataformas}
 \item{Herramientas de programaci\'{o}n}
 \item{Extracci\'{o}n e integraci\'{o}n}
+\item{T\'{e}cnicas map-reduce}
 \item{Almacenaje}
 \item{Escalabilidad de \'{i}ndices}
 \item{Procesamiento de grafos}
 \item{Procesamiento de flujos (streams)}
 \item{An\'{a}lisis probabil\'{i}stico}
-\item{Visualizaci\'{o}n}
 \item{Privacidad y anonimidad}
 \end{itemize}
+
+\begin{description}
+\item[10\%]{Instalaci\'{o}n y configuraci\'{o}n de herramientas}
+\item[10\%]{Caso de estudio pr\'{a}ctico: datos clim\'{a}ticos}
+\item[10\%]{Caso de estudio pr\'{a}ctico: datos biom\'{e}dicos}
+\item[10\%]{Caso de estudio pr\'{a}ctico: datos astron\'{o}micos}
+\item[10\%]{Caso de estudio pr\'{a}ctico: datos de control \'{a}ereo}
+
+\item[10\%]{Caso de estudio pr\'{a}ctico: datos de redes sociales}
+\item[10\%]{Caso de estudio pr\'{a}ctico: procesamiento en tiempo real}    
+\item[10\%]{Ensayo de revisi\'{o}n de literatura de algoritmos y
+  estructuras de datos probabil\'{i}sticos para datos grandes}
+\item[10\%]{Implementaci\'{o}n de un algoritmo o una estructura datos
+  probabil\'{i}stico para datos grandes}
+\item[10\%]{Caso de estudio pr\'{a}ctico: anonomizaci\'{o}n de datos
+  georeferenciados}
+\end{description}  
 
 \vfill\null \columnbreak
 
@@ -1780,13 +1985,41 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 \item{Paralelismo en la nube}
 \item{Almacenaje distribuido}
 \item{Virtualizaci\'{o}n}
-\item{Seguridad}
-\item{Sistemas operativos de n\'{u}cleos m\'{u}ltiples}
-\item{T\'{e}cnicas map-reduce}
-\item{Proveedores de servicio actuales}
+\item{Seguridad inform\'{a}tica en la nube}
 \end{itemize}
 
-\end{multicols}
+Se recomienda trabajar con por lo menos tres distintos proveedores de
+servicios de c\'{o}mputo en la nube que no incurran costo para el
+estudiante. Es importante limitar el alcance de las tareas para que el
+plan gratuito o estudiant\'{i}l sea suficiente para su realizaci\'{o}n
+exitosa.
+
+\begin{description}
+\item[10\%]{Ejercicios pr\'{a}cticos de acceso de servicios de c\'{o}mputo en
+  la nube}
+\item[10\%]{Ejercicios pr\'{a}cticos de configuraci\'{o}n de servicios de
+  c\'{o}mputo en la nube}
+\item[10\%]{Ejercicios pr\'{a}cticos de implementaci\'{o}n de servicios de
+  c\'{o}mputo en la nube}
+\item[10\%]{Ejercicios pr\'{a}cticos de monitoreo de servicios de c\'{o}mputo
+  en la nube}
+\item[10\%]{Ejercicios pr\'{a}cticos de estimaci\'{o}n de costo de servicios
+  de c\'{o}mputo en la nube}
+\item[10\%]{Examen de medio curso}  
+
+\item[10\%]{Ejercicios pr\'{a}cticos de paralelismo en la nube}
+\item[10\%]{Ejercicios pr\'{a}cticos de almacenaje distribuido}
+\item[10\%]{Ejercicios pr\'{a}cticos de virtualizaci\'{o}n en la nube}
+\item[10\%]{Ensayo de revisi\'{o}n de literatura sobre aspectos de
+  seguridad inform\'{a}tica en la nube}
+\item[10\%]{Examen ordinario}
+\end{description}  
+
+Los ejercicios realizados en las plataformas de c\'{o}mputo en la nube se
+comprueban con capturas de pantalla est\'{a}ticas o de video, procurando
+siempre ocultar las claves de acceso y cualquier informaci\'{o}n que
+identifica el usuario.
+
 \newpage
 
 \hypertarget{te}{\section*{Tecnolog\'{\i}as emergentes}} 
@@ -1794,32 +2027,92 @@ Tres cr\'{e}ditos. Optativa de octavo semestre. Requiere
 Tres cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{ia}{\em
   Inteligencia artificial}.
 
-Discusi\'{o}n de t\'{o}picos selectos de inter\'{e}s actual como por ejemplo
-procesamiento de lenguage natural, bioinform\'{a}tica, criptomonedas o
-blockchain.
+Discusi\'{o}n de t\'{o}picos selectos de inter\'{e}s actual como por
+ejemplo procesamiento de lenguaje natural, bioinform\'{a}tica,
+criptomonedas o blockchain. El docente propone tres o m\'{a}s temas por
+cubrir en la unidad e indica al inicio del semestre a los
+participantes cu\'{a}les tareas se relacionar\'{a}n a cada uno de los temas
+por discutir, indicando tambi\'{e}n cu\'{a}les ser\'{a}n individuales y cu\'{a}les
+grupales. Se recomienda limitarse a herramientas de c\'{o}digo abierto de
+libre acceso para fines sin lucro.
+
+\begin{description}
+\item[10\%]{Revisi\'{o}n de literatura sobre un tema emergente}
+\item[10\%]{Ejercicio pr\'{a}ctico de uso de herramientas existentes para
+  un tema emergente}
+\item[15\%]{Dise\~{n}o e implementaci\'{o}n de un prototipo para un tema
+  emergente}
+\item[15\%]{Examen de medio curso}
+\item[10\%]{Exposici\'{o}n oral (presencial o videl) sobre un tema
+  emergente}
+\item[10\%]{Propuesta de selecci\'{o}n de herramientas para un caso de
+  estudio de un tema emergente}
+\item[15\%]{An\'{a}lisis experimental de una herramienta existente para un
+  tema emergente}
+\item[15\%]{Examen ordinario}
+\end{description}  
+
+\vfill\null \columnbreak
 
 \hypertarget{pi1}{\section*{Proyecto integrador I}} 
 
 Cuatro cr\'{e}ditos. Octavo semestre. Requiere \hyperlink{aw}{\em
   Aplicaciones web}.
 
-Se produce un plan de trabajo que detalla un proyecto del \'{a}rea de
-tecnolog\'{i}a de software junto con un prototipo inicial en un
-repositorio p\'{u}blico. Se debe especificar la metodolog\'{i}a a seguir y
-mantener una bit\'{a}cora semanal.
+Se produce un dise\~{n}o de un proyecto del \'{a}rea de tecnolog\'{i}a de
+software junto con un prototipo inicial y la evaluaci\'{o}n de usabilidad
+del prototipo, almacenado en un repositorio p\'{u}blico. Se debe
+especificar la metodolog\'{i}a a seguir y mantener una bit\'{a}cora
+semanal.
 
-El tama\~{n}o de los grupos de trabajo es de dos a siete personas, a la
-par con la complejidad del proyecto propuesto. Cada equipo debe
+El tama\~{n}o de los grupos de trabajo es de dos a siete personas, a
+la par con la complejidad del proyecto propuesto. Cada equipo debe
 nombrar un gerente de proyecto y aclarar el papel de cada integrante
 al inicio.
+
+{\em La unidad no tiene ex\'{a}menes individuales escritas sino
+  presentaciones grupales.} Es primordial el uso grupal de un
+repositorio con control de versiones como por ejemplo GitHub.
+
+\begin{description}
+\item[20\%]{Plan de trabajo sobre el dise\~{n}o, incluyendo calendarizaci\'{o}n y roles}
+\item[10\%]{Bit\'{a}coras semanales de la primera mitad}
+\item[20\%]{Video-presentaci\'{o}n del dise\~{n}o (medio curso)}
+\item[20\%]{Plan de trabajo del primer prototipo}
+\item[10\%]{Bit\'{a}coras semanales de la segunda mitad}
+\item[20\%]{Video-presentaci\'{o}n del prototipo (ordinario)}
+\end{description}  
+
+\vfill\null \columnbreak
 
 \hypertarget{pi2}{\section*{Proyecto integrador II}} 
 
 Cuatro cr\'{e}ditos. Noveno semestre. Requiere {\em Proyecto integrador I}.
 
-Se crea la versi\'{o}n final del producto de software junto con la
-documentaci\'{o}n pertinente en el mismo repositorio p\'{u}blico creado en la
-primera unidad. Se debe mantener una bit\'{a}cora semanal.
+Se implementa y comprueba la versi\'{o}n final del producto de
+software, comenzando con las pruebas unitarias y de integraci\'{o}n, junto
+con la documentaci\'{o}n pertinente en el mismo repositorio
+p\'{u}blico creado en la primera unidad. Se debe mantener una
+bit\'{a}cora semanal.
+
+{\em La unidad no tiene ex\'{a}menes individuales escritas sino
+  presentaciones grupales.} Es primordial el uso grupal de un
+repositorio con control de versiones como por ejemplo GitHub.
+
+\begin{description}
+\item[20\%]{Plan de trabajo sobre las pruebas, incluyendo
+  calendarizaci\'{o}n y roles}
+\item[10\%]{Bit\'{a}coras semanales de la primera mitad}
+\item[20\%]{Video-presentaci\'{o}n de las pruebas (medio curso)}
+\item[20\%]{Plan de trabajo de la implementaci\'{o}n}
+\item[10\%]{Bit\'{a}coras semanales de la segunda mitad}
+\item[20\%]{Video-presentaci\'{o}n de la implementaci\'{o}n (ordinario)}
+\end{description}  
+
+\end{multicols}
+
+\newpage
+
 
 \hypertarget{cert}{\section*{Certificaci\'{o}n I \& II}} 
 
@@ -1829,6 +2122,56 @@ cantidad de cr\'{e}ditos otorgados, como por ejemplo certificaciones de
 AWS, MS Azure o Google.
 
 
+\hypertarget{mov}{\section*{Movilidad I \& II}}
+
+La comprobaci\'{o}n de un semestre de estudios en una instituci\'{o}n
+educativa extranjera relacionados a tecnolog\'{i}a de software permite
+acreditar una unidad de Movilidad. Un a\~{n}o de estudios permite
+acreditar los dos unidades.
+
+\hypertarget{le}{\section*{Libre elecci\'{o}n I \& II}} 
+
+Cualquier combinaci\'{o}n de cursos universitarios de nivel de
+maestr\'{i}a afines a la tecnolog\'{i}a de software o sus aplicaciones, de la
+FIME, de la UANL o de una instituci\'{o}n educativa externa nacional o
+internacional, sea en modalidad en l\'{i}nea o presencial, que cubra una
+cantidad de horas por lo menos igual a la cantidad de cr\'{e}ditos
+otorgados.
+
+\hypertarget{inv}{\section*{Investigaci\'{o}n I \& II}}
+
+Es necesario realizar la I para poder inscribir la II porque forman
+una secuencia. Sin embargo, un estudiante puede inscribir la I y luego
+optar por una optativa distinta en el \'{u}ltimo semestre, si as\'{i}
+prefiere.
+
+Antes de inscribir la primera, el estudiante necesita contar con un
+acuerdo previo con un asesor quien tiene el grado de doctor y labora
+como profesor investigador en el posgrado de la facultad y
+posiblemente un segundo doctor como coasesor (\'{e}ste puede provenir de
+una instituci\'{o}n externa). Este acuerdo previo debe incluir un t\'{i}tulo
+tentativo del proyecto de investigaci\'{o}n por realizar.
+
+En la primera unidad, se plantean las hip\'{o}tesis y objetivos, se
+identifican y estructuran los antecedentes en escrito, se busca y
+clasifica trabajos relacionados en literatura cient\'{i}fica
+contemporanea, se identifica el \'{a}rea de oportunidad y se dise\~{n}a la
+soluci\'{o}n propuesta. Todo esto se documenta en un manuscrito parcial de
+tesis de licenciatura y se expone el resultado al asesor y los
+coasesores y adem\'{a}s un tercer doctor (interno o externo) quien funge
+como revisor; el revisor se nombra a medio curso. Al final del
+semestre, si el estudiante pretende inscribir la segunda unidad, se
+registra el tema de tesis en el Departamento de Titulaci\'{o}n de Licenciatura con el
+visto bueno del Subdirector Acad\'{e}mico.
+
+En la segunda unidad, se implementa la soluci\'{o}n, se dise\~{n}an, ejecutan,
+reportan y analizan los experimentos para su validaci\'{o}n, se redactan
+las contribuciones y conclusiones igual como posibles trabajos a
+futuro, completando as\'{i} un manuscrito de tesis de licenciatura. La
+terminaci\'{o}n exitosa del manuscrito se culmina con la exposici\'{o}n
+p\'{u}blica (presencial o por videoconferencia trasmitida abiertamente)
+del proyecto, despu\'{e}s de que el comit\'{e} de tesis se\~{n}ala al Departamento
+de Titulaci\'{o}n de Licenciatura que el alumno ha cumplido con su tesis.
 
 \end{document}
 
